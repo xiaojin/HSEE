@@ -93,10 +93,10 @@ body {
 	width:60%;
 	top:60%;
 	left:-24%;
-    animation: 1s linear 0 alternate none infinite anRecSmall;
-    -webkit-animation:1s linear 0 alternate none infinite anRecSmall;
-    -moz-animation:1s linear 0 alternate none infinite anRecSmall;
-    -o-animation: 1s linear 0 alternate none infinite anRecSmall;
+    animation: 1s linear 1s alternate none infinite anRecSmall;
+    -webkit-animation:1s linear 1s alternate none infinite anRecSmall;
+    -moz-animation:1s linear 1s alternate none infinite anRecSmall;
+    -o-animation: 1s linear 1s alternate none infinite anRecSmall;
 	
 }
 .rec-short img
@@ -116,10 +116,10 @@ body {
 	width:80%;
 	top:80%;
 	left:-40%;
-    animation: 4s linear 0 alternate none infinite anCircleDown;
-    -webkit-animation:4s linear 0 alternate none infinite anCircleDown;
-    -moz-animation:4s linear 0 alternate none infinite anCircleDown;
-    -o-animation: 4s linear 0 alternate none infinite anCircleDown;
+    animation: 4s linear 1s alternate none infinite anCircleDown;
+    -webkit-animation:4s linear 1s alternate none infinite anCircleDown;
+    -moz-animation:4s linear 1s alternate none infinite anCircleDown;
+    -o-animation: 4s linear 1s alternate none infinite anCircleDown;
 	
 }
 .line-circleDown img
@@ -139,10 +139,10 @@ body {
 	width:100%;
 	top:52%;
 	left:62%;
-    animation: 4s linear  infinite anBlockSmall;
-    -webkit-animation:4s linear  infinite anBlockSmall;
-    -moz-animation:4s linear infinite anBlockSmall;
-    -o-animation: 4s linear  infinite anBlockSmall;
+    animation: 4s linear 1s infinite anBlockSmall;
+    -webkit-animation:4s linear 1s infinite anBlockSmall;
+    -moz-animation:4s linear 1s infinite anBlockSmall;
+    -o-animation: 4s linear 1s infinite anBlockSmall;
 	
 }
 .block-small img
@@ -187,10 +187,10 @@ body {
 	position:absolute;
 	width:100%;
 	top:15%;	
-    animation: 2s linear 0s alternate none infinite anBlockRecruit;
-    -webkit-animation: 2s linear 0s alternate none infinite anBlockRecruit;
-    -moz-animation:2s linear 0s alternate none infinite anBlockRecruit;
-    -o-animation: 2s linear 0s alternate none infinite anBlockRecruit;
+    animation: 2s linear 1s alternate none infinite anBlockRecruit;
+    -webkit-animation: 2s linear 1s alternate none infinite anBlockRecruit;
+    -moz-animation:2s linear 1s alternate none infinite anBlockRecruit;
+    -o-animation: 2s linear 1s alternate none infinite anBlockRecruit;
 	
 }
 .recruitToNext
