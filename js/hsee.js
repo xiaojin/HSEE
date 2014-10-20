@@ -23,6 +23,7 @@ var hsee = {
        // }   
     },
    ready : function() {
+        setTimeout(function() { $('.loading').fadeOut(500); }, 1000);
         hsee.bind();
         var swiperParent = new Swiper('.swiper-parent', {
             mode : 'vertical',

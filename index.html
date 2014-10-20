@@ -7,8 +7,13 @@
     <title>Hiring</title>
     <link rel="stylesheet" href="css/idangerous.swiper.css">
     <link rel="stylesheet" href="css/main.css">
+    <style>
+	    .loading {position: absolute; top: 0; left: 0;width:100%; height:100%; background: none repeat scroll 0 0 #fff;  z-index: 2; }
+		.loading img { display: block; margin: 50% auto 0; width: 10%; } 
+    </style>
   </head>
   <body>
+  	<div class="loading"><img src="images/loading.gif" alt=""></div>
   	<div class="swiper-container swiper-parent">
   		<div class="swiper-wrapper">
   			<div class="swiper-slide page1 pages">
@@ -184,6 +189,7 @@
   		</div>
 
   	</div>
+
   	<div class="first-class red-slide pages" style="z-index:9999;display: none;width:100%;height: 100%;top:-100%;position:absolute;">
       		 Slide 1 
    </div>
