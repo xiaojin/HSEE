@@ -26,10 +26,10 @@ body {
 	width:45%;
 	top: -30%;
 	left: 30%;
-    animation: 3s linear 0s alternate none infinite anCircleUp;
-    -webkit-animation: 3s linear 0s alternate none infinite anCircleUp;
-    -moz-animation:3s linear 0s alternate none infinite anCircleUp;
-    -o-animation: 3s linear 0s alternate none infinite anCircleUp;
+    animation: 3s linear 1s alternate none infinite anCircleUp;
+    -webkit-animation: 3s linear 1s alternate none infinite anCircleUp;
+    -moz-animation:3s linear 1s alternate none infinite anCircleUp;
+    -o-animation: 3s linear 1s alternate none infinite anCircleUp;
 	
 }
 .line-circleUp img
