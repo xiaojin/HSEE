@@ -25,30 +25,39 @@ var hsee = {
    ready : function() {
         setTimeout(function() { $('.loading').fadeOut(500); }, 1000);
         hsee.bind();
-        var swiperParent = new Swiper('.swiper-parent', {
-            mode : 'vertical',
-            speed : 750,
-            slidesPerView : 1,
-            onSlideChangeStart : function(swiper, direction) {
-                if (swiper.activeIndex === 1 && direction === "next") {
-                    $(".block-recruit").addClass("recruitToNext");
-                }
-            },
-            onTouchMove : function(swiper) {
-                var offsetY = -swiper.getWrapperTranslate('y'), silderHalfHeighter = $(".page1").height() * 0.3;
-
-                if (swiper.activeIndex === 0) {
-                    if (offsetY > silderHalfHeighter) {
+         if($(window).height() < '500') {
+            // 上下滚动翻页
+            $('.swiper-parent').css("min-height","504px");
+            $('.pages').css("min-height","504px");
+            var swiperParent = new Swiper('.swiper-parent', {
+                mode : 'vertical',
+                speed : 750,
+                slidesPerView : 1,
+                calculateHeight:true,
+                onSlideChangeStart : function(swiper, direction) {
+                    if (swiper.activeIndex === 1 && direction === "next") {
                         $(".block-recruit").addClass("recruitToNext");
-                    };
+                    }
+                },
+                onTouchMove : function(swiper) {
+                    var offsetY = -swiper.getWrapperTranslate('y'), silderHalfHeighter = $(".page1").height() * 0.3;
+    
+                    if (swiper.activeIndex === 0) {
+                        if (offsetY > silderHalfHeighter) {
+                            $(".block-recruit").addClass("recruitToNext");
+                        };
+                    }
+                },
+                onSlideChangeEnd : function(swiper, direction) {
+                    if (swiper.activeIndex === 1) {
+                        $(".block-recruit").removeClass("recruitToNext");
+                    }
                 }
-            },
-            onSlideChangeEnd : function(swiper, direction) {
-                if (swiper.activeIndex === 1) {
-                    $(".block-recruit").removeClass("recruitToNext");
-                }
-            }
-        });
+            });            
+          }
+
+        
+        
         var swiperNested1 = new Swiper('.swiper-human', {
             paginationClickable : true,
              mode : 'horizontal',
