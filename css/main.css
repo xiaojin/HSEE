@@ -459,8 +459,115 @@ body {
 	margin-top:30%;
 }
 
+/*swiper-mile*/
+.page6{	
+	background: rgba(95,228,238,1);
+	background-image: url(../images/page06/budongdi.png);
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+.lastMile
+{
+	position: absolute;
+	width:100%;
+}
 
+.lastMileicon
+{
+	top: 20%;
+}
+.lastMileicon img
+{
+	width: 72%;
+}
+.lastMiletitle
+{
+	top:26%;
+}
 
+.lastMiletitle img
+{
+	width: 66%;
+}
+.mileCircleShadowL
+{
+	width: 56%;
+	top:44%;
+}
+.mileCircleShadowL img
+{
+	width: 100%;
+}
+
+.mileCircleShadowD
+{
+	width: 66%;
+	top:44%;
+}
+
+.mileCircleShadowD img
+{
+	width: 100%;
+}
+.mileCircle
+{
+	top:40%;
+}
+
+.mileCircle img
+{
+	width: 53%;
+}
+.mileCircleIn
+{
+	top:40%;
+}
+.mileCircleIn img
+{
+	width: 56%;
+}
+.mileCircleOut
+{
+	top:37%;
+}
+.mileCircleOut img
+{
+	width: 66%;
+}
+.mile-title
+{
+	position:absolute;
+	width: 100%;
+	top: 82%;
+}
+
+.mile-title img
+{
+	width: 50%;
+}
+
+.mileHide-Circle
+{
+	position: absolute;
+	width: 100%;
+	top: 39%;
+}
+.mileHide-Circle img
+{
+	width: 100%;
+}
+.mile-icons
+{
+	position:absolute;
+	width: 300%;
+	left: 20%;
+	top:40%;
+	
+}
+.mile-icons img
+{
+	width: 100%;
+}
 
 
 

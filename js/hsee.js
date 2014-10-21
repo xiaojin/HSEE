@@ -148,7 +148,36 @@ var hsee = {
         });
         var swiperNested2 = new Swiper('.swiper-mile',{
             paginationClickable : true,
-            slidesPerView : 1
+            slidesPerView : 1,
+            onSetWrapperTransform: function(swiper,transform){
+                var $mileIcons = $(".mile-icons"),
+                    index= swiper.activeIndex;
+                var per = Math.abs((transform.x+(swiper.width*index))/swiper.width);
+                var moveDist = (swiper.positions.current - swiper.positions.start);
+                console.log(swiper.positions);
+                if ((index + 1) < 6 && (swiper.positions.current - swiper.positions.start) < 0 ) {
+                        var offsetX = "translateX("+(-per*20-(20*index))+"%)";
+                        console.log(offsetX);
+                        $mileIcons.css('-webkit-transform',offsetX);
+                }  else if ((swiper.positions.current - swiper.positions.start) > 0 && (index - 1) >= 0) {
+                        var offsetX = "translateX("+(per*20-(20*index))+"%)";
+                        $mileIcons.css('-webkit-transform',offsetX);
+                }
+            },
+            onTouchEnd :function(swiper){
+                console.log(swiper.getWrapperTranslate('x'));
+                var index = swiper.activeIndex,
+                    offset = 0;
+                if(swiper.getWrapperTranslate('x') <0){
+                   
+                    offset = "translateX("+((-20*index))+"%)";
+                } else 
+                {
+                    offset = "translateX("+((20*index))+"%)";
+                }
+                
+                 $(".mile-icons").css({'-webkit-transform':offset});
+            }
         });
 
         $("#top").click(function() {
