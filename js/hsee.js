@@ -54,6 +54,31 @@ var hsee = {
                     }
                 }
             });            
+          } else {
+            var swiperParent = new Swiper('.swiper-parent', {
+                mode : 'vertical',
+                speed : 750,
+                slidesPerView : 1,
+                onSlideChangeStart : function(swiper, direction) {
+                    if (swiper.activeIndex === 1 && direction === "next") {
+                        $(".block-recruit").addClass("recruitToNext");
+                    }
+                },
+                onTouchMove : function(swiper) {
+                    var offsetY = -swiper.getWrapperTranslate('y'), silderHalfHeighter = $(".page1").height() * 0.3;
+    
+                    if (swiper.activeIndex === 0) {
+                        if (offsetY > silderHalfHeighter) {
+                            $(".block-recruit").addClass("recruitToNext");
+                        };
+                    }
+                },
+                onSlideChangeEnd : function(swiper, direction) {
+                    if (swiper.activeIndex === 1) {
+                        $(".block-recruit").removeClass("recruitToNext");
+                    }
+                }
+            });               
           }
 
         
