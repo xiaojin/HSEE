@@ -570,6 +570,142 @@ body {
 }
 
 
+/*page07 started*/
+.page7{	
+	background: rgba(115,199,217,1);
+	background-image: url(../images/page07/budongdi.png);
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+
+
+.hseeskillbar {
+	width:100%;margin-top:4%;position:relative;
+}
+.hseeskillstopbar{
+	margin-top:18%;
+	
+}
+.hseeskillColorbar
+{
+	width:100%;
+	transition:margin-left 2s;
+	-moz-transition:margin-left 2s; /* Firefox 4 */
+	-webkit-transition:margin-left 2s; /* Safari and Chrome */
+	-o-transition:margin-left 2s; /* Opera */
+}
+.hseeskillColortitle
+{
+	 transition:left 1s;
+	-moz-transition:left 1s; 
+	-webkit-transition:left 1s; 
+	-o-transition:left 1s; 
+
+}
+.hseeskillbar img
+{
+	width:100%;
+}
+
+.hseeskills-blackbar 
+{
+	margin-left: 100%;
+
+}
+.hseeskills-bluebar
+{
+	margin-left: -100%;
+	transition-delay: 1s;
+	-moz-transition-delay: 1s; 
+	-webkit-transition-delay: 1s;
+	-o-transition-delay: 1s; 
+}
+.hseeskills-redbar
+{
+	margin-left: 100%;
+	transition-delay: 2s;
+	-moz-transition-delay:2s; 
+	-webkit-transition-delay: 2s;
+	-o-transition-delay: 2s; 
+}
+.hseeskills-greenbar
+{
+	margin-left: -100%;
+	transition-delay: 3s;
+	-moz-transition-delay:3s; 
+	-webkit-transition-delay: 3s;
+	-o-transition-delay: 3s; 
+}
+.hseeskills-blacktitle
+{
+	width:50%;
+	position:absolute;
+	left:100%;
+	top:14%;
+	transition-delay: 2s;
+	-moz-transition-delay: 2s; 
+	-webkit-transition-delay: 2s;
+	-o-transition-delay: 2s; 
+}
+.hseeskills-bluetitle
+{
+	width:78%;position:absolute;left: -100%;top:14%;
+	transition-delay: 2s;
+	-moz-transition-delay: 2s; 
+	-webkit-transition-delay: 2s;
+	-o-transition-delay: 2s; 
+}
+.hseeskills-redtitle
+{
+	width:78%;position:absolute;left: 100%;top:14%;
+	transition-delay: 3s;
+	-moz-transition-delay: 3s; 
+	-webkit-transition-delay: 3s;
+	-o-transition-delay: 3s;
+}
+.hseeskills-greentitle
+{
+	width:82%;position:absolute;left: -100%;top:14%;
+	transition-delay: 4s;
+	-moz-transition-delay: 4s; 
+	-webkit-transition-delay: 4s;
+	-o-transition-delay: 4s;
+}
+
+.swiper-slide-active .hseeskills-blackbar {
+	margin-left:4%
+}
+.swiper-slide-active .hseeskills-bluebar
+{
+	margin-left: -4%
+}
+.swiper-slide-active .hseeskills-redbar
+{
+	margin-left: 4%
+}
+.swiper-slide-active .hseeskills-greenbar
+{
+	margin-left: -4%
+}
+
+.swiper-slide-active  .hseeskills-blacktitle {
+	left:46%;
+}
+.swiper-slide-active  .hseeskills-bluetitle
+{
+	left: 4%;
+}
+
+.swiper-slide-active  .hseeskills-redtitle
+{
+  	left: 18%;
+}
+
+.swiper-slide-active  .hseeskills-greentitle
+{
+   left: 4%;
+}
+
 
 .first-class
 {
