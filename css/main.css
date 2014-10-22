@@ -340,6 +340,7 @@ body {
 }
 /*page4 start*/
 
+
 .page4{	
 	background: rgba(95,228,238,1);
 	background-image: url(../images/page03/budongdi.png);
@@ -350,68 +351,133 @@ body {
 	margin-top:25%;
 }
 
-.charc-block
-{
+.charc-block {
 	width: 100%;
+	transition: margin-top 1s;
+	-moz-transition: margin-top 1s; 
+	-webkit-transition: margin-top 1s; 
+	-o-transition: margin-top 1s; 
 }
+
 .charac-head img{
 	width: 75%;
 }
+.charac-lineUp 
+{
+	margin-top:40%;
+}
 .charac-lineUp img{
 	width: 75%;
+}
+.swiper-slide-active  .charac-lineUp
+{
+	margin-top:3%;
+}
+.charac-secHead
+{
+	margin-top:10%;
+}
+.swiper-slide-active .charac-secHead
+{
 	margin-top:3%;
 }
 .charac-secHead img{
 	width: 53%;
-	margin-top:3%;
+}
+.charac-position
+{
+	margin-top:10%;
+}
+.swiper-slide-active .charac-position
+{
+	margin-top:7%;
 }
 .charac-position img{
 	width: 25%;
-	margin-top:7%;
+	
+}
+.charac-lineShort
+{
+	margin-top:2%;
+}
+.swiper-slide-active .charac-lineShort
+{
+	margin-top:2%;
 }
 .charac-lineShort img
 {
 	width:9%;
+}
+.charac-article
+{
+	margin-top:10%;
+}
+.swiper-slide-active .charac-article
+{
 	margin-top:2%;
 }
 .charac-article img
-{
-	
+{	
 	width:69%;
-	margin-top:2%;
 }
 
 .hess-charCircle
 {
 	position: relative;
-	margin-top:7%;
+	/*margin-top:11%;*/
+	margin-top: 80%;
 	width: 100%;
+	transition: margin-top 1s;
+	-moz-transition: margin-top 1s; 
+	-webkit-transition: margin-top 1s; 
+	-o-transition: margin-top 1s;
 }
-
+.swiper-slide-active .hess-charCircle
+{
+	margin-top:11%;
+}
 .hess-charCircle img
 {
 	width: 100%;
 }
+
 .charCircle-left
 {
-	position: absolute;
 	width:27%;
-	left:6%;
-	padding-top: 5%;
+	margin-left:6%;
 }
 .charCircle-center
 {
 	position: absolute;
 	width:36%;
-	left:31%;
+	left:32%;
+	top:200%;
+	transition: top 1s;
+	-moz-transition: top 1s; 
+	-webkit-transition: top 1s; 
+	-o-transition: top 1s;
+}
+
+.swiper-slide-active .charCircle-center
+{
+	top:-16%;
 }
 .charCircle-right
 {
 	position: absolute;
 	width:27%;
-	left:63%;
-	padding-top: 5%;
+	left:67%;
+	top:300%;
+	transition: top 1s;
+	-moz-transition: top 1s; 
+	-webkit-transition: top 1s; 
+	-o-transition: top 1s;
 }
+.swiper-slide-active .charCircle-right
+{
+	top:0;
+}
+
 
 
 /*page5 start*/
