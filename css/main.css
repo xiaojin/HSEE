@@ -83,7 +83,7 @@ body {
 }
 
 /*Thin retangle small*/
-@keyframes anRecSmall   { 0% {transform:translate(0%,0%);} 25% {transform:translate(-4%,10%);} 25% {transform:translate(-8%,20%);} 75% {transform:translate(-16%,40%);} 75% {transform:translate(-20%,50%);}}
+@keyframes anRecSmall   { 0% {transform:translate(0%,0%);} 25% {transform:translate(-4%,10%);} 50% {transform:translate(-8%,20%);} 75% {transform:translate(-16%,40%);} 100% {transform:translate(-20%,50%);}}
 @-webkit-keyframes anRecSmall   { 0% {-webkit-transform:translate(0%,0%);} 25% {-webkit-transform:translate(-4%,10%);} 50% {-webkit-transform:translate(-8%,20%);} 75% {-webkit-transform:translate(-16%,40%);} 100% {-webkit-transform:translate(-20%,50%);}} 
 @-moz-keyframes anRecSmall { 0% {-moz-transform:translate(0%,0%);} 25% {-moz-transform:translate(-4%,10%);} 50% {-moz-transform:translate(-8%,20%);} 75% {-moz-transform:translate(-16%,40%);} 100% {-moz-transform:translate(-20%,50%);}}
 @-o-keyframes anRecSmall   { 0% {-o-transform:translate(0%,0%);} 25% {-o-transform:translate(-4%,10%);} 50% {-o-transform:translate(-8%,20%);} 75% {-o-transform:translate(-16%,40%);} 100% {-o-transform:translate(-20%,40%);}}
@@ -214,32 +214,30 @@ body {
 }
 .shadowD{
 	position: absolute;
-	top: 35%;
-	width:100%;
-	left: -20%;
+	top: 26%;
+	width:69%;
 }
 .shadowL{
 	position: absolute;
-	top: 35%;
-	width:100%;
-	left: -30%;
+	top: 25%;
+	width:65%;
 }
 .shadowD img{
-	width: 80%
+	width: 100%
 }
 .shadowL img{
-	width: 85%;
+	width: 100%;
 }
 .faces{
 	position: absolute;
-	top:28%;
-	width: 35%;
+	top:22%;
+	width: 25%;
 }
 .faces img{
 	width: 100%;
 }
 .lfaces{
-	left: 15%;
+	left: 25%;
 	-webkit-transform-origin: 100% 0;
 }
 .rfaces{
@@ -282,7 +280,7 @@ body {
 .humanTitle{
 	position: absolute;
 	width: 100%;
-	top: 75%;
+	top: 63%;
 }
 
 .humanTitle img
@@ -364,7 +362,7 @@ body {
 }
 .charac-lineUp 
 {
-	margin-top:40%;
+	margin-top:22%;
 }
 .charac-lineUp img{
 	width: 75%;
@@ -425,7 +423,7 @@ body {
 {
 	position: relative;
 	/*margin-top:11%;*/
-	margin-top: 80%;
+	/*margin-top: 80%;*/
 	width: 100%;
 	transition: margin-top 1s;
 	-moz-transition: margin-top 1s; 
@@ -451,6 +449,7 @@ body {
 	position: absolute;
 	width:36%;
 	left:32%;
+	top:-16%;
 	top:200%;
 	transition: top 1s;
 	-moz-transition: top 1s; 
@@ -540,7 +539,7 @@ body {
 
 .lastMileicon
 {
-	top: 20%;
+	top: 8%;
 }
 .lastMileicon img
 {
@@ -548,13 +547,55 @@ body {
 }
 .lastMiletitle
 {
-	top:26%;
+	top:14%;
 }
 
 .lastMiletitle img
 {
 	width: 66%;
 }
+.mileArrows
+{
+	position:absolute;
+	width:5%;
+}
+.mileArrows img
+{
+	width: 100%;
+}
+.mileLeftArrow
+{
+	left:6%;
+	top:41%;
+}
+@keyframes anMileLArrow   {from {left:4%;} to {left:8%;}}
+@-webkit-keyframes anMileLArrow {from {left:4%;} to {left:8%;}}
+@-moz-keyframes anMileLArrow {from {left:4%;} to {left:8%;}}
+@-o-keyframes anMileLArrow   {from {left:4%;} to {left:8%;}}
+.swiper-slide-active  .mileLeftArrow
+{  
+    animation: 1s linear  alternate none infinite anMileLArrow;
+    -webkit-animation:1s linear  alternate none infinite anMileLArrow;
+    -moz-animation:1s linear  alternate none infinite anMileLArrow;
+    -o-animation: 1s linear alternate none infinite anMileLArrow;
+}
+.mileRightArrow
+{
+	left:89%;
+	top:41%;
+}
+@keyframes anMileRArrow  {from {left:91%;} to {left:87%;}}
+@-webkit-keyframes anMileRArrow   {from {left:91%;} to {left:87%;}}
+@-moz-keyframes anMileRArrow {from {left:91%;} to {left:87%;}}
+@-o-keyframes anMileRArrow  {from {left:91%;} to {left:87%;}}
+.swiper-slide-active  .mileRightArrow
+{  
+    animation: 1s linear  alternate none infinite anMileRArrow;
+    -webkit-animation:1s linear  alternate none infinite anMileRArrow;
+    -moz-animation:1s linear  alternate none infinite anMileRArrow;
+    -o-animation: 1s linear alternate none infinite anMileRArrow;
+}
+
 .mileCircleShadowL
 {
 	width: 56%;
@@ -577,7 +618,7 @@ body {
 }
 .mileCircle
 {
-	top:40%;
+	top:28%;
 }
 
 .mileCircle img
@@ -586,7 +627,7 @@ body {
 }
 .mileCircleIn
 {
-	top:40%;
+	top:28%;
 }
 .mileCircleIn img
 {
@@ -594,7 +635,7 @@ body {
 }
 .mileCircleOut
 {
-	top:37%;
+	top:25%;
 }
 .mileCircleOut img
 {
@@ -604,9 +645,8 @@ body {
 {
 	position:absolute;
 	width: 100%;
-	top: 82%;
+	top: 70%;
 }
-
 .mile-title img
 {
 	width: 50%;
@@ -616,7 +656,7 @@ body {
 {
 	position: absolute;
 	width: 100%;
-	top: 39%;
+	top: 27%;
 }
 .mileHide-Circle img
 {
@@ -627,7 +667,7 @@ body {
 	position:absolute;
 	width: 300%;
 	left: 20%;
-	top:40%;
+	top:28%;
 	
 }
 .mile-icons img
