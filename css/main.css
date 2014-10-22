@@ -706,6 +706,134 @@ body {
    left: 4%;
 }
 
+/*page8 started */
+.page8{	
+	background: rgba(95,228,238,1);
+	background-image: url(../images/page03/budongdi.png);
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+.locations
+{
+	position: relative;
+	margin-top: 14%;
+}
+.locationDesc
+{
+	margin-top:7%;
+	width:100%;
+	margin-left: -1%;
+}
+.locationOrg img
+{
+	width: 16%;
+}
+
+.locationTitle
+{
+	margin-top:2%;
+}
+.locationTitle img
+{
+	width: 26%;
+}
+.locationCorp
+{
+	margin-top:2%;
+}
+.locationCorp img
+{
+	width: 34%;
+}
+.locationTree
+{
+	width: 100%;
+}
+.locationTree img{
+	width:75%;
+}
+.location-name
+{
+	width: 8%;
+	position: absolute;
+}
+
+.location-name img
+{
+	width:100%;
+}
+.location-name
+{
+	top:-20%;
+	transition:top 2s;
+	-moz-transition:top 2s; /* Firefox 4 */
+	-webkit-transition:top 2s; /* Safari and Chrome */
+	-o-transition:top 2s; /* Opera */
+	transition-delay: 1s;
+	-moz-transition-delay: 1s; 
+	-webkit-transition-delay: 1s;
+	-o-transition-delay: 1s; 
+}
+.location-beijing
+{
+	left: 8%;
+	
+}
+.swiper-slide-active .location-beijing
+{
+	top:11%;
+}
+.location-hefei
+{
+	left: 9%;	
+}
+.swiper-slide-active .location-hefei
+{
+	top:34%;
+}
+.location-shanghai
+{
+	left: 33%;
+}
+.swiper-slide-active .location-shanghai
+{
+	top:-6%;
+}
+.location-hangzhou
+{
+	left:46%;
+
+}
+.swiper-slide-active .location-hangzhou
+{
+	top:1%;
+}
+.location-chengdu
+{
+	left: 57%;
+}
+.swiper-slide-active .location-chengdu
+{
+	top:16%;
+}
+.location-qingdao
+{
+	left: 68%;
+
+}
+.swiper-slide-active .location-qingdao
+{
+	top:5%;
+}
+.location-zhenzhou
+{
+	left:85%;
+}
+.swiper-slide-active .location-zhenzhou
+{
+		top:18%;
+}
+
 
 .first-class
 {
