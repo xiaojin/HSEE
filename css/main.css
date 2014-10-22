@@ -764,11 +764,11 @@ body {
 }
 .location-name
 {
-	top:-20%;
-	transition:top 2s;
-	-moz-transition:top 2s; /* Firefox 4 */
-	-webkit-transition:top 2s; /* Safari and Chrome */
-	-o-transition:top 2s; /* Opera */
+	top:-10%;
+	transition:top 1s;
+	-moz-transition:top 1s; /* Firefox 4 */
+	-webkit-transition:top 1s; /* Safari and Chrome */
+	-o-transition:top 1s; /* Opera */
 	transition-delay: 1s;
 	-moz-transition-delay: 1s; 
 	-webkit-transition-delay: 1s;
