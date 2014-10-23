@@ -94,6 +94,12 @@ var hsee = {
                 $(".facel" + index).css("-webkit-transform", "rotateY(0deg)");
                 $(".facer" + index).show();
                 $(".facer" + index).css("-webkit-transform", "rotateY(0deg)");
+                if (index === 3) {
+                    $(".shadowL").hide();
+                } else {
+                    $(".shadowL").show();
+                }
+
             },
             onSetWrapperTransition : function(swiper, duration) {
                 if (swiper.positions.current - swiper.positions.start != 0) {
@@ -104,8 +110,14 @@ var hsee = {
                 previousX = transform;
                 console.log("instance:" +instance);
                 var index = swiper.activeIndex;
+               if (index === 2) {
+                    $(".shadowL").css('display','none');
+                } else {
+                    $(".shadowL").css('display','block');
+                }                   
                 var $facer = $(".facer" + index), per = (transform + (swiper.width * index)) / swiper.width, $facel = $(".facel" + index);
                 console.log("transform:"+transform);
+              
                 if ((index + 1) < 6 && instance < 0) {
                     var $nrface = $(".facer" + (index + 1)), $nlface = $(".facel" + (index + 1));
                     $nrface.show();

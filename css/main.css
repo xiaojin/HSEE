@@ -189,22 +189,17 @@ body {
 .page2 {
 	background: rgba(254,184,41,1);
 }
-.shadowD {
-	position: absolute;
-	top: 26%;
-	width: 69%;
-}
+
 .shadowL {
 	position: absolute;
-	top: 25%;
-	width: 65%;
-}
-.shadowD img {
-	width: 100%
+	top: 29%;
+	width: 55%;	
+	left:8%;
 }
 .shadowL img {
-	width: 100%;
+	width: 100%
 }
+
 .faces {
 	position: absolute;
 	top: 22%;
@@ -280,7 +275,7 @@ body {
 }
 
 .intro-title {
-	margin-top: 25%;
+	margin-top: 14.5%;
 }
 .intro-title img {
 	width: 62%;
@@ -298,7 +293,7 @@ body {
 	background-size: cover;
 }
 .hess-character {
-	margin-top: 25%;
+	margin-top: 6%;
 }
 .charc-block {
 	width: 100%;
@@ -419,7 +414,7 @@ body {
 }
 
 .weiGo {
-	margin-top: 20%;
+	margin-top: 10%;
 }
 
 .weiGo-item {
