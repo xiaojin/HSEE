@@ -851,6 +851,166 @@ to {
 	top: 18%;
 }
 
+/*page9 started*/
+.page9{
+	/*background: rgb(110,227,239);*/
+	background: rgb(85,195,207);
+}
+.officeWall{
+	background: rgb(110,227,239);
+	background-image: url(../images/page09/budongdi.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 63%;
+}
+.officeDesk{
+	position:relative;
+	/*background: rgb(85,195,207);*/
+	margin-top: -44%;
+}
+.swiper-slide-active .officeHead {
+	margin-left: 0%;
+	transition: margin-left 1s;
+	-moz-transition: margin-left 1s; /* Firefox 4 */
+	-webkit-transition: margin-left 1s; /* Safari and Chrome */
+	-o-transition: margin-left 1s; /* Opera */
+}
+.swiper-slide-active .officeTitle{
+	margin-left: 0%;
+	transition: margin-left 1s;
+	-moz-transition: margin-left 1s; /* Firefox 4 */
+	-webkit-transition: margin-left 1s; /* Safari and Chrome */
+	-o-transition: margin-left 1s; /* Opera */
+}
+.officeHead{
+	margin-left: 75%;
+	padding-top:7%;
+	width: 100%;
+}
+.officeHead img{
+	width: 47%;
+}
+.officeTitle{
+	margin-left: 75%;
+	margin-top:2%;
+	width: 100%;
+}
+.officeTitle img{
+	width: 37.5%;
+}
+.officeComputer{
+	width:100%;
+}
+.officeComputer img
+{
+	width: 60%;
+}
+.officeItems{
+	position: absolute;
+}
+.officeItems img{
+	width:100%;
+}
+.officeStick {
+	width: 11%;	
+	top: 0%;
+	left: 56%;
+}
+.computerCircle{
+	width:100%;
+	top: 15%;
+	position: absolute;
+}
+.computerCircle img{
+	width:16%;
+}
+.officeBottle{
+	width:28%;
+	left: -42%;
+	top: 54%;;
+}
+.anOfficeBottle{
+	left: 12.5%;
+	transition: left 1s;
+	-moz-transition: left 1s; /* Firefox 4 */
+	-webkit-transition: left 1s; /* Safari and Chrome */
+	-o-transition: left 1s; /* Opera */
+}
+.officePen{
+	width:16.5%;
+	left: -21%;
+	top: 106%;
+}
+.anOfficePen{
+	left: 3%;
+	transition: left 1s;
+	-moz-transition: left 1s; /* Firefox 4 */
+	-webkit-transition: left 1s; /* Safari and Chrome */
+	-o-transition: left 1s; /* Opera */
+}
+
+.officeMobile{
+	width:7.8%;
+	left: -28%;
+	top: 115%;
+}
+.anOfficeMobile{
+	left: 19%;
+	transition: left 1s;
+	-moz-transition: left 1s; /* Firefox 4 */
+	-webkit-transition: left 1s; /* Safari and Chrome */
+	-o-transition: left 1s; /* Opera */
+}
+
+
+.officeKeyboard{
+	width:36.3%;
+	left: -72%;
+	top: 113%;
+}
+.anOfficeKeyboard{
+	left: 35%;
+	transition: left 1s;
+	-moz-transition: left 1s; /* Firefox 4 */
+	-webkit-transition: left 1s; /* Safari and Chrome */
+	-o-transition: left 1s; /* Opera */
+}
+
+.officeNotebook{
+	width:37.8%;
+	left: 140%;
+	top: 80%;
+}
+.anOfficeNotebook{
+	left: 64%;
+	transition: left 1s;
+	-moz-transition: left 1s; /* Firefox 4 */
+	-webkit-transition: left 1s; /* Safari and Chrome */
+	-o-transition: left 1s; /* Opera */
+}
+
+.officeMouse{
+	width:6.3%;
+	left: 130%;
+	top: 119%;
+}
+.anOfficeMouse{
+	left: 78%;
+	transition: left 1s;
+	-moz-transition: left 1s; /* Firefox 4 */
+	-webkit-transition: left 1s; /* Safari and Chrome */
+	-o-transition: left 1s; /* Opera */
+}
+
+
+
+
+
+
+
+
+
+
 .first-class {
 	color: #fff;
 	text-align: center;

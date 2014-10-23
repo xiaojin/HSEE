@@ -10,19 +10,15 @@ var hsee = {
         var swiperNested1;
         var previousX = 1;
         var humanFlipped = false;
-        if ($(window).height() < '500') {
-            // 上下滚动翻页
-            $('.swiper-parent').css("min-height", "504px");
-            $('.pages').css("min-height", "504px");
-            var swiperParent = new Swiper('.swiper-parent', {
+        var swiperParent = new Swiper('.swiper-parent', {
                 mode : 'vertical',
                 speed : 750,
                 slidesPerView : 1,
-                calculateHeight : true,
                 onSlideChangeStart : function(swiper, direction) {
                     if (swiper.activeIndex === 1 && direction === "next") {
                         $(".block-recruit").addClass("recruitToNext");
                     }
+
                 },
                 onTouchMove : function(swiper) {
                     var offsetY = -swiper.getWrapperTranslate('y'), silderHalfHeighter = $(".page1").height() * 0.3;
@@ -34,6 +30,21 @@ var hsee = {
                 },
                 onSlideChangeEnd : function(swiper, direction) {
                     console.log(swiper.activeIndex);
+                    if (swiper.activeIndex === 8) {
+                        $(".officeBottle").addClass("anOfficeBottle");
+                        $(".officePen").addClass("anOfficePen");
+                        $(".officeMobile").addClass("anOfficeMobile");
+                        $(".officeKeyboard").addClass("anOfficeKeyboard");
+                        $(".officeNotebook").addClass("anOfficeNotebook");
+                        $(".officeMouse").addClass("anOfficeMouse"); 
+                    } else {
+                        $(".officeBottle").removeClass("anOfficeBottle");
+                        $(".officePen").removeClass("anOfficePen");
+                        $(".officeMobile").removeClass("anOfficeMobile");
+                        $(".officeKeyboard").removeClass("anOfficeKeyboard");
+                        $(".officeNotebook").removeClass("anOfficeNotebook");
+                        $(".officeMouse").removeClass("anOfficeMouse");
+                    }                    
                     if (swiper.activeIndex === 1) {
                         $(".block-recruit").removeClass("recruitToNext");
                          previousX=1;
@@ -43,42 +54,17 @@ var hsee = {
                              humanFlipped =true;                   
                         } 
                     }
+    
+
+
                 }
-            });
-        } else {
-            var swiperParent = new Swiper('.swiper-parent', {
-                mode : 'vertical',
-                speed : 750,
-                slidesPerView : 1,
-                onSlideChangeStart : function(swiper, direction) {
-                    if (swiper.activeIndex === 1 && direction === "next") {
-                        $(".block-recruit").addClass("recruitToNext");
-                    }
-                },
-                onTouchMove : function(swiper) {
-                    var offsetY = -swiper.getWrapperTranslate('y'), silderHalfHeighter = $(".page1").height() * 0.3;
-                    if (swiper.activeIndex === 0) {
-                        if (offsetY > silderHalfHeighter) {
-                            $(".block-recruit").addClass("recruitToNext");
-                        };
-                    }
-                },
-                onSlideChangeEnd : function(swiper, direction) {
-                    console.log(swiper.activeIndex);
-                    if (swiper.activeIndex === 1) {
-                        $(".block-recruit").removeClass("recruitToNext");
-                        // swiperNested1.params.autoplay = 300;
-                        // swiperNested1.startAutoplay();
-                         previousX=1;
-                        if(!humanFlipped){
-                            swiperNested1.params.autoplay = 300;
-                            swiperNested1.startAutoplay(); 
-                            humanFlipped =true;                       
-                        } 
-                    }
-                }
-            });
-        }
+            });        
+        if ($(window).height() < '500') {
+            // 上下滚动翻页
+            $('.swiper-parent').css("min-height", "504px");
+            $('.pages').css("min-height", "504px");
+            swiperParent.params.calculateHeight =true;
+        } 
 
         swiperNested1 = new Swiper('.swiper-human', {
             mode : 'horizontal',
