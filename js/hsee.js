@@ -67,8 +67,8 @@ var hsee = {
                     console.log(swiper.activeIndex);
                     if (swiper.activeIndex === 1) {
                         $(".block-recruit").removeClass("recruitToNext");
-                        swiperNested1.params.autoplay = 300;
-                        swiperNested1.startAutoplay();
+                        // swiperNested1.params.autoplay = 300;
+                        // swiperNested1.startAutoplay();
                          previousX=1;
                         if(!humanFlipped){
                             swiperNested1.params.autoplay = 300;
