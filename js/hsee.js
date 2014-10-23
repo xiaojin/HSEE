@@ -44,7 +44,14 @@ var hsee = {
                         $(".officeKeyboard").removeClass("anOfficeKeyboard");
                         $(".officeNotebook").removeClass("anOfficeNotebook");
                         $(".officeMouse").removeClass("anOfficeMouse");
-                    }                    
+                    }
+                    if(swiper.activeIndex === 3) {
+                        $(".charCircle-center").addClass("anCharCircle-center");
+                        $(".charCircle-right ").addClass("anCharCircle-right");
+                    }   else {
+                        $(".charCircle-center").removeClass("anCharCircle-center");
+                        $(".charCircle-right ").removeClass("anCharCircle-right");                        
+                    }                
                     if (swiper.activeIndex === 1) {
                         $(".block-recruit").removeClass("recruitToNext");
                          previousX=1;

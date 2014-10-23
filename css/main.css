@@ -380,30 +380,36 @@ body {
 	position: absolute;
 	width: 36%;
 	left: 32%;
-	top: -16%;
 	top: 200%;
+
+}
+.anCharCircle-center{
+	top: -16%;
 	transition: top 1s;
 	-moz-transition: top 1s;
 	-webkit-transition: top 1s;
 	-o-transition: top 1s;
 }
 
-.swiper-slide-active .charCircle-center {
-	top: -16%;
-}
+/*.swiper-slide-active .charCircle-center {
+	
+}*/
 .charCircle-right {
 	position: absolute;
 	width: 27%;
 	left: 67%;
 	top: 300%;
+}
+.anCharCircle-right{
+	top: 0;
 	transition: top 1s;
 	-moz-transition: top 1s;
 	-webkit-transition: top 1s;
 	-o-transition: top 1s;
 }
-.swiper-slide-active .charCircle-right {
-	top: 0;
-}
+/*.swiper-slide-active .charCircle-right {
+	
+}*/
 
 /*page5 start*/
 .page5 {
