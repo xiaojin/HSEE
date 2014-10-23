@@ -80,7 +80,7 @@ var hsee = {
                         var $nrface = $(".facer" + (index + 1)), $nlface = $(".facel" + (index + 1));
                             $nrface.show();                   
                         if (Math.abs(per) < 0.45) {                          
-                            $facer.css("transform","rotateY(" + (per * 2) * 90 + "deg)");
+                            $facer.css("-webkit-transform","rotateY(" + (per * 2) * 90 + "deg)");
                         } else if (Math.abs(per) > 0.5) {
                             var degree = ((1 - Math.abs(per)) * 2) * 90;
                             //hide current right face
@@ -89,7 +89,7 @@ var hsee = {
                             $nlface.show();
                             $facel.css("z-index", 0);
                             $nlface.css("z-index", 1);
-                            $nlface.css("transform","rotateY(" + degree + "deg)");
+                            $nlface.css("-webkit-transform","rotateY(" + degree + "deg)");
                             if (degree < 10) {
                                 $facel.hide();
                             }
@@ -98,7 +98,7 @@ var hsee = {
                         var $prface = $(".facer" + (index - 1)), $plface = $(".facel" + (index - 1));
                         $plface.show();
                         if (Math.abs(per) < 0.45) {
-                            $facel[0].style.transform = "rotateY(" + (per * 2) * 90 + "deg)";
+                            $facel.css("-webkit-transform", "rotateY(" + (per * 2) * 90 + "deg)");
                         } else if (Math.abs(per) > 0.5) {
                             var degree = ((1 - Math.abs(per)) * 2) * 90;
                             $facel.hide();
@@ -106,7 +106,7 @@ var hsee = {
                             $prface.show();
                             $facer.css("z-index", 0);
                             $prface.css("z-index", 1);
-                            $prface[0].style.transform = "rotateY(" + degree + "deg)";
+                            $prface.css("-webkit-transform","rotateY(" + degree + "deg)");
                             if (degree < 10) {
                                 $facer.hide();
                             }
@@ -118,9 +118,9 @@ var hsee = {
                 var index = Math.abs(swiper.activeIndex);
                 $(".faces").hide();
                 $(".facel"+index).show();
-                $(".facel"+index).css("transform","rotateY(0deg)");
+                $(".facel"+index).css("-webkit-transform","rotateY(0deg)");
                 $(".facer"+index).show();
-                $(".facer"+index).css("transform","rotateY(0deg)");
+                $(".facer"+index).css("-webkit-transform","rotateY(0deg)");
             },
         });
         var swiperNested2 = new Swiper('.swiper-mile',{
@@ -146,13 +146,12 @@ var hsee = {
                 var index = swiper.activeIndex,
                     offset = 0;
                 if(swiper.getWrapperTranslate('x') <0){
-                   
                     offset = "translateX("+((-20*index))+"%)";
                 } else 
                 {
                     offset = "translateX("+((20*index))+"%)";
-                }
-                
+                } 
+
                  $(".mile-icons").css({'-webkit-transform':offset});
             }
         });
