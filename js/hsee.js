@@ -8,6 +8,8 @@ var hsee = {
         }, 1000);
         hsee.bind();
         var swiperNested1;
+        var previousX = 1;
+        var humanFlipped = false;
         if ($(window).height() < '500') {
             // 上下滚动翻页
             $('.swiper-parent').css("min-height", "504px");
@@ -34,9 +36,12 @@ var hsee = {
                     console.log(swiper.activeIndex);
                     if (swiper.activeIndex === 1) {
                         $(".block-recruit").removeClass("recruitToNext");
-                        swiperNested1.reInit();
-                        swiperNested1.params.autoplay = 300;
-                        swiperNested1.startAutoplay();
+                         previousX=1;
+                        if(!humanFlipped){
+                            swiperNested1.params.autoplay = 300;
+                            swiperNested1.startAutoplay();      
+                             humanFlipped =true;                   
+                        } 
                     }
                 }
             });
@@ -52,7 +57,6 @@ var hsee = {
                 },
                 onTouchMove : function(swiper) {
                     var offsetY = -swiper.getWrapperTranslate('y'), silderHalfHeighter = $(".page1").height() * 0.3;
-
                     if (swiper.activeIndex === 0) {
                         if (offsetY > silderHalfHeighter) {
                             $(".block-recruit").addClass("recruitToNext");
@@ -65,11 +69,17 @@ var hsee = {
                         $(".block-recruit").removeClass("recruitToNext");
                         swiperNested1.params.autoplay = 300;
                         swiperNested1.startAutoplay();
+                         previousX=1;
+                        if(!humanFlipped){
+                            swiperNested1.params.autoplay = 300;
+                            swiperNested1.startAutoplay(); 
+                            humanFlipped =true;                       
+                        } 
                     }
                 }
             });
         }
-        var previousX = 1;
+
         swiperNested1 = new Swiper('.swiper-human', {
             mode : 'horizontal',
             slidesPerView : 1,
@@ -86,18 +96,16 @@ var hsee = {
                 $(".facer" + index).css("-webkit-transform", "rotateY(0deg)");
             },
             onSetWrapperTransition : function(swiper, duration) {
-                console.log();
                 if (swiper.positions.current - swiper.positions.start != 0) {
-                    event.preventDefault();
                     return false;
-                }
+                }   
                 var transform = swiper.getWrapperTranslate('x');
                 var instance = transform - previousX;
                 previousX = transform;
-                console.log(instance);
+                console.log("instance:" +instance);
                 var index = swiper.activeIndex;
                 var $facer = $(".facer" + index), per = (transform + (swiper.width * index)) / swiper.width, $facel = $(".facel" + index);
-                console.log(transform);
+                console.log("transform:"+transform);
                 if ((index + 1) < 6 && instance < 0) {
                     var $nrface = $(".facer" + (index + 1)), $nlface = $(".facel" + (index + 1));
                     $nrface.show();
