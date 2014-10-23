@@ -1,4 +1,7 @@
-
+html, body, .swiper-container {
+    height:100%;
+    position:relative;
+}
 .swiper-parent {
 	max-width: 414px;
 }
