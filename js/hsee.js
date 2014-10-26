@@ -1,6 +1,228 @@
 var hsee = {
     bind : function() {
-
+        $(".entranceButton").click(function(){
+           $(".resourceEntrance").hide();
+           $(".resourceCategory").show();
+           $(".entranceButton img").removeClass("scaleo"); 
+           $(".page12").addClass("page12background");
+           $(".recruitButtons img").addClass("scaleo");
+        });
+        $(".recruitproductbtn").click(function(){
+            $(".resourceCategory").hide();
+            $(".resourceproductdetail").show();
+            hsee.initProductsilder();
+        });
+         $(".recruitleaderbtn").click(function(){
+            $(".resourceCategory").hide();
+            $(".resourceleadertdetail").show();
+            hsee.initLeadersidler();            
+         });
+         $(".recruitengineerbtn").click(function(){
+            $(".resourceCategory").hide();
+            $(".resourceengineertdetail").show();
+            hsee.initEngineersilder();
+         });
+         $(".recruitquit").click(function(e){
+            var $target = $(e.target);
+            $target.closest(".recruitquit").parent().hide();
+            $(".resourceCategory").show();              
+         });  
+         $(".contactletter").click(function(){
+             $(".contactinfooverlay").show();
+         });
+         $(".contactinfooverlay").click(function(){
+             $(".contactinfooverlay").hide();
+         });
+    },
+    initProductsilder :function(){
+        var swiperproduct = new Swiper('.swiperproductmen', {
+            mode : 'horizontal',
+            slidesPerView : 1,
+            speed : 400,
+            onSlideChangeStart :function(swiper, direction){
+               console.log(swiper.getWrapperTranslate('x'));
+                var index = swiper.activeIndex+1, offset = 0;
+                var $hideHuman = $(".humanOpacity"); 
+                for (i=0;i<$hideHuman.length;i++){
+                    var current = $($hideHuman[i]).css('left');
+                    current = current.replace(/px/, "");
+                    for(j=i+1;j<$hideHuman.length;j++){
+                        var next = $($hideHuman[j]).css('left');
+                        next = next.replace(/px/, "");
+                        if(next < current){
+                            var p = $hideHuman[i];
+                            $hideHuman[i] = $hideHuman[j];
+                            $hideHuman[j] = p;
+                            current = next;
+                        }
+                    }
+                }
+                if ((swiper.positions.current - swiper.positions.start) < 0 && index <=3) {
+                     $(".producthumanactive").css({
+                        'left':'-20%',
+                    });
+                     $(".producthumanactive").addClass("humanOpacity");
+                     $(".producthuman"+(index-1)).removeClass("producthumanactive");                      
+                     $($hideHuman[$hideHuman.length-1]).css('left',0);
+                     $($hideHuman[$hideHuman.length-1]).removeClass("humanOpacity");
+                     $($hideHuman[$hideHuman.length-1]).addClass("producthumanactive");
+                    for (i=0;i<$hideHuman.length-1;i++){
+                        var current = $($hideHuman[i]).css('left');
+                        var myleft = $($hideHuman[i]).position().left / $($hideHuman[i]).parent().width();
+                         offset = ((myleft +0.4)*100)+'%';
+                        $($hideHuman[i]).css({
+                            'left' : offset
+                        });
+                        console.log($($hideHuman[i]).css('left'));
+                    }               
+                }else if ((swiper.positions.current - swiper.positions.start) > 0 && index >=1) {
+                    $(".producthumanactive").css({
+                        'left':'20%',
+                    });
+                    $(".producthumanactive").addClass("humanOpacity");
+                    $(".producthuman"+(index+1)).removeClass("producthumanactive");                    
+                    $($hideHuman[0]).css('left',0);
+                    $($hideHuman[0]).removeClass("humanOpacity");
+                    $($hideHuman[0]).addClass("producthumanactive");                    
+                    for (i=1;i<$hideHuman.length;i++){
+                        var current = $($hideHuman[i]).css('left');
+                        var myleft = $($hideHuman[i]).position().left / $($hideHuman[i]).parent().width();
+                         offset = ((myleft - 0.4)*100)+'%';
+                        $($hideHuman[i]).css({
+                            'left' : offset
+                        });
+                        console.log($($hideHuman[i]).css('left'));
+                    }
+                }                                  
+            }
+        });        
+    },
+    initLeadersidler:function(){
+        var swiperleader = new Swiper('.swiperleadermen', {
+            mode : 'horizontal',
+            slidesPerView : 1,
+            speed : 400,
+            onSlideChangeStart :function(swiper, direction){
+               console.log(swiper.getWrapperTranslate('x'));
+                var index = swiper.activeIndex+1, offset = 0;
+                var $hideHuman = $(".leaderhumanOpacity"); 
+                for (i=0;i<$hideHuman.length;i++){
+                    var current = $($hideHuman[i]).css('left');
+                    current = current.replace(/px/, "");
+                    for(j=i+1;j<$hideHuman.length;j++){
+                        var next = $($hideHuman[j]).css('left');
+                        next = next.replace(/px/, "");
+                        if(next < current){
+                            var p = $hideHuman[i];
+                            $hideHuman[i] = $hideHuman[j];
+                            $hideHuman[j] = p;
+                            current = next;
+                        }
+                    }
+                }
+                if ((swiper.positions.current - swiper.positions.start) < 0 && index <=3) {
+                     $(".leaderhumanactive").css({
+                        'left':'-20%',
+                    });
+                     $(".leaderhumanactive").addClass("leaderhumanOpacity");
+                     $(".leaderhuman"+(index-1)).removeClass("leaderhumanactive");                      
+                     $($hideHuman[$hideHuman.length-1]).css('left',0);
+                     $($hideHuman[$hideHuman.length-1]).removeClass("leaderhumanOpacity");
+                     $($hideHuman[$hideHuman.length-1]).addClass("leaderhumanactive");
+                    for (i=0;i<$hideHuman.length-1;i++){
+                        var current = $($hideHuman[i]).css('left');
+                        var myleft = $($hideHuman[i]).position().left / $($hideHuman[i]).parent().width();
+                         offset = ((myleft +0.4)*100)+'%';
+                        $($hideHuman[i]).css({
+                            'left' : offset
+                        });
+                        console.log($($hideHuman[i]).css('left'));
+                    }               
+                }else if ((swiper.positions.current - swiper.positions.start) > 0 && index >=1) {
+                    $(".leaderhumanactive").css({
+                        'left':'20%',
+                    });
+                    $(".leaderhumanactive").addClass("leaderhumanOpacity");
+                    $(".leaderhuman"+(index+1)).removeClass("leaderhumanactive");                    
+                    $($hideHuman[0]).css('left',0);
+                    $($hideHuman[0]).removeClass("leaderhumanOpacity");
+                    $($hideHuman[0]).addClass("leaderhumanactive");                    
+                    for (i=1;i<$hideHuman.length;i++){
+                        var current = $($hideHuman[i]).css('left');
+                        var myleft = $($hideHuman[i]).position().left / $($hideHuman[i]).parent().width();
+                         offset = ((myleft - 0.4)*100)+'%';
+                        $($hideHuman[i]).css({
+                            'left' : offset
+                        });
+                        console.log($($hideHuman[i]).css('left'));
+                    }
+                }                                  
+            }
+        });          
+    },
+    initEngineersilder:function(){
+         var swiperengineer = new Swiper('.swiperengineermen', {
+            mode : 'horizontal',
+            slidesPerView : 1,
+            speed : 400,
+            onSlideChangeStart :function(swiper, direction){
+               console.log(swiper.getWrapperTranslate('x'));
+                var index = swiper.activeIndex+1, offset = 0;
+                var $hideHuman = $(".enghumanOpacity"); 
+                for (i=0;i<$hideHuman.length;i++){
+                    var current = $($hideHuman[i]).css('left');
+                    current = current.replace(/px/, "");
+                    for(j=i+1;j<$hideHuman.length;j++){
+                        var next = $($hideHuman[j]).css('left');
+                        next = next.replace(/px/, "");
+                        if(next < current){
+                            var p = $hideHuman[i];
+                            $hideHuman[i] = $hideHuman[j];
+                            $hideHuman[j] = p;
+                            current = next;
+                        }
+                    }
+                }
+                if ((swiper.positions.current - swiper.positions.start) < 0 && index <=4) {
+                     $(".enghumanactive").css({
+                        'left':'-20%',
+                    });
+                                                              
+                     $(".enghumanactive").addClass("enghumanOpacity");  
+                     $(".enghuman"+(index-1)).removeClass("enghumanactive");                   
+                     $($hideHuman[$hideHuman.length-1]).css('left',0);
+                     $($hideHuman[$hideHuman.length-1]).removeClass("enghumanOpacity");
+                     $($hideHuman[$hideHuman.length-1]).addClass("enghumanactive");
+                    for (i=0;i<$hideHuman.length-1;i++){
+                        var current = $($hideHuman[i]).css('left');
+                        var myleft = $($hideHuman[i]).position().left / $($hideHuman[i]).parent().width();
+                         offset = ((myleft +0.2)*100)+'%';
+                        $($hideHuman[i]).css({
+                            'left' : offset
+                        });
+                        console.log($($hideHuman[i]).css('left'));
+                    }               
+                }else if ((swiper.positions.current - swiper.positions.start) > 0 && index >=1) {
+                    $(".enghumanactive").css({
+                        'left':'20%',
+                    });
+                    $(".enghumanactive").addClass("enghumanOpacity");  
+                    $(".enghuman"+(index+1)).removeClass("enghumanactive");                                      
+                    $($hideHuman[0]).css('left',0);
+                    $($hideHuman[0]).removeClass("enghumanOpacity");
+                    $($hideHuman[0]).addClass("enghumanactive");                    
+                    for (i=1;i<$hideHuman.length;i++){
+                        var current = $($hideHuman[i]).css('left');
+                        var myleft = $($hideHuman[i]).position().left / $($hideHuman[i]).parent().width();
+                         offset = ((myleft - 0.2)*100)+'%';
+                        $($hideHuman[i]).css({
+                            'left' : offset
+                        });
+                        console.log($($hideHuman[i]).css('left'));
+                    }
+                }                                  
+            }
+        });          
     },
     ready : function() {
         setTimeout(function() {
