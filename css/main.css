@@ -890,11 +890,11 @@ to {
 }
 .officeHead{
 	margin-left: 75%;
-	padding-top:7%;
 	width: 100%;
 }
 .officeHead img{
 	width: 47%;
+	margin-top: 6%;
 }
 .officeTitle{
 	margin-left: 75%;
