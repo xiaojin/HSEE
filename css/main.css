@@ -4,6 +4,7 @@ html, body, .swiper-container {
 }
 .swiper-parent {
 	max-width: 414px;
+	min-height: 504px;
 }
 
 body {
@@ -14,7 +15,9 @@ body {
 	/*background: rgba(254,184,41,1);*/
 	background: wheat;
 }
-
+.pages{
+	min-height:504px;
+}
 .swiper-slide {
 	position: relative;
 }
