@@ -236,6 +236,11 @@ var hsee = {
                 mode : 'vertical',
                 speed : 750,
                 slidesPerView : 1,
+                onSlideNext: function(swiper) {
+                    $('.swiper-slide-active .lazy').each(function(){
+                        $(this).attr('src',$(this).attr('img-url'));
+                    });
+                },
                 onSlideChangeStart : function(swiper, direction) {
                     if (swiper.activeIndex === 1 && direction === "next") {
                         $(".block-recruit").addClass("recruitToNext");
