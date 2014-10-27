@@ -238,7 +238,7 @@ var hsee = {
                 slidesPerView : 1,
                 onSlideNext: function(swiper) {
                     $('.swiper-slide-active .lazy').each(function(){
-                        $(this).attr('src',$(this).attr('img-url'));
+                        $(this).attr('src',$(this).attr('image-url'));
                     });
                 },
                 onSlideChangeStart : function(swiper, direction) {
