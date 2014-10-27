@@ -245,7 +245,14 @@ var hsee = {
                     if (swiper.activeIndex === 1 && direction === "next") {
                         $(".block-recruit").addClass("recruitToNext");
                     }
-
+                    if(swiper.activeIndex === 2){
+                        $(".intro-title img").addClass("anintro-title");
+                        $(".intro-title .intro-higher").addClass("anintro-higher");
+                    } 
+                    if(swiper.activeIndex === 3) {
+                        $(".charCircle-center").addClass("anCharCircle-center");
+                        $(".charCircle-right ").addClass("anCharCircle-right");
+                    }    
                 },
                 onTouchMove : function(swiper) {
                     var offsetY = -swiper.getWrapperTranslate('y'), silderHalfHeighter = $(".page1").height() * 0.3;
@@ -254,6 +261,7 @@ var hsee = {
                             $(".block-recruit").addClass("recruitToNext");
                         };
                     }
+
                 },
                 onSlideChangeEnd : function(swiper, direction) {
                     console.log(swiper.activeIndex);
@@ -272,18 +280,19 @@ var hsee = {
                         $(".officeNotebook").removeClass("anOfficeNotebook");
                         $(".officeMouse").removeClass("anOfficeMouse");
                     }
-                    if(swiper.activeIndex === 3) {
-                        $(".charCircle-center").addClass("anCharCircle-center");
-                        $(".charCircle-right ").addClass("anCharCircle-right");
-                    }   else {
+                    if(swiper.activeIndex !== 3)  {
                         $(".charCircle-center").removeClass("anCharCircle-center");
                         $(".charCircle-right ").removeClass("anCharCircle-right");                        
-                    }                
+                    }
+                    if(swiper.activeIndex !== 2) {
+                        $(".intro-title img").removeClass("anintro-title");
+                        $(".intro-title .intro-higher").removeClass("anintro-higher");
+                    }   
                     if (swiper.activeIndex === 1) {
                         $(".block-recruit").removeClass("recruitToNext");
                          previousX=1;
                         if(!humanFlipped){
-                            swiperNested1.params.autoplay = 300;
+                            swiperNested1.params.autoplay = 500;
                             swiperNested1.startAutoplay();      
                              humanFlipped =true;                   
                         } 
@@ -357,6 +366,9 @@ var hsee = {
                         $facer.hide();
                         $facel.hide();
                     }, 200);
+                    if(index==4){
+                        $(".page2 .pullup").show();
+                    }
                 } else if ((index - 1) >= 0 && instance > 0) {
                     var $prface = $(".facer" + (index - 1)), $plface = $(".facel" + (index - 1));
                     $plface.show();
@@ -392,6 +404,9 @@ var hsee = {
                     var offsetX = "translateX(" + (-per * 20 - (20 * index)) + "%)";
                     console.log(offsetX);
                     $mileIcons.css('-webkit-transform', offsetX);
+                    if(index ==4){
+                        $(".page6 .pullup").show();
+                    }
                 } else if ((swiper.positions.current - swiper.positions.start) > 0 && (index - 1) >= 0) {
                     var offsetX = "translateX(" + (per * 20 - (20 * index)) + "%)";
                     $mileIcons.css('-webkit-transform', offsetX);
@@ -411,19 +426,21 @@ var hsee = {
                 });
             }
         });
-
-        $("#top").click(function() {
-            $(".first-class").show();
-            $(".first-class").animate({
-                top : 0
-            });
-
-            setTimeout(function() {
-                swiperParent.swipeTo(0, 0, true);
-                $(".first-class").hide();
-            }, 2000);
-
+        $(".contacttopbutton").click(function(){
+            swiperParent.swipeTo(0, 0, true);
         });
+        // $("#top").click(function() {
+            // $(".first-class").show();
+            // $(".first-class").animate({
+                // top : 0
+            // });
+// 
+            // setTimeout(function() {
+                // swiperParent.swipeTo(0, 0, true);
+                // $(".first-class").hide();
+            // }, 2000);
+// 
+        // });
 
     }
 };
