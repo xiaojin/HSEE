@@ -1009,105 +1009,212 @@ to {
 }
 
 /*page10 started*/
-.page10{
+
+.page10 {
 	background: rgb(95,228,238);
+	
 }
-.hseeEye{
-	position:relative;
-	width: 100%;
-	margin-left: -22%;
-	margin-top: 27%;
+.hseeEye {
+	position: absolute;
+	width: 168%;
+	/*margin-left: 8%;*/
+	left: 8%;
+	top:-5%;
 }
 
-.eyeCenter{
-	width:145%;
-	position: relative;
-	z-index: 1;
+.swiper-slide-active .hseeEye {
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	animation: 30s linear infinite anEyeCenter;
+	-webkit-animation: 30s linear infinite anEyeCenter;
+	-moz-animation: 30s linear infinite anEyeCenter;
+	-o-animation: 30s linear infinite anEyeCenter;
+	-webkit-transform-origin: 50% 50%;
+	-ms-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
 }
-.eyeCenter img{
-	width:100%;
-}
-.eyeitems{
+@keyframes anEyeCenter  { 0% {transform:rotate(0deg);} 100% {transform:rotate(360deg);}}
+@-webkit-keyframes anEyeCenter   { 0% {-webkit-transform:rotate(0deg);} 100% {-webkit-transform:rotate(360deg);}}
+@-moz-keyframes anEyeCenter { 0% {-moz-transform:rotate(0deg);} 100% {-moz-transform:rotate(360deg);}}
+@-o-keyframes anEyeCenter   { 0% {-o-transform:rotate(0deg);} 100% {-o-transform:rotate(360deg);}}
+
+@keyframes anEyeItemCenter  { 0% {transform:rotate(360deg);} 100% {transform:rotate(0deg);}}
+@-webkit-keyframes anEyeItemCenter   { 0% {-webkit-transform:rotate(360deg);} 100% {-webkit-transform:rotate(0deg);}}
+@-moz-keyframes anEyeItemCenter { 0% {-moz-transform:rotate(360deg);} 100% {-moz-transform:rotate(0deg);}}
+@-o-keyframes anEyeItemCenter   { 0% {-o-transform:rotate(360deg);} 100% {-o-transform:rotate(0deg);}}
+
+.eyeCenter {
 	width: 100%;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+}
+
+.eyeCenterback {
+	width: 100%;
+	z-index: 1;
+	opacity: 0;
+}
+.eyeCenterback img {
+	width: 100%;
+}
+
+.eyeCenter img {
+	width: 100%;
+}
+.eyeitems {
+	width: 60%;
+	position: absolute;
+}
+.swiper-slide-active  .eyecircle {
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	animation: 30s linear infinite anEyeItemCenter;
+	-webkit-animation: 30s linear infinite anEyeItemCenter;
+	-moz-animation: 30s linear infinite anEyeItemCenter;
+	-o-animation: 30s linear infinite anEyeItemCenter;
+}
+.eyeblue {
+	top: 26%;
+	left: -17%;
+}
+.eyeblue img {
+	width: 14%;
+}
+.eyeblueline {
+	top: 30%;
+	z-index: 0;
+	left: -5%;
+}
+.eyeblueline img {
+	width: 40%;
+}
+.eyebluetitle {
+	width: 100%;
+	top: 42%;
+	left: -7%;
 	position: absolute;
 }
 
-.eyeblue{
-	top: 10%;
-	left: -44%;
+.eyebluetitle img {
+	width: 29.5%;
 }
-.eyeblue img{
-	width: 29.3%;
+
+.eyered {
+	top: 9%;
+	left: 41%;
 }
-.eyeblueline{
-	top: 16%;
-	
-	z-index: 0;
-}
-.eyeblueline img{
-	width: 40%;
-}
-.eyered{
-	top: -11%;
-	left: 28%;	
-}
-.eyered img{
-	width: 30.6%;
+.eyered img {
+	width: 14%;
 }
 .eyeredline {
-	top: -3%;
-	left: 21%;	
+	top: 16%;
+	left: 31%;
 	z-index: 0;
 }
-.eyeredline img{
+.eyeredline img {
 	width: 27.2%;
-	
+}
+
+.eyeredtitle {
+	width: 100%;
+	top: 39%;
+	left: -8%;
+	position: absolute;
+}
+
+.eyeredtitle img {
+	width: 29.5%;
 }
 .eyegray {
 	z-index: 0;
-	top: 22%;
-	left: 84%;
+	top: 41%;
+	left: 64%;
 }
-.eyegray img{
-	width: 29.7%;
+.eyegray img {
+	width: 14%;
 }
-.eyegrayline{
+.eyegrayline {
 	z-index: 0;
-	top: 28%;
-	left: 67%;
+	top: 45.5%;
+	left: 50%;
 }
-.eyegrayline img{
+.eyegrayline img {
 	width: 40.6%;
 }
-.eyegreen{
-	top: 74%;
-	left: 46%;
+
+.eyegraytitle {
+	width: 100%;
+	top: 39%;
+	left: -8%;
+	position: absolute;
 }
-.eyegreen img{
-	width: 29.7%;
+
+.eyegraytitle img {
+	width: 29.5%;
 }
-.eyegreenline{
+.eyegreen {
+	top: 83%;
+	left: 38.5%;
+}
+.eyegreen img {
+	width: 14%;
+}
+.eyegreenline {
 	z-index: 0;
-	top: 54%;
-	left: 41%;
+	top: 63%;
+	left: 31%;
 }
-.eyegreenline img{
+.eyegreenline img {
 	width: 19%;
 }
-.eyeyellow{
-	top: 61%;
-	left: -41%;
+.eyegreentitle {
+	width: 100%;
+	top: 35%;
+	left: -8%;
+	position: absolute;
 }
-.eyeyellow img{
-	width: 33.7%;
+
+.eyegreentitle img {
+	width: 29.5%;
 }
-.eyeyellowline{
-	top: 57%;
+.eyeyellow {
+	top: 69%;
+	left: -16%;
+}
+.eyeyellow img {
+	width: 14%;
+}
+.eyeyellowline {
+	top: 64%;
 	z-index: 0;
+	left: -6%;
 }
-.eyeyellowline img{
+.eyeyellowline img {
 	width: 37.5%;
 }
+
+.eyeyellowtitle {
+	position: absolute;
+	width: 100%;
+	top: 39%;
+	left: -8%;
+}
+
+.eyeyellowtitle img {
+	width: 29.5%;
+}
+
+.eyelogo{
+	top: 41%;
+	z-index: 2;
+	left: 20%;
+}
+
+.eyelogo img{
+	width: 27.7%;
+}
+
 
 /*page11 started*/
 .page11{
