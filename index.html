@@ -24,6 +24,195 @@
 		margin: 50% auto 0;
 		width: 10%;
 	}
+	
+	body {
+		margin: 0;
+		font-family: Arial, Helvetica, sans-serif;
+		background: wheat;
+	}
+	
+	html, body, .swiper-container {
+	    height:100%;
+	    position:relative;
+	}
+	.swiper-parent {
+		max-width: 414px;
+	}
+	.swiper-container {
+		width: 100%;
+		height: 100%;
+		color: #fff;
+		text-align: center;
+	}
+	.swiper-human {
+		width: 100%;
+	}
+	
+	.swiper-slide {
+		position: relative;
+	}
+	/*page1 started*/
+	
+	/*lineWithCircle upper*/
+	@keyframes anCircleUp   { 0% {transform:translate(0%,0%);} 25% {transform:translate(-5%,5%);} 50% {transform:translate(-12%,2%);} 75% {transform:translate(-24%,48%);} 100% {transform:translate(-32%,64%);}}
+	@-webkit-keyframes anCircleUp   { 0% {-webkit-transform:translate(0%,0%);} 25% {-webkit-transform:translate(-10%,10%);} 50% {-webkit-transform:translate(-20%,20%);} 75% {-webkit-transform:translate(-30%,30%);} 100% {-webkit-transform:translate(-40%,40%);} }
+	@-moz-keyframes anCircleUp { 0% {-moz-transform:translate(0%,0%);} 25% {-moz-transform:translate(-6%,1%);} 50% {-moz-transform:translate(-16%,32%);} 75% {-moz-transform:translate(-24%,48%);} 100% {-moz-transform:translate(-32%,64%);}  }
+	@-o-keyframes anCircleUp    { 0% {-o-transform:translate(0%,0%);} 25% {-o-transform:translate(-6%,1%);} 50% {-o-transform:translate(-16%,32%);} 75% {-o-transform:translate(-24%,48%);} 100% {-o-transform:translate(-32%,64%);}  }
+	.line-circleUp {
+		position: absolute;
+		width: 45%;
+		top: -30%;
+		left: 30%;
+		animation: 3s linear 1s alternate none infinite anCircleUp;
+		-webkit-animation: 3s linear 1s alternate none infinite anCircleUp;
+		-moz-animation: 3s linear 1s alternate none infinite anCircleUp;
+		-o-animation: 3s linear 1s alternate none infinite anCircleUp;
+	}
+	.line-circleUp img {
+		width: 100%;
+	}
+	/*Thin liner upper*/
+	@keyframes anlineUp   { 0% {transform:translate(0%,0%);} 25% {transform:translate(-8%,16%);} 50% {transform:translate(-16%,32%);} 75% {transform:translate(-24%,48%);} 100% {transform:translate(-32%,64%);}}
+	@-webkit-keyframes anlineUp   { 0% {-webkit-transform:translate(0%,0%);} 25% {-webkit-transform:translate(-8%,16%);} 50% {-webkit-transform:translate(-16%,32%);} 75% {-webkit-transform:translate(-24%,48%);} 100% {-webkit-transform:translate(-32%,64%);} }
+	@-moz-keyframes anlineUp { 0% {-moz-transform:translate(0%,0%);} 25% {-moz-transform:translate(-8%,16%);} 50% {-moz-transform:translate(-16%,32%);} 75% {-moz-transform:translate(-24%,48%);} 100% {-moz-transform:translate(-32%,64%);}  }
+	@-o-keyframes anlineUp    { 0% {-o-transform:translate(0%,0%);} 25% {-o-transform:translate(-8%,16%);} 50% {-o-transform:translate(-16%,32%);} 75% {-o-transform:translate(-24%,48%);} 100% {-o-transform:translate(-32%,64%);}  }
+	.thin-line {
+		position: absolute;
+		width: 80%;
+		top: -20%;
+		left: 60%;
+		animation: 2s linear 2s alternate none infinite anlineUp;
+		-webkit-animation: 2s linear 2s alternate none infinite anlineUp;
+		-moz-animation: 2s linear 2s alternate none infinite anlineUp;
+		-o-animation: 2s linear 2s alternate none infinite anlineUp;
+	}
+	.thin-line img {
+		width: 50%;
+	}
+	/*Thin retangle larger*/
+	@keyframes anRecLarge  { 0% {transform:translate(0%,0%);} 25% {transform:translate(-10%,10%);} 50% {transform:translate(-20%,20%);} 75% {transform:translate(-40%,40%);} 100% {transform:translate(-50%,50%);}  }
+	@-webkit-keyframes anRecLarge   { 0% {-webkit-transform:translate(0%,0%);} 25% {-webkit-transform:translate(-10%,10%);} 50% {-webkit-transform:translate(-20%,20%);} 75% {-webkit-transform:translate(-40%,40%);} 100% {-webkit-transform:translate(-50%,50%);}  }
+	@-moz-keyframes anRecLarge  { 0% {-moz-transform:translate(0%,0%);} 25% {-moz-transform:translate(-10%,10%);} 50% {-moz-transform:translate(-20%,20%);} 75% {-moz-transform:translate(-40%,40%);} 100% {-moz-transform:translate(-50%,50%);}  }
+	@-o-keyframes anRecLarge  { 0% {-o-transform:translate(0%,0%);} 25% {-o-transform:translate(-10%,10%);} 50% {-o-transform:translate(-20%,20%);} 75% {-o-transform:translate(-40%,40%);} 100% {-o-transform:translate(-50%,50%);}  }
+	.rec-long {
+		position: absolute;
+		width: 80%;
+		top: 20%;
+		left: -20%;
+		animation: 3s linear 1s alternate none infinite anRecLarge;
+		-webkit-animation: 3s linear 1s alternate none infinite anRecLarge;
+		-moz-animation: 3s linear 1s alternate none infinite anRecLarge;
+		-o-animation: 3s linear 1s alternate none infinite anRecLarge;
+	}
+	.rec-long img {
+		width: 100%;
+	}
+	
+	/*Thin retangle small*/
+	@keyframes anRecSmall   { 0% {transform:translate(0%,0%);} 25% {transform:translate(-4%,10%);} 50% {transform:translate(-8%,20%);} 75% {transform:translate(-16%,40%);} 100% {transform:translate(-20%,50%);}}
+	@-webkit-keyframes anRecSmall   { 0% {-webkit-transform:translate(0%,0%);} 25% {-webkit-transform:translate(-4%,10%);} 50% {-webkit-transform:translate(-8%,20%);} 75% {-webkit-transform:translate(-16%,40%);} 100% {-webkit-transform:translate(-20%,50%);}}
+	@-moz-keyframes anRecSmall { 0% {-moz-transform:translate(0%,0%);} 25% {-moz-transform:translate(-4%,10%);} 50% {-moz-transform:translate(-8%,20%);} 75% {-moz-transform:translate(-16%,40%);} 100% {-moz-transform:translate(-20%,50%);}}
+	@-o-keyframes anRecSmall   { 0% {-o-transform:translate(0%,0%);} 25% {-o-transform:translate(-4%,10%);} 50% {-o-transform:translate(-8%,20%);} 75% {-o-transform:translate(-16%,40%);} 100% {-o-transform:translate(-20%,40%);}}
+	.rec-short {
+		position: absolute;
+		width: 60%;
+		top: 60%;
+		left: -24%;
+		animation: 1s linear 1s alternate none infinite anRecSmall;
+		-webkit-animation: 1s linear 1s alternate none infinite anRecSmall;
+		-moz-animation: 1s linear 1s alternate none infinite anRecSmall;
+		-o-animation: 1s linear 1s alternate none infinite anRecSmall;
+	}
+	.rec-short img {
+		width: 50%;
+	}
+	
+	/*lineWithCircle down*/
+	@keyframes anCircleDown   { 0% {transform:translate(0%,0%);} 25% {transform:translate(-8%,16%);} 50% {transform:translate(-16%,32%);} 75% {transform:translate(-24%,48%);} 100% {transform:translate(-32%,64%);}}
+	@-webkit-keyframes anCircleDown   { 0% {-webkit-transform:translate(0%,0%);} 25% {-webkit-transform:translate(-8%,16%);} 50% {-webkit-transform:translate(-16%,32%);} 75% {-webkit-transform:translate(-24%,48%);} 100% {-webkit-transform:translate(-32%,64%);} }
+	@-moz-keyframes anCircleDown { 0% {-moz-transform:translate(0%,0%);} 25% {-moz-transform:translate(-8%,16%);} 50% {-moz-transform:translate(-16%,32%);} 75% {-moz-transform:translate(-24%,48%);} 100% {-moz-transform:translate(-32%,64%);}  }
+	@-o-keyframes anCircleDown    { 0% {-o-transform:translate(0%,0%);} 25% {-o-transform:translate(-8%,16%);} 50% {-o-transform:translate(-16%,32%);} 75% {-o-transform:translate(-24%,48%);} 100% {-o-transform:translate(-32%,64%);}  }
+	.line-circleDown {
+		position: absolute;
+		width: 80%;
+		top: 80%;
+		left: -40%;
+		animation: 4s linear 1s alternate none infinite anCircleDown;
+		-webkit-animation: 4s linear 1s alternate none infinite anCircleDown;
+		-moz-animation: 4s linear 1s alternate none infinite anCircleDown;
+		-o-animation: 4s linear 1s alternate none infinite anCircleDown;
+	}
+	.line-circleDown img {
+		width: 50%;
+	}
+	/*block small*/
+	@keyframes anBlockSmall  { 0% {transform:rotateZ(0deg);} 100% {transform:rotateZ(-360deg);}}
+	@-webkit-keyframes anBlockSmall   { 0% {-webkit-transform:rotateZ(0deg);} 100% {-webkit-transform:rotateZ(-360deg);}}
+	@-moz-keyframes anBlockSmall { 0% {-moz-transform:rotateZ(0deg);} 100% {-moz-transform:rotateZ(-360deg);}}
+	@-o-keyframes anBlockSmall   { 0% {-o-transform:rotateZ(0deg);} 100% {-o-transform:rotateZ(-360deg);}}
+	.block-small {
+		position: absolute;
+		-webkit-transform-origin: 1% 0;
+		width: 100%;
+		top: 52%;
+		left: 62%;
+		animation: 4s linear 1s infinite anBlockSmall;
+		-webkit-animation: 4s linear 1s infinite anBlockSmall;
+		-moz-animation: 4s linear 1s infinite anBlockSmall;
+		-o-animation: 4s linear 1s infinite anBlockSmall;
+	}
+	.block-small img {
+		width: 5%;
+	}
+	
+	/*block large*/
+	@keyframes anBlockLarge  { 0% {transform:rotateZ(0deg);} 100% {transform:rotateZ(360deg);}}
+	@-webkit-keyframes anBlockLarge   { 0% {-webkit-transform:rotateZ(0deg);} 100% {-webkit-transform:rotateZ(360deg);}}
+	@-moz-keyframes anBlockLarge { 0% {-moz-transform:rotateZ(0deg);} 100% {-moz-transform:rotateZ(360deg);}}
+	@-o-keyframes anBlockLarge   { 0% {-o-transform:rotateZ(0deg);} 100% {-o-transform:rotateZ(360deg);}}
+	.block-large {
+		position: absolute;
+		-webkit-transform-origin: 1% 0;
+		width: 150%;
+		top: 50%;
+		left: 62%;
+		animation: 8s linear 2s infinite anBlockLarge;
+		-webkit-animation: 8s linear 2s infinite anBlockLarge;
+		-moz-animation: 8s linear 2s infinite anBlockLarge;
+		-o-animation: 8s linear 2s infinite anBlockLarge;
+	}
+	.block-large img {
+		width: 5%;
+	}
+	/*Block recruit */
+	@keyframes anBlockRecruit   { 0% {transform:translateY(3%);} 100% {transform:translateY(0%);} }
+	@-webkit-keyframes anBlockRecruit    { 0% {-webkit-transform:translateY(3%);}  100% {-webkit-transform:translateY(0%);} }
+	@-moz-keyframes anBlockRecruit  { 0% {-moz-transform:translateY(3%);}  100% {-moz-transform:translateY(0%);} }
+	@-o-keyframes anBlockRecruit    { 0% {-o-transform:translateY(3%);} 100% {-o-transform:translateY(0%);} }
+	
+	@keyframes anBlockRecruitNext     { 0% {transform:translateY(0%);} 25% {transform:translateY(34%);} 50% {transform:translateY(-164%);} 75% {transform:translateY(-164%);} 100% {transform:translateY(0%);}  }
+	@-webkit-keyframes anBlockRecruitNext   { 0% {-webkit-transform:translateY(0%);} 25% {-webkit-transform:translateY(34%);} 50% {-webkit-transform:translateY(-164%);} 75% {-webkit-transform:translateY(-164%);} 100% {transform:translateY(0%);}  }
+	@-moz-keyframes anBlockRecruitNext   { 0% {-moz-transform:translateY(0%);} 25% {-moz-transform:translateY(34%);} 50% {-moz-transform:translateY(-164%);} 75% {-moz-transform:translateY(-164%);} 100% {-moz-transform:translateY(0%);}  }
+	@-o-keyframes anBlockRecruitNext   { 0% {-o-transform:translateY(0%);} 25% {-o-transform:translateY(34%);} 50% {-o-transform:translateY(-164%);} 75% {-o-transform:translateY(-164%);} 100% {-o-transform:translateY(0%);}  }
+	.block-recruit {
+		position: absolute;
+		width: 100%;
+		top: 15%;
+		animation: 2s linear 1s alternate none infinite anBlockRecruit;
+		-webkit-animation: 2s linear 1s alternate none infinite anBlockRecruit;
+		-moz-animation: 2s linear 1s alternate none infinite anBlockRecruit;
+		-o-animation: 2s linear 1s alternate none infinite anBlockRecruit;
+	}
+	.recruitToNext {
+		animation: 1s linear 0s alternate none 1 anBlockRecruitNext;
+		-webkit-animation: 1s linear 0s alternate none 1 anBlockRecruitNext;
+		-moz-animation: 1s linear 0s alternate none 1 anBlockRecruitNext;
+		-o-animation: 1s linear 0s alternate none 1 anBlockRecruitNext;
+	}
+	.block-recruit img {
+		width: 62%;
+	}
+	
 	</style>
   </head>
   <body>
@@ -669,7 +858,7 @@
 						</div>					
 					</div>	      				
 	      		</div>
-				<div class="contactinfooverlay">
+				<div class="contactinfooverlay" style="display:none;">
 					<div class="contactinfotitle">
 						<p>打开微信</p>
 						<p>搜索chinahsee公共账号</p>
