@@ -596,22 +596,6 @@ to {
 	-o-animation: 1s linear alternate none infinite anMileRArrow;
 }
 
-.mileCircleShadowL {
-	width: 56%;
-	top: 44%;
-}
-.mileCircleShadowL img {
-	width: 100%;
-}
-
-.mileCircleShadowD {
-	width: 66%;
-	top: 44%;
-}
-
-.mileCircleShadowD img {
-	width: 100%;
-}
 .mileCircle {
 	top: 28%;
 }
