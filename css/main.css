@@ -301,20 +301,65 @@ body {
 .intro-title {
 	margin-top: 14.5%;
 }
-.intro-title img {
+.intro-title div {
+	width: 62%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 12%;
+	color: rgb(39,68,42);
+	text-align: center;
+}
+.intro-title div:first-child{
+	font-size: 4.2em;
+	font-weight: bold;
+}
+.intro-title div:nth-child(2){
+	border-bottom: 1px solid rgb(56,110,120);
+	margin-top: 12%;
+	width: 60%;
+}
+.intro-title div:nth-child(3){
+	font-size: 0.6em;
+}
+.intro-title div:nth-child(4){
+	font-size: 1.5em;
+	font-weight: bold;
+	margin-top: 12%
+}
+
+.intro-title div:nth-child(5){
+	border-bottom: 1px solid rgb(51,94,105);
+	margin-top: 11%;
+}
+.intro-title div:nth-child(6){
+	font-size: 0.9em;
+	margin-top: 11%;
+}
+
+.intro-title .intro-higher {
+	margin-top: 11%;
+}
+/*.intro-title img {
 	width: 62%;
 	margin-top: 12%;
 }
 .intro-title .intro-higher {
 	margin-top: 11%;
-}
-
+}*/
 .anintro-title{
 	transition: margin-top 1s;
 	-moz-transition: margin-top 1s;
 	-webkit-transition: margin-top 1s;
 	-o-transition: margin-top 1s;
 	margin-top: 2% !important;
+}
+.intro-title div:nth-child(2).anintro-title
+{
+	margin-top: -2% !important;
+}
+.intro-title div:nth-child(4).anintro-title
+{
+	margin-top: 0% !important;
 }
 .anintro-higher{
 	margin-top: 3% !important;
@@ -814,16 +859,14 @@ to {
 .locationTree img {
 	width: 75%;
 }
-.location-name {
-	width: 8%;
-	position: absolute;
-}
-
 .location-name img {
 	width: 100%;
 }
 .location-name {
-	top: -10%;
+	width: 8%;
+	position: absolute;	
+	top: -20%;
+	opacity:0;
 	transition: top 1s;
 	-moz-transition: top 1s; /* Firefox 4 */
 	-webkit-transition: top 1s; /* Safari and Chrome */
@@ -833,6 +876,7 @@ to {
 	-webkit-transition-delay: 1s;
 	-o-transition-delay: 1s;
 }
+
 .location-beijing {
 	left: 8%;
 }

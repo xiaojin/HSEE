@@ -246,7 +246,7 @@ var hsee = {
                         $(".block-recruit").addClass("recruitToNext");
                     }
                     if(swiper.activeIndex === 2){
-                        $(".intro-title img").addClass("anintro-title");
+                        $(".intro-title div").addClass("anintro-title");
                         $(".intro-title .intro-higher").addClass("anintro-higher");
                     } 
                     if(swiper.activeIndex === 3) {
@@ -265,6 +265,8 @@ var hsee = {
                 },
                 onSlideChangeEnd : function(swiper, direction) {
                     console.log(swiper.activeIndex);
+                    
+                    
                     if (swiper.activeIndex === 8) {
                         $(".officeBottle").addClass("anOfficeBottle");
                         $(".officePen").addClass("anOfficePen");
@@ -280,12 +282,17 @@ var hsee = {
                         $(".officeNotebook").removeClass("anOfficeNotebook");
                         $(".officeMouse").removeClass("anOfficeMouse");
                     }
+                     if (swiper.activeIndex === 7) {
+                        $(".location-name ").css("opacity",1);
+                     } else {
+                         $(".location-name ").css("opacity",0);
+                     }
                     if(swiper.activeIndex !== 3)  {
                         $(".charCircle-center").removeClass("anCharCircle-center");
                         $(".charCircle-right ").removeClass("anCharCircle-right");                        
                     }
                     if(swiper.activeIndex !== 2) {
-                        $(".intro-title img").removeClass("anintro-title");
+                        $(".intro-title div").removeClass("anintro-title");
                         $(".intro-title .intro-higher").removeClass("anintro-higher");
                     }   
                     if (swiper.activeIndex === 1) {
