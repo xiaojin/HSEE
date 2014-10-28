@@ -186,8 +186,7 @@ var hsee = {
                 if ((swiper.positions.current - swiper.positions.start) < 0 && index <=4) {
                      $(".enghumanactive").css({
                         'left':'-20%',
-                    });
-                                                              
+                    });                                                              
                      $(".enghumanactive").addClass("enghumanOpacity");  
                      $(".enghuman"+(index-1)).removeClass("enghumanactive");                   
                      $($hideHuman[$hideHuman.length-1]).css('left',0);
@@ -264,9 +263,7 @@ var hsee = {
 
                 },
                 onSlideChangeEnd : function(swiper, direction) {
-                    console.log(swiper.activeIndex);
-                    
-                    
+                    console.log(swiper.activeIndex);                                      
                     if (swiper.activeIndex === 8) {
                         $(".officeBottle").addClass("anOfficeBottle");
                         $(".officePen").addClass("anOfficePen");
