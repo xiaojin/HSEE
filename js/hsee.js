@@ -246,11 +246,18 @@ var hsee = {
                     }
                     if(swiper.activeIndex === 2){
                         $(".intro-title div").addClass("anintro-title");
+                        $(".intro-title img").addClass("anintro-title");
                         $(".intro-title .intro-higher").addClass("anintro-higher");
                     } 
                     if(swiper.activeIndex === 3) {
+                        $(".charac-lineUp").addClass("ancharac-lineUp");
+                        $(".charac-secHead").addClass("ancharac-secHead");
+                        $(".charac-position").addClass("ancharac-position");
+                        $(".charac-lineShort").addClass("ancharac-lineShort");
+                        $(".charac-article").addClass("ancharac-article");                       
                         $(".charCircle-center").addClass("anCharCircle-center");
-                        $(".charCircle-right ").addClass("anCharCircle-right");
+                        $(".charCircle-right").addClass("anCharCircle-right");
+                        $(".hess-charCircle").addClass("anhess-charCircle");
                     }    
                 },
                 onTouchMove : function(swiper) {
@@ -285,11 +292,19 @@ var hsee = {
                          $(".location-name ").css("opacity",0);
                      }
                     if(swiper.activeIndex !== 3)  {
-                        $(".charCircle-center").removeClass("anCharCircle-center");
-                        $(".charCircle-right ").removeClass("anCharCircle-right");                        
+                         $(".charac-lineUp").removeClass("ancharac-lineUp");
+                         $(".charac-secHead").removeClass("ancharac-secHead");
+                         $(".charac-position").removeClass("ancharac-position");
+                         $(".charac-lineShort").removeClass("ancharac-lineShort");
+                         $(".charac-article").removeClass("ancharac-article");                           
+                         $(".hess-charCircle").removeClass("anhess-charCircle");
+                         $(".charCircle-center").removeClass("anCharCircle-center");
+                         $(".charCircle-right ").removeClass("anCharCircle-right"); 
+                                               
                     }
                     if(swiper.activeIndex !== 2) {
                         $(".intro-title div").removeClass("anintro-title");
+                        $(".intro-title img").removeClass("anintro-title");
                         $(".intro-title .intro-higher").removeClass("anintro-higher");
                     }   
                     if (swiper.activeIndex === 1) {
