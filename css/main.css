@@ -56,7 +56,7 @@ body {
 	-moz-animation: 1s linear alternate none infinite anUp;
 	-o-animation: 1s linear alternate none infinite anUp;
 }
-
+/*page1 started*/
 .page1 {
 	background: rgba(254,184,41,1);
 	background-image: url(../images/page01/budongdi.png);
@@ -73,6 +73,9 @@ body {
 	width: 45%;
 	top: -30%;
 	left: 30%;
+}
+.swiper-slide-active .line-circleUp
+{
 	animation: 3s linear 1s alternate none infinite anCircleUp;
 	-webkit-animation: 3s linear 1s alternate none infinite anCircleUp;
 	-moz-animation: 3s linear 1s alternate none infinite anCircleUp;
@@ -91,6 +94,10 @@ body {
 	width: 80%;
 	top: -20%;
 	left: 60%;
+
+}
+.swiper-slide-active .thin-line
+{
 	animation: 2s linear 2s alternate none infinite anlineUp;
 	-webkit-animation: 2s linear 2s alternate none infinite anlineUp;
 	-moz-animation: 2s linear 2s alternate none infinite anlineUp;
@@ -109,11 +116,15 @@ body {
 	width: 80%;
 	top: 20%;
 	left: -20%;
+}
+.swiper-slide-active .rec-long
+{
 	animation: 3s linear 1s alternate none infinite anRecLarge;
 	-webkit-animation: 3s linear 1s alternate none infinite anRecLarge;
 	-moz-animation: 3s linear 1s alternate none infinite anRecLarge;
 	-o-animation: 3s linear 1s alternate none infinite anRecLarge;
 }
+
 .rec-long img {
 	width: 100%;
 }
@@ -128,6 +139,10 @@ body {
 	width: 60%;
 	top: 60%;
 	left: -24%;
+
+}
+.swiper-slide-active .rec-short
+{
 	animation: 1s linear 1s alternate none infinite anRecSmall;
 	-webkit-animation: 1s linear 1s alternate none infinite anRecSmall;
 	-moz-animation: 1s linear 1s alternate none infinite anRecSmall;
@@ -147,6 +162,9 @@ body {
 	width: 80%;
 	top: 80%;
 	left: -40%;
+}
+.swiper-slide-active .line-circleDown
+{
 	animation: 4s linear 1s alternate none infinite anCircleDown;
 	-webkit-animation: 4s linear 1s alternate none infinite anCircleDown;
 	-moz-animation: 4s linear 1s alternate none infinite anCircleDown;
@@ -166,6 +184,10 @@ body {
 	width: 100%;
 	top: 52%;
 	left: 62%;
+
+}
+.swiper-slide-active .block-small
+{
 	animation: 4s linear 1s infinite anBlockSmall;
 	-webkit-animation: 4s linear 1s infinite anBlockSmall;
 	-moz-animation: 4s linear 1s infinite anBlockSmall;
@@ -186,6 +208,9 @@ body {
 	width: 150%;
 	top: 50%;
 	left: 62%;
+}
+.swiper-slide-active .block-large
+{
 	animation: 8s linear 2s infinite anBlockLarge;
 	-webkit-animation: 8s linear 2s infinite anBlockLarge;
 	-moz-animation: 8s linear 2s infinite anBlockLarge;
@@ -280,16 +305,17 @@ body {
 }
 
 .humanTitle img {
-	width: 40%;
+	/*width: 40%;*/
+	width:100%;
 }
 
-.humanQTitle img {
+/*.humanQTitle img {
 	width: 30%;
 }
 
 .humanMyTitle img {
 	width: 25%;
-}
+}*/
 
 .humanHSEEHead {
 	position: absolute;
@@ -297,11 +323,13 @@ body {
 	top: 8%;
 }
 .humanHSEEHead img {
-	width: 85%;
+	/*width: 85%;*/
+	width:100%;
 }
 
 .humanHSEETitle img {
-	width: 65%;
+	/*width: 65%;*/
+	width:100%;
 }
 
 /*page03 start*/
@@ -362,15 +390,15 @@ body {
 	-webkit-transition: margin-top 1s;
 	-o-transition: margin-top 1s;
 }
-.charac-head div{
+/*.charac-head div{
 	text-align:center;
 	color: rgb(52,63,79);
 	font-size: 1.8em;
 	font-weight: bold;
-}
-/*.charac-head img {
-	width: 75%;
 }*/
+.charac-head img {
+	width: 75%;
+}
 .charac-lineUp {
 	margin-top: 12%;
 	width: 75%;
@@ -387,33 +415,33 @@ body {
 .charac-secHead {
 	margin-top: 10%;
 }
-.charac-secHead  div{
+/*.charac-secHead  div{
 	text-align:center;
 	color: rgb(52,63,79);
 	font-size: 1.3em;
 	font-weight: bold;	
-}
+}*/
 .ancharac-secHead {
 	margin-top: 3%;
 }
-/*.charac-secHead img {
+.charac-secHead img {
 	width: 53%;
-}*/
+}
 .charac-position {
 	margin-top: 10%;
 }
 .ancharac-position {
 	margin-top: 7%;
 }
-.charac-position div{
+/*.charac-position div{
 	text-align:center;
 	color: rgb(52,63,79);
 	font-size: 1.4em;
 	font-weight: bold;	
-}
-/*.charac-position img {
-	width: 25%;
 }*/
+.charac-position img {
+	width: 25%;
+}
 
 
 .charac-lineShort {
@@ -428,21 +456,21 @@ body {
 }
 .charac-article {
 	margin-top: 10%;
-	/*width: 69%;*/
+}
+.charac-article img {
+	width: 69%;
 }
 .ancharac-article {
 	margin-top: 2%;
 }
-.charac-article div{	
+/*.charac-article div{	
 	text-align:center;
 	color: rgb(52,63,79);
 	font-size: 0.7em;
 	font-weight: 100;
 	line-height: 1.8;	
-}
-/*.charac-article img {
-	width: 69%;
 }*/
+
 
 .hess-charCircle {
 	position: relative;
@@ -479,9 +507,6 @@ body {
 	-o-transition: top 1s;
 }
 
-/*.swiper-slide-active .charCircle-center {
-	
-}*/
 .charCircle-right {
 	position: absolute;
 	width: 27%;
@@ -495,9 +520,7 @@ body {
 	-webkit-transition: top 1s;
 	-o-transition: top 1s;
 }
-/*.swiper-slide-active .charCircle-right {
-	
-}*/
+
 
 /*page5 start*/
 .page5 {
@@ -856,10 +879,14 @@ to {
 	width: 100%;
 	margin-left: -1%;
 }
+.locationDesc img{
+	width: 33.90625%;
+}
+
 /*.locationOrg img {
 	width: 16%;
 }*/
-.locationOrg{
+/*.locationOrg{
 	text-align:center;
 	color: rgb(3,145,141);
 	font-size: 0.9em
@@ -869,17 +896,17 @@ to {
 	text-align:center;
 	color: rgb(52,63,79);
 	font-size: 1.3em
-}
+}*/
 /*.locationTitle img {
 	width: 26%;
 }*/
-.locationCorp {
+/*.locationCorp {
 	margin-top: 2%;
 	text-align:center;
 	color: rgb(52,63,79);
 	font-size: 0.7em;
 	font-weight: bolder;
-}
+}*/
 /*.locationCorp img {
 	width: 34%;
 }*/
@@ -1103,7 +1130,7 @@ to {
 	position: absolute;
 	width: 168%;
 	/*margin-left: 8%;*/
-	left: 8%;
+	left: 0%;
 	top:-5%;
 }
 
