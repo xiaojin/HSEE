@@ -1871,7 +1871,7 @@ keyframes scalebutton{0%{transform:scaleX(1) scaleY(1);} 100%{transform:scaleX(2
 .contacttopbutton img{
 	width: 14.4%;
 }
-.contacttitle{
+/*.contacttitle{
 	color: white;
 	text-align: center;
 	width: 100%;
@@ -1884,13 +1884,6 @@ keyframes scalebutton{0%{transform:scaleX(1) scaleY(1);} 100%{transform:scaleX(2
 	font-size: 1.5em;
 	margin-top: -3%;
 }
-/*.contacttitle{
-	width: 100%;
-	margin-top: 6%;
-}
-.contacttitle img{
-	width: 43.4%
-}*/
 .contactline{
 	width:13.4%;
 	margin: 3% auto;
@@ -1902,13 +1895,14 @@ keyframes scalebutton{0%{transform:scaleX(1) scaleY(1);} 100%{transform:scaleX(2
 	width: 100%;
 	line-height: 0.9;
 	font-size: 1em;
-}
-/*.contactcontent{
+}*/
+.contactcontent{
 	width: 100%;
+	margin-top:6%;
 }
 .contactcontent img{
-	width: 71.6%;
-}*/
+	width: 100%;
+}
 .contactletter{
 	width: 100%;
 	position: relative;
@@ -1953,16 +1947,26 @@ keyframes scalebutton{0%{transform:scaleX(1) scaleY(1);} 100%{transform:scaleX(2
     /* place overlay on top of other elements */
     z-index:10000;
     /* styling */
-    background-color:rgb(240,26,49);
-    opacity:0.9;
+   	background-image: url(../images/page13/di.png);
+	background-repeat: no-repeat;
+	background-size: cover;	
     position:absolute;  
     top:0;
     left:0;
     width:100%;
     height:100%;
+
          
 }
 .contactinfotitle{
+	width: 100%;
+	margin-top: 21.57%;
+}
+.contactinfotitle img{
+	width: 100%;
+}
+
+/*.contactinfotitle{
 	color: white;
 	text-align: center;
 	width: 100%;
@@ -1983,7 +1987,7 @@ keyframes scalebutton{0%{transform:scaleX(1) scaleY(1);} 100%{transform:scaleX(2
 	width: 100%;
 	margin-top: 3%;
 	line-height: 0.7;
-	font-size: 1em;
+	*/font-size: 1em;
 }
 
 

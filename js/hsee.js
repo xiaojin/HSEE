@@ -233,7 +233,7 @@ var hsee = {
         var humanFlipped = false;
         var swiperParent = new Swiper('.swiper-parent', {
                 mode : 'vertical',
-                speed : 750,
+                speed : 600,
                 slidesPerView : 1,
                 onSlideNext: function(swiper) {
                     $('.swiper-slide-active .lazy').each(function(){
@@ -325,7 +325,7 @@ var hsee = {
             // 上下滚动翻页
             $('.swiper-parent').css("min-height", "504px");
             $('.pages').css("min-height", "504px");
-            swiperParent.params.calculateHeight =true;
+            // swiperParent.params.calculateHeight =true;
         } 
 
         swiperNested1 = new Swiper('.swiper-human', {
