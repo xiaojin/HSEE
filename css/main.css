@@ -342,7 +342,7 @@ body {
 }
 
 .intro-title {
-	margin-top: 14.5%;
+	margin-top: 15%;
 }
 .intro-title img {
 	width: 62%;
@@ -367,7 +367,7 @@ body {
 	margin-top: 2% !important;
 }
 .anintro-higher{
-	margin-top: 3% !important;
+	margin-top: 4% !important;
 }
 /*page4 start*/
 
@@ -378,7 +378,7 @@ body {
 	background-size: cover;
 }
 .hess-character {
-	margin-top: 6%;
+	margin-top: 7%;
 }
 .charc-block {
 	width: 100%;
@@ -431,7 +431,7 @@ body {
 	margin-top: 10%;
 }
 .ancharac-position {
-	margin-top: 7%;
+	margin-top: 8%;
 }
 /*.charac-position div{
 	text-align:center;
@@ -461,7 +461,7 @@ body {
 	width: 69%;
 }
 .ancharac-article {
-	margin-top: 2%;
+	margin-top: 3%;
 }
 /*.charac-article div{	
 	text-align:center;
@@ -482,7 +482,7 @@ body {
 	-o-transition: margin-top 1s;
 }
 .anhess-charCircle {
-	margin-top: 11%;
+	margin-top: 14%;
 }
 .hess-charCircle img {
 	width: 100%;
@@ -1464,8 +1464,12 @@ to {
 }
 .entrancetitle{
 	margin-top: 10%;	
+	width: 100%;
 }
-.creativetitle1 img{
+.entrancetitle img{
+	width:76.40625%;
+}
+/*.creativetitle1 img{
 	width:26.2%;
 }
 .creativetitle2 img{
@@ -1473,15 +1477,15 @@ to {
 }
 .creativetitle3{
 	margin-top:4%;
-}
-.creativetitle3 img{
+}*/
+/*.creativetitle3 img{
 	width:76.3%;
-}
-.creativeline{
+}*/
+/*.creativeline{
 	width:6.6%;
 	margin: 2% auto;
 	border-bottom: 1px solid white;
-}
+}*/
 
 .entranceButton{
 	position: relative;
@@ -1504,22 +1508,23 @@ to {
 	position: relative;
 	width:100%;
 	z-index:1;
+	margin-left:3%;
 }
 .human2 img{
-	width: 64.5%;
+	width: 60%;
 }
 .human7{
 	position: absolute;
-	width: 57.2%;
-	top: -10%;
+	width: 60%;
+	top: -7%;
 	left: -19%;
 	z-index:1;
 }
 .human6{
 	position: absolute;
-	width: 62.7%;
-	top: -10%;
-	left: 52%;
+	width: 60%;
+	top: -8%;
+	left: 58%;
 	z-index:1;
 }
 .human5{
@@ -1527,32 +1532,32 @@ to {
 	width: 53.1%;
 	z-index:0;
 	opacity: 0.2;
-	top: -31%;
+	top: -26%;
 	left: -21%;
 }
 .human1{
 	position: absolute;
-	width: 41.25%;
+	width: 53%;
 	z-index:0;
 	opacity: 0.2;
-	top: -28%;
-	left: 17%;
+	top: -24%;
+	left: 8%;
 }
 .human4{
 	position: absolute;
-	width: 57.5%;
+	width: 53%;
 	z-index:0;
 	opacity: 0.2;
-	top: -25%;
-	left: 46%;
+	top: -18%;
+	left: 48%;
 }
 .human10{
 	position: absolute;
-	width: 45%;
+	width: 53%;
 	z-index:0;
 	opacity: 0.2;
-	top: -40%;
-	left: 79%;
+	top: -35%;
+	left: 78%;
 }
 
 .scaleo {
@@ -1577,8 +1582,12 @@ keyframes scaleo{0%{opacity:1;transform:scaleX(1) scaleY(1);} 100%{opacity:1;tra
 /*page12 recruit*/
 .recruittitle{
 	margin-top: 11%;
+	width:100%;
 }
-.recruithead{
+.recruittitle img{
+	width: 80.3125%;
+}
+/*.recruithead{
 	width: 100%;
 }
 .recruithead img{
@@ -1595,7 +1604,7 @@ keyframes scaleo{0%{opacity:1;transform:scaleX(1) scaleY(1);} 100%{opacity:1;tra
 }
 .recruitdesc img{
 	width: 80.3%;
-}
+}*/
 .recruitButtons{
 	position:relative;
 	margin-top:16%;
@@ -1641,7 +1650,7 @@ keyframes scaleo{0%{opacity:1;transform:scaleX(1) scaleY(1);} 100%{opacity:1;tra
 
 .producthumans , .leaderhumans, .enghumans{
 	position: relative;
-	margin-top:9%;
+	margin-top:15%;
 	width:100%;
 }
 .producthumanback, .leaderhumanback, .enghumanback{
@@ -1655,15 +1664,15 @@ keyframes scaleo{0%{opacity:1;transform:scaleX(1) scaleY(1);} 100%{opacity:1;tra
 .producthuman1{
 	position:absolute;
 	width: 100%;
-	top:0;
+	top:16%;
 }
 .producthuman1 img{
-	width:41%;
+	width:38.1%;
 }
 .producthuman2{
 	position:absolute;
 	width: 100%;
-	top:2%;
+	top:16%;
 	left:20%;
 }
 .producthuman2 img{
@@ -1672,12 +1681,22 @@ keyframes scaleo{0%{opacity:1;transform:scaleX(1) scaleY(1);} 100%{opacity:1;tra
 .producthuman3{
 	position:absolute;
 	width: 100%;
-	top:2%;
-	left:-20%;
+	top:16%;
+	left:0%;
 }
 .producthuman3 img{
 	width:38.1%;
 }
+.producthuman4{
+	position:absolute;
+	width: 100%;
+	top:16%;
+	left:-20%;
+}
+.producthuman4 img{
+	width:38.1%;
+}
+
 .resourcewhiteback{
 	width:100%;
 	margin-top:3%
@@ -1706,79 +1725,83 @@ keyframes scaleo{0%{opacity:1;transform:scaleX(1) scaleY(1);} 100%{opacity:1;tra
 .swiperproductmen .swiper-slide, .swiperleadermen .swiper-slide, .swiperengineermen .swiper-slide{
 	width: 100%;
 }
-.swiperproductmen img,.swiperleadermen img, .swiperengineermen img{
+.swiperproductmen img,.swiperleadermen img{
 	width:35.6%;
-	margin-top:100%;
+	margin-top:92%;
+}
+.swiperengineermen img{
+	width:35.6%;
+	margin-top:90%;
 }
 
 .leaderhumanback img{
-	width:51%;
+	width:45%;
 }
 .leaderhuman1{
 	position:absolute;
 	width: 100%;
-	top:0;
+	top:16%;
 }
 .leaderhuman1 img{
-	width:47%;
+	width:38.1%;
 }
 .leaderhuman2{
 	position:absolute;
 	width: 100%;
-	top:2%;
+	top:16%;
 	left:20%;
 }
 .leaderhuman2 img{
-	width:55%;
+	width:38.1%;
 }
 .leaderhuman3{
 	position:absolute;
 	width: 100%;
-	top:2%;
+	top:16%;
 	left:-20%;
 }
 .leaderhuman3 img{
-	width:50%;
+	width:38.1%;
 }
 
 .enghumanback img{
-	width:58%;
+	width:45%;
 }
 .enghuman1{
 	position:absolute;
 	width: 100%;
-	top:0;
+	top:16%;
 }
 .enghuman1 img{
-	width:51%;
+	width:38.1%;
 }
 .enghuman2{
 	position:absolute;
 	width: 100%;
-	top:2%;
+	top:16%;
 	left:20%;
 }
 .enghuman2 img{
-	width:46%;
+	width:38.1%;
 }
 
 .enghuman3{
 	position:absolute;
 	width: 100%;
-	top:0;
+	top:16%;
 	left:0%;
 }
 .enghuman3 img{
-	width:55%;
+	width:38.1%;
 }
 .enghuman4{
 	position:absolute;
 	width: 100%;
-	top:0;
+	top:16%;
 	left:-20%;
 }
 .enghuman4 img{
-	width:54%;
+	width:38.1%;
 }
 .producthumans div, .leaderhumans div, .enghumans div{
 	transition: left 1s linear;
@@ -1808,18 +1831,20 @@ keyframes scaleo{0%{opacity:1;transform:scaleX(1) scaleY(1);} 100%{opacity:1;tra
 .producthumanactive{
 	opacity: 1;
 	z-index:1;
-	-webkit-transform: scale(1.1);
+	-webkit-transform: scale(1.4);
+	top: 2%;
 }
 .leaderhumanactive{
 	opacity: 1;
 	z-index:1;
-	-webkit-transform: scale(1.1);
+	-webkit-transform: scale(1.4);
+	top: 2%;
 }
 .enghumanactive{
 	opacity: 1;
 	z-index:1;
-	-webkit-transform: scale(1.1);	
-	top: 12%;
+	-webkit-transform: scale(1.4);	
+	top: 2%;
 }
 
 /*page13 started*/

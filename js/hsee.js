@@ -57,7 +57,7 @@ var hsee = {
                         }
                     }
                 }
-                if ((swiper.positions.current - swiper.positions.start) < 0 && index <=3) {
+                if ((swiper.positions.current - swiper.positions.start) < 0 && index <=4) {
                      $(".producthumanactive").css({
                         'left':'-20%',
                     });
@@ -69,7 +69,7 @@ var hsee = {
                     for (i=0;i<$hideHuman.length-1;i++){
                         var current = $($hideHuman[i]).css('left');
                         var myleft = $($hideHuman[i]).position().left / $($hideHuman[i]).parent().width();
-                         offset = ((myleft +0.4)*100)+'%';
+                         offset = ((myleft +0.2)*100)+'%';
                         $($hideHuman[i]).css({
                             'left' : offset
                         });
@@ -87,7 +87,7 @@ var hsee = {
                     for (i=1;i<$hideHuman.length;i++){
                         var current = $($hideHuman[i]).css('left');
                         var myleft = $($hideHuman[i]).position().left / $($hideHuman[i]).parent().width();
-                         offset = ((myleft - 0.4)*100)+'%';
+                         offset = ((myleft - 0.2)*100)+'%';
                         $($hideHuman[i]).css({
                             'left' : offset
                         });
