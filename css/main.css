@@ -529,8 +529,13 @@ body {
 	background-repeat: no-repeat;
 	background-size: cover;
 }
-
 .weiGo {
+	width: 100%;
+}
+.weiGo img{
+	width:100%;
+}
+/*.weiGo {
 	margin-top: 10%;
 }
 
@@ -564,7 +569,7 @@ body {
 
 	width: 79%;
 	margin-top: 30%;
-}
+}*/
 
 /*swiper-mile*/
 .page6 {

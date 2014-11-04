@@ -414,6 +414,7 @@ var hsee = {
         var swiperNested2 = new Swiper('.swiper-mile', {
             paginationClickable : true,
             slidesPerView : 1,
+            speed : 400,
             onSetWrapperTransform : function(swiper, transform) {
                 var $mileIcons = $(".mile-icons"), index = swiper.activeIndex;
                 var per = Math.abs((transform.x + (swiper.width * index)) / swiper.width);
