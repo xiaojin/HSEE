@@ -242,14 +242,14 @@ var hsee = {
                 speed : 350,
                 slidesPerView : 1,
                 onSlideNext: function(swiper) {
-                    if(swiper.activeIndex >3 && !hasallloader){
-                        $('.swiper-slide-active .lazy').each(function(){
-                            $(this).attr('src',$(this).attr('image-url'));
-                        });  
-                        if(swiper.activeIndex ===12){
-                            hasallloader = true;
-                        }  
-                    }
+                    // if(swiper.activeIndex >3 && !hasallloader){
+                        // $('.swiper-slide-active .lazy').each(function(){
+                            // $(this).attr('src',$(this).attr('image-url'));
+                        // });  
+                        // if(swiper.activeIndex ===12){
+                            // hasallloader = true;
+                        // }  
+                    // }
                 },
                 onSlideChangeStart : function(swiper, direction) {
                     if (swiper.activeIndex === 1 && direction === "next") {
@@ -281,7 +281,12 @@ var hsee = {
 
                 },
                 onSlideChangeEnd : function(swiper, direction) {
-                    console.log(swiper.activeIndex);                                      
+                    console.log(swiper.activeIndex);            
+                    var pagenum = ".page"+(swiper.activeIndex+3);
+                     $(pagenum+".unloaded .lazy").each(function(){
+                            $(this).attr('src',$(this).attr('image-url'));
+                            $(pagenum).removeClass("unloaded");
+                       });                 
                     if (swiper.activeIndex === 8) {
                         $(".officeBottle").addClass("anOfficeBottle");
                         $(".officePen").addClass("anOfficePen");
