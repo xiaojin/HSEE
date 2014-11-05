@@ -236,14 +236,20 @@ var hsee = {
         var previousX = 1;
         var humanFlipped = false;
         //The main slider
+        var hasallloader = false;
         var swiperParent = new Swiper('.swiper-parent', {
                 mode : 'vertical',
                 speed : 350,
                 slidesPerView : 1,
                 onSlideNext: function(swiper) {
-                    $('.swiper-slide-active .lazy').each(function(){
-                        // $(this).attr('src',$(this).attr('image-url'));
-                    });
+                    if(swiper.activeIndex >3 && !hasallloader){
+                        $('.swiper-slide-active .lazy').each(function(){
+                            $(this).attr('src',$(this).attr('image-url'));
+                        });  
+                        if(swiper.activeIndex ===12){
+                            hasallloader = true;
+                        }  
+                    }
                 },
                 onSlideChangeStart : function(swiper, direction) {
                     if (swiper.activeIndex === 1 && direction === "next") {
