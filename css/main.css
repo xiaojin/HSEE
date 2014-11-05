@@ -1383,10 +1383,10 @@ to {
 
 .swiper-slide-active .hearttitle
 {
-	animation: 0.5s linear 0.5s both 1 anhearttitle;
-	-webkit-animation: 0.5s linear 0.5s both 1 anhearttitle;
-	-moz-animation: 0.5s linear 0.5s both 1 anhearttitle;
-	-o-animation: 0.5s linear 0.5s both 1 anhearttitle;
+	animation: 0.5s linear 0.1s both 1 anhearttitle;
+	-webkit-animation: 0.5s linear 0.1s both 1 anhearttitle;
+	-moz-animation: 0.5s linear 0.1s both 1 anhearttitle;
+	-o-animation: 0.5s linear 0.1s both 1 anhearttitle;
 }
 
 .heartCharacter{
@@ -1420,10 +1420,10 @@ to {
 
 .swiper-slide-active .change
 {
-	animation: 0.5s linear 0.5s both 1 anBigChange;
-	-webkit-animation: 0.5s linear 0.5s both 1 anBigChange;
-	-moz-animation: 0.5s linear 0.5s both 1 anBigChange;
-	-o-animation: 0.5s linear 0.5s both 1 anBigChange;
+	animation: 0.5s linear 0.1s both 1 anBigChange;
+	-webkit-animation: 0.5s linear 0.1s both 1 anBigChange;
+	-moz-animation: 0.5s linear 0.1s both 1 anBigChange;
+	-o-animation: 0.5s linear 0.1s both 1 anBigChange;
 }
 
 
@@ -1440,10 +1440,10 @@ to {
 
 .swiper-slide-active .dream
 {
-	animation: 0.5s linear 0.5s both 1 anBigDream;
-	-webkit-animation: 0.5s linear 0.5s both 1 anBigDream;
-	-moz-animation: 0.5s linear 0.5s both 1 anBigDream;
-	-o-animation: 0.5s linear  0.5s both 1 anBigDream;
+	animation: 0.5s linear 0.1s both 1 anBigDream;
+	-webkit-animation: 0.5s linear 0.1s both 1 anBigDream;
+	-moz-animation: 0.5s linear 0.1s both 1 anBigDream;
+	-o-animation: 0.5s linear  0.1s both 1 anBigDream;
 }
 
 /*page12 started*/
