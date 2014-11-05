@@ -34,6 +34,7 @@ var hsee = {
              $(".contactinfooverlay").hide();
          });
     },
+    //init slider in the page12 for producter recruitment
     initProductsilder :function(){
         var swiperproduct = new Swiper('.swiperproductmen', {
             mode : 'horizontal',
@@ -97,6 +98,7 @@ var hsee = {
             }
         });        
     },
+     //init slider in the page12 for view guider recruitment
     initLeadersidler:function(){
         var swiperleader = new Swiper('.swiperleadermen', {
             mode : 'horizontal',
@@ -160,6 +162,7 @@ var hsee = {
             }
         });          
     },
+    //init slider in the page12 for engineer recruitment    
     initEngineersilder:function(){
          var swiperengineer = new Swiper('.swiperengineermen', {
             mode : 'horizontal',
@@ -229,11 +232,13 @@ var hsee = {
         }, 1000);
         hsee.bind();
         var swiperNested1;
+        //To mark if slide in page2 has been played
         var previousX = 1;
         var humanFlipped = false;
+        //The main slider
         var swiperParent = new Swiper('.swiper-parent', {
                 mode : 'vertical',
-                speed : 600,
+                speed : 350,
                 slidesPerView : 1,
                 onSlideNext: function(swiper) {
                     $('.swiper-slide-active .lazy').each(function(){
@@ -327,7 +332,7 @@ var hsee = {
             $('.pages').css("min-height", "504px");
             // swiperParent.params.calculateHeight =true;
         } 
-
+         //The slider in page2
         swiperNested1 = new Swiper('.swiper-human', {
             mode : 'horizontal',
             slidesPerView : 1,
@@ -411,10 +416,11 @@ var hsee = {
 
             },
         });
+          //The slider in page6 last mile
         var swiperNested2 = new Swiper('.swiper-mile', {
             paginationClickable : true,
             slidesPerView : 1,
-            speed : 400,
+            speed : 300,
             onSetWrapperTransform : function(swiper, transform) {
                 var $mileIcons = $(".mile-icons"), index = swiper.activeIndex;
                 var per = Math.abs((transform.x + (swiper.width * index)) / swiper.width);
@@ -449,18 +455,6 @@ var hsee = {
         $(".contacttopbutton").click(function(){
             swiperParent.swipeTo(0, 0, true);
         });
-        // $("#top").click(function() {
-            // $(".first-class").show();
-            // $(".first-class").animate({
-                // top : 0
-            // });
-// 
-            // setTimeout(function() {
-                // swiperParent.swipeTo(0, 0, true);
-                // $(".first-class").hide();
-            // }, 2000);
-// 
-        // });
 
     }
 };
