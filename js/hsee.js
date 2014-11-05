@@ -242,7 +242,7 @@ var hsee = {
                 slidesPerView : 1,
                 onSlideNext: function(swiper) {
                     $('.swiper-slide-active .lazy').each(function(){
-                        $(this).attr('src',$(this).attr('image-url'));
+                        // $(this).attr('src',$(this).attr('image-url'));
                     });
                 },
                 onSlideChangeStart : function(swiper, direction) {
@@ -321,9 +321,6 @@ var hsee = {
                              humanFlipped =true;                   
                         } 
                     }
-    
-
-
                 }
             });        
         if ($(window).height() < '500') {
