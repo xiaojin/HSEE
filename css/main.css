@@ -335,6 +335,10 @@ body {
 .intro-title img {
 	width: 62%;
 	margin-top: 18%;
+	transition: margin-top 0.8s ease;
+	-moz-transition: margin-top 0.8s ease;
+	-webkit-transition: margin-top 0.8s ease;
+	-o-transition: margin-top 0.8s ease;
 }
 .intro-title .hengxian{
 	border-bottom: 1px solid rgb(52,63,79);
@@ -342,21 +346,27 @@ body {
 	width: 62%;
 	margin-left:auto;
 	margin-right:auto;
+	transition: margin-top 0.8s ease;
+	-moz-transition: margin-top 0.8s ease;
+	-webkit-transition: margin-top 0.8s ease;
+	-o-transition: margin-top 0.8s ease;
 }
-.intro-title .intro-higher {
-	margin-top: 18%;
+.anintro0-5{
+	margin-top: 0.5% !important;
 }
-
-.anintro-title{
-	transition: margin-top 0.5s;
-	-moz-transition: margin-top 0.5s;
-	-webkit-transition: margin-top 0.5s;
-	-o-transition: margin-top 0.5s;
+.anintro2{
 	margin-top: 2% !important;
 }
-.anintro-higher{
-	margin-top: 4% !important;
+.anintro3{
+	margin-top: 3% !important;
 }
+.anintro3-5{
+	margin-top: 3.5% !important;
+}
+.anintro5{
+	margin-top: 5% !important;
+}
+
 /*page4 start*/
 
 .page4 {
@@ -370,20 +380,16 @@ body {
 }
 .charc-block {
 	width: 100%;
+	margin-top:18%;
 }
 
 .swiper-slide-active .charc-block {
-	transition: margin-top 0.5s;
-	-moz-transition: margin-top 0.5s;
-	-webkit-transition: margin-top 0.5s;
-	-o-transition: margin-top 0.5s;
+	transition: margin-top 0.8s ease;
+	-moz-transition: margin-top 0.8s ease;
+	-webkit-transition: margin-top 0.8s ease;
+	-o-transition: margin-top 0.8s ease;
 }
-/*.charac-head div{
-	text-align:center;
-	color: rgb(52,63,79);
-	font-size: 1.8em;
-	font-weight: bold;
-}*/
+
 .charac-head img {
 	width: 75%;
 }
@@ -394,21 +400,12 @@ body {
 	margin-left:auto;
 	margin-right:auto;
 }
-/*.charac-lineUp img {
-	width: 75%;
-}*/
 .ancharac-lineUp {
-	margin-top: 2.5%;
+	margin-top: 2%;
 }
 .charac-secHead {
 	margin-top: 10%;
 }
-/*.charac-secHead  div{
-	text-align:center;
-	color: rgb(52,63,79);
-	font-size: 1.3em;
-	font-weight: bold;	
-}*/
 .ancharac-secHead {
 	margin-top: 3%;
 }
@@ -421,17 +418,9 @@ body {
 .ancharac-position {
 	margin-top: 8%;
 }
-/*.charac-position div{
-	text-align:center;
-	color: rgb(52,63,79);
-	font-size: 1.4em;
-	font-weight: bold;	
-}*/
 .charac-position img {
 	width: 25%;
 }
-
-
 .charac-lineShort {
 	width: 9%;
 	margin-top: 2%;
@@ -451,23 +440,15 @@ body {
 .ancharac-article {
 	margin-top: 3.5%;
 }
-/*.charac-article div{	
-	text-align:center;
-	color: rgb(52,63,79);
-	font-size: 0.7em;
-	font-weight: 100;
-	line-height: 1.8;	
-}*/
-
 
 .hess-charCircle {
 	position: relative;
 	margin-top: 20%;
 	width: 100%;
-	transition: margin-top 0.5s;
-	-moz-transition: margin-top 0.5s;
-	-webkit-transition: margin-top 0.5s;
-	-o-transition: margin-top 0.5s;
+	transition: margin-top 0.5s ease;
+	-moz-transition: margin-top 0.5s ease;
+	-webkit-transition: margin-top 0.5s ease;
+	-o-transition: margin-top 0.5s ease;
 }
 .anhess-charCircle {
 	margin-top: 18%;
@@ -748,16 +729,16 @@ to {
 	width: 100%;
 }
 .swiper-slide-active .hseeskillColorbar {
-	transition: margin-left 2s;
-	-moz-transition: margin-left 2s; /* Firefox 4 */
-	-webkit-transition: margin-left 2s; /* Safari and Chrome */
-	-o-transition: margin-left 2s; /* Opera */
+	transition: margin-left 0.8s;
+	-moz-transition: margin-left 0.8s; /* Firefox 4 */
+	-webkit-transition: margin-left 0.8s; /* Safari and Chrome */
+	-o-transition: margin-left 0.8s; /* Opera */
 }
 .swiper-slide-active .hseeskillColortitle {
-	transition: left 1s;
-	-moz-transition: left 1s;
-	-webkit-transition: left 1s;
-	-o-transition: left 1s;
+	transition: left 0.8s;
+	-moz-transition: left 0.8s;
+	-webkit-transition: left 0.8s;
+	-o-transition: left 0.8s;
 }
 .hseeskillbar img {
 	width: 100%;
@@ -805,55 +786,55 @@ to {
 }
 .swiper-slide-active .hseeskills-bluebar {
 	margin-left: -4%;
-	transition-delay: 1s;
-	-moz-transition-delay: 1s;
-	-webkit-transition-delay: 1s;
-	-o-transition-delay: 1s;
+	transition-delay: 0.5s;
+	-moz-transition-delay: 0.5s;
+	-webkit-transition-delay: 0.5s;
+	-o-transition-delay: 0.5s;
 }
 .swiper-slide-active .hseeskills-redbar {
 	margin-left: 4%;
-	transition-delay: 2s;
-	-moz-transition-delay: 2s;
-	-webkit-transition-delay: 2s;
-	-o-transition-delay: 2s;
+	transition-delay: 1.2s;
+	-moz-transition-delay: 1.2s;
+	-webkit-transition-delay: 1.2s;
+	-o-transition-delay: 1.2s;
 }
 .swiper-slide-active .hseeskills-greenbar {
 	margin-left: -4%;
-	transition-delay: 3s;
-	-moz-transition-delay: 3s;
-	-webkit-transition-delay: 3s;
-	-o-transition-delay: 3s;
+	transition-delay: 1.8s;
+	-moz-transition-delay: 1.8s;
+	-webkit-transition-delay: 1.8s;
+	-o-transition-delay: 1.8s;
 }
 
 .swiper-slide-active  .hseeskills-blacktitle {
 	left: 46%;
-	transition-delay: 2s;
-	-moz-transition-delay: 2s;
-	-webkit-transition-delay: 2s;
-	-o-transition-delay: 2s;
+	transition-delay: 0.5s;
+	-moz-transition-delay: 0.5s;
+	-webkit-transition-delay: 0.5s;
+	-o-transition-delay: 0.5s;
 }
 .swiper-slide-active  .hseeskills-bluetitle {
 	left: 4%;
-	transition-delay: 2s;
-	-moz-transition-delay: 2s;
-	-webkit-transition-delay: 2s;
-	-o-transition-delay: 2s;
+	transition-delay: 1.2s;
+	-moz-transition-delay: 1.2s;
+	-webkit-transition-delay: 1.2s;
+	-o-transition-delay: 1.2s;
 }
 
 .swiper-slide-active  .hseeskills-redtitle {
 	left: 18%;
-	transition-delay: 3s;
-	-moz-transition-delay: 3s;
-	-webkit-transition-delay: 3s;
-	-o-transition-delay: 3s;
+	transition-delay: 1.6s;
+	-moz-transition-delay: 1.6s;
+	-webkit-transition-delay: 1.6s;
+	-o-transition-delay: 1.6s;
 }
 
 .swiper-slide-active  .hseeskills-greentitle {
 	left: 4%;
-	transition-delay: 4s;
-	-moz-transition-delay: 4s;
-	-webkit-transition-delay: 4s;
-	-o-transition-delay: 4s;
+	transition-delay: 2.2s;
+	-moz-transition-delay: 2.2s;
+	-webkit-transition-delay: 2.2s;
+	-o-transition-delay: 2.2s;
 }
 
 /*page8 started */
@@ -1361,10 +1342,10 @@ to {
 
 .swiper-slide-active .dreamtitle
 {
-	animation: 0.5s linear both 1 andreamtitle;
-	-webkit-animation: 0.5s linear both 1 andreamtitle;
-	-moz-animation: 0.5s linear both 1 andreamtitle;
-	-o-animation: 0.5s linear both 1 andreamtitle;
+	animation: 0.5s ease  1 andreamtitle;
+	-webkit-animation: 0.5s ease  1 andreamtitle;
+	-moz-animation: 0.5s ease  1 andreamtitle;
+	-o-animation: 0.5s ease  1 andreamtitle;
 }
 
 
@@ -1383,10 +1364,10 @@ to {
 
 .swiper-slide-active .hearttitle
 {
-	animation: 0.5s linear 0.1s both 1 anhearttitle;
-	-webkit-animation: 0.5s linear 0.1s both 1 anhearttitle;
-	-moz-animation: 0.5s linear 0.1s both 1 anhearttitle;
-	-o-animation: 0.5s linear 0.1s both 1 anhearttitle;
+	animation: 0.5s ease 0.1s  1 anhearttitle;
+	-webkit-animation: 0.5s ease 0.1s  1 anhearttitle;
+	-moz-animation: 0.5s ease 0.1s  1 anhearttitle;
+	-o-animation: 0.5s ease 0.1s  1 anhearttitle;
 }
 
 .heartCharacter{
@@ -1401,10 +1382,10 @@ to {
 
 .swiper-slide-active .heartCharacter
 {
-	animation: 0.5s linear  both 1 anBigHeart;
-	-webkit-animation: 0.5s linear  both 1 anBigHeart;
-	-moz-animation: 0.5s linear  both 1 anBigHeart;
-	-o-animation: 0.5s linear  both 1 anBigHeart;
+	animation: 0.5s ease   1 anBigHeart;
+	-webkit-animation: 0.5s ease   1 anBigHeart;
+	-moz-animation: 0.5s ease   1 anBigHeart;
+	-o-animation: 0.5s ease   1 anBigHeart;
 }
 
 .change{
@@ -1420,10 +1401,10 @@ to {
 
 .swiper-slide-active .change
 {
-	animation: 0.5s linear 0.1s both 1 anBigChange;
-	-webkit-animation: 0.5s linear 0.1s both 1 anBigChange;
-	-moz-animation: 0.5s linear 0.1s both 1 anBigChange;
-	-o-animation: 0.5s linear 0.1s both 1 anBigChange;
+	animation: 0.5s ease 0.1s  1 anBigChange;
+	-webkit-animation: 0.5s ease 0.1s  1 anBigChange;
+	-moz-animation: 0.5s ease 0.1s  1 anBigChange;
+	-o-animation: 0.5s ease 0.1s  1 anBigChange;
 }
 
 
@@ -1440,10 +1421,10 @@ to {
 
 .swiper-slide-active .dream
 {
-	animation: 0.5s linear 0.1s both 1 anBigDream;
-	-webkit-animation: 0.5s linear 0.1s both 1 anBigDream;
-	-moz-animation: 0.5s linear 0.1s both 1 anBigDream;
-	-o-animation: 0.5s linear  0.1s both 1 anBigDream;
+	animation: 0.5s ease 0.1s  1 anBigDream;
+	-webkit-animation: 0.5s ease 0.1s  1 anBigDream;
+	-moz-animation: 0.5s ease 0.1s  1 anBigDream;
+	-o-animation: 0.5s ease  0.1s  1 anBigDream;
 }
 
 /*page12 started*/
@@ -1492,7 +1473,7 @@ to {
 .entranceEmployees{
 	position: relative;
 	width:100%;
-	margin-top:8%;
+	margin-top:12%;
 }
 .entranceEmployees img{
 	width: 100%;

@@ -1,5 +1,6 @@
 var hsee = {
     bind : function() {
+        //绑定12页欢迎进入按钮
         $(".entranceButton").click(function(){
            $(".resourceEntrance").hide();
            $(".resourceCategory").show();
@@ -7,34 +8,40 @@ var hsee = {
            $(".page12").addClass("page12background");
            $(".recruitButtons img").addClass("scaleo");
         });
+         //绑定产品招聘按钮
         $(".recruitproductbtn").click(function(){
             $(".resourceCategory").hide();
             $(".resourceproductdetail").show();
             hsee.initProductsilder();
         });
+        //绑定导视招聘按钮
          $(".recruitleaderbtn").click(function(){
             $(".resourceCategory").hide();
             $(".resourceleadertdetail").show();
             hsee.initLeadersidler();            
          });
+         //绑定工程师招聘按钮
          $(".recruitengineerbtn").click(function(){
             $(".resourceCategory").hide();
             $(".resourceengineertdetail").show();
             hsee.initEngineersilder();
          });
+         //绑定招聘详细页面推出按钮
          $(".recruitquit").click(function(e){
             var $target = $(e.target);
             $target.closest(".recruitquit").parent().hide();
             $(".resourceCategory").show();              
-         });  
+         }); 
+         //绑定13页关注我们按钮
          $(".contactletter").click(function(){
              $(".contactinfooverlay").show();
          });
+         //绑定13页overlay退出
          $(".contactinfooverlay").click(function(){
              $(".contactinfooverlay").hide();
          });
     },
-    //init slider in the page12 for producter recruitment
+    //13页员工详细信息：初始化产品员工招聘详细页面滑动控件
     initProductsilder :function(){
         var swiperproduct = new Swiper('.swiperproductmen', {
             mode : 'horizontal',
@@ -98,7 +105,7 @@ var hsee = {
             }
         });        
     },
-     //init slider in the page12 for view guider recruitment
+     //13页员工详细信息：初始化导视员工招聘详细页面滑动控件
     initLeadersidler:function(){
         var swiperleader = new Swiper('.swiperleadermen', {
             mode : 'horizontal',
@@ -162,7 +169,7 @@ var hsee = {
             }
         });          
     },
-    //init slider in the page12 for engineer recruitment    
+      //13页员工详细信息：初始化工程师员工招聘详细页面滑动控件    
     initEngineersilder:function(){
          var swiperengineer = new Swiper('.swiperengineermen', {
             mode : 'horizontal',
@@ -232,11 +239,10 @@ var hsee = {
         }, 1000);
         hsee.bind();
         var swiperNested1;
-        //To mark if slide in page2 has been played
+        //第二页动画播放一遍，定义标签确定动画是否已经播放完毕
         var previousX = 1;
         var humanFlipped = false;
-        //The main slider
-        var hasallloader = false;
+        //项目主要的上下滑动控件
         var swiperParent = new Swiper('.swiper-parent', {
                 mode : 'vertical',
                 speed : 350,
@@ -253,14 +259,17 @@ var hsee = {
                 },
                 onSlideChangeStart : function(swiper, direction) {
                     if (swiper.activeIndex === 1 && direction === "next") {
-                        $(".block-recruit").addClass("recruitToNext");
+                        $(".block-recruit").addClass("recruitToNext"); //第2页 招聘滴水图片跳动 动画
                     }
-                    if(swiper.activeIndex === 2){
-                        $(".intro-title div").addClass("anintro-title");
-                        $(".intro-title img").addClass("anintro-title");
-                        $(".intro-title .intro-higher").addClass("anintro-higher");
+                    if(swiper.activeIndex === 2){ //第2页 动画加载
+                        $(".intro-title img:first-child").addClass("anintro2");
+                        $(".intro-title div:nth-child(2)").addClass("anintro2");
+                        $(".intro-title img:nth-child(3)").addClass("anintro3");
+                        $(".intro-title img:nth-child(4)").addClass("anintro0-5");
+                        $(".intro-title div:nth-child(5)").addClass("anintro3-5");                        
+                        $(".intro-title img:nth-child(6)").addClass("anintro5");
                     } 
-                    if(swiper.activeIndex === 3) {
+                    if(swiper.activeIndex === 3) { //第3页 动画加载
                         $(".charac-lineUp").addClass("ancharac-lineUp");
                         $(".charac-secHead").addClass("ancharac-secHead");
                         $(".charac-position").addClass("ancharac-position");
@@ -273,7 +282,7 @@ var hsee = {
                 },
                 onTouchMove : function(swiper) {
                     var offsetY = -swiper.getWrapperTranslate('y'), silderHalfHeighter = $(".page1").height() * 0.3;
-                    if (swiper.activeIndex === 0) {
+                    if (swiper.activeIndex === 0) { //第1页 招聘滴水图片跳动 动画 ，根据用户的滑动加载，可能用户滑动间距不大，导致没有跳至下一页，但是跳动画面还是需要的
                         if (offsetY > silderHalfHeighter) {
                             $(".block-recruit").addClass("recruitToNext");
                         };
@@ -287,14 +296,14 @@ var hsee = {
                             $(this).attr('src',$(this).attr('image-url'));
                             $(pagenum).removeClass("unloaded");
                        });                 
-                    if (swiper.activeIndex === 8) {
+                    if (swiper.activeIndex === 8) { //第8页，加载动画
                         $(".officeBottle").addClass("anOfficeBottle");
                         $(".officePen").addClass("anOfficePen");
                         $(".officeMobile").addClass("anOfficeMobile");
                         $(".officeKeyboard").addClass("anOfficeKeyboard");
                         $(".officeNotebook").addClass("anOfficeNotebook");
                         $(".officeMouse").addClass("anOfficeMouse"); 
-                    } else {
+                    } else { //第8页，否则移除动画
                         $(".officeBottle").removeClass("anOfficeBottle");
                         $(".officePen").removeClass("anOfficePen");
                         $(".officeMobile").removeClass("anOfficeMobile");
@@ -302,12 +311,12 @@ var hsee = {
                         $(".officeNotebook").removeClass("anOfficeNotebook");
                         $(".officeMouse").removeClass("anOfficeMouse");
                     }
-                     if (swiper.activeIndex === 7) {
+                     if (swiper.activeIndex === 7) { //第7页，让地点字体显示
                         $(".location-name ").css("opacity",1);
-                     } else {
-                         $(".location-name ").css("opacity",0);
+                     } else { //第7页，让地点字体隐藏
+                        $(".location-name ").css("opacity",0);
                      }
-                    if(swiper.activeIndex !== 3)  {
+                    if(swiper.activeIndex !== 3)  { //非第3页，才移除动画，否则会有托影 效果
                          $(".charac-lineUp").removeClass("ancharac-lineUp");
                          $(".charac-secHead").removeClass("ancharac-secHead");
                          $(".charac-position").removeClass("ancharac-position");
@@ -318,12 +327,15 @@ var hsee = {
                          $(".charCircle-right ").removeClass("anCharCircle-right"); 
                                                
                     }
-                    if(swiper.activeIndex !== 2) {
-                        $(".intro-title div").removeClass("anintro-title");
-                        $(".intro-title img").removeClass("anintro-title");
-                        $(".intro-title .intro-higher").removeClass("anintro-higher");
+                    if(swiper.activeIndex !== 2) { //非第2页，才移除动画，否则会有托影 效果
+                        $(".intro-title img:first-child").removeClass("anintro2");
+                        $(".intro-title div:nth-child(2)").removeClass("anintro2");
+                        $(".intro-title img:nth-child(3)").removeClass("anintro3");
+                        $(".intro-title img:nth-child(4)").removeClass("anintro0-5");
+                        $(".intro-title div:nth-child(5)").removeClass("anintro3-5");                        
+                        $(".intro-title img:nth-child(6)").removeClass("anintro5");
                     }   
-                    if (swiper.activeIndex === 1) {
+                    if (swiper.activeIndex === 1) { //第2页，加载任务头像自动播放动画
                         $(".block-recruit").removeClass("recruitToNext");
                          previousX=1;
                         if(!humanFlipped){
@@ -334,13 +346,13 @@ var hsee = {
                     }
                 }
             });        
-        if ($(window).height() < '500') {
+        if ($(window).height() < '500') { //设置 屏幕的最小高度是504
             // 上下滚动翻页
             $('.swiper-parent').css("min-height", "504px");
             $('.pages').css("min-height", "504px");
             // swiperParent.params.calculateHeight =true;
         } 
-         //The slider in page2
+         //第2页，任务头像滑动控件
         swiperNested1 = new Swiper('.swiper-human', {
             mode : 'horizontal',
             slidesPerView : 1,
@@ -360,7 +372,6 @@ var hsee = {
                 } else {
                     $(".shadowL").show();
                 }
-
             },
             onSetWrapperTransition : function(swiper, duration) {
                 if (swiper.positions.current - swiper.positions.start != 0) {
@@ -424,7 +435,7 @@ var hsee = {
 
             },
         });
-          //The slider in page6 last mile
+         //第6页，图标滑动控件
         var swiperNested2 = new Swiper('.swiper-mile', {
             paginationClickable : true,
             slidesPerView : 1,
@@ -460,6 +471,7 @@ var hsee = {
                 });
             }
         });
+        //绑定第13页，top 按钮，回到首页
         $(".contacttopbutton").click(function(){
             swiperParent.swipeTo(0, 0, true);
         });
