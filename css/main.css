@@ -1527,11 +1527,11 @@ keyframes scaleo{0%{opacity:1;transform:scaleX(1) scaleY(1);} 100%{opacity:1;tra
 @-o-keyframes scaleo{0%{opacity:1;-o-transform:scaleX(1) scaleY(1);} 100%{opacity:1;-o-transform:scaleX(1.2) scaleY(1.2);}}
 /*page12 recruit*/
 .recruittitle{
-	margin-top: 11%;
+	margin-top: 15%;
 	width:100%;
 }
 .recruittitle img{
-	width: 80.3125%;
+	width: 100%;
 }
 /*.recruithead{
 	width: 100%;
@@ -1553,7 +1553,7 @@ keyframes scaleo{0%{opacity:1;transform:scaleX(1) scaleY(1);} 100%{opacity:1;tra
 }*/
 .recruitButtons{
 	position:relative;
-	margin-top:16%;
+	margin-top:20%;
 }
 .recruitleaderbtn{
 	position:relative;
