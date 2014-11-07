@@ -263,6 +263,12 @@ body {
 .shadowL img {
 	width: 100%
 }
+.anshowL{	
+	transition:opacity 0.9s ease-out;
+	-moz-transition: opacity 0.9s ease-out;
+	-webkit-transition: opacity 0.9s ease-out;
+	-o-transition: opacity 0.9s ease-out;	
+}
 
 .faces {
 	position: absolute;
@@ -504,41 +510,6 @@ body {
 .weiGo img{
 	width:100%;
 }
-/*.weiGo {
-	margin-top: 10%;
-}
-
-.weiGo-item {
-	width: 100%;
-}
-.weiGo-icon img {
-	width: 47%;
-}
-
-.weiGo-logo img {
-	width: 46%;
-	margin-top: 10%;
-}
-.weiGo-title img {
-	width: 46%;
-	margin-top: 4%;
-}
-.weiGo-line div{
-	width: 10%;
-	border-bottom:1px solid rgb(52,63,79);
-	margin-top: 5%;
-	margin-left:auto;
-	margin-right:auto;
-}
-.weiGo-head img {
-	width: 60%;
-	margin-top: 4%;
-}
-.weiGo-icons img {
-
-	width: 79%;
-	margin-top: 30%;
-}*/
 
 /*swiper-mile*/
 .page6 {
@@ -562,10 +533,11 @@ body {
 
 .mileArrows {
 	position: absolute;
-	width: 5%;
+	width: 10%;
+	z-index: 20;
 }
 .mileArrows img {
-	width: 100%;
+	width: 50%;
 }
 .mileLeftArrow {
 	left: 6%;
@@ -573,31 +545,31 @@ body {
 }
 @keyframes anMileLArrow   {
 from {
-	left: 4%;
+	left: 0%;
 }
 to {
-	left: 8%;
+	left: 4%;
 }}
 @-webkit-keyframes
 anMileLArrow {from {
-	left: 4%;
+	left: 0%;
 }
 to {
-	left: 8%;
+	left: 4%;
 }}
 @-moz-keyframes
 anMileLArrow {from {
-	left: 4%;
+	left: 0%;
 }
 to {
-	left: 8%;
+	left: 4%;
 }}
 @-o-keyframes
 anMileLArrow {from {
-	left: 4%;
+	left: 0%;
 }
 to {
-	left: 8%;
+	left: 4%;
 }}
 .swiper-slide-active  .mileLeftArrow {
 	animation: 1s linear alternate none infinite anMileLArrow;

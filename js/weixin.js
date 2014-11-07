@@ -2,11 +2,11 @@ var dataForWeixin={
  
    appId: "",
  
-   MsgImg: "../images/corplogo.jpg",
+   MsgImg: "http://www.wuxiyezhu.com/HSEE/images/corplogo.jpg",
  
-   TLImg: "../images/corplogo.jpg",
+   TLImg: "http://www.wuxiyezhu.com/HSEE/images/corplogo.jpg",
  
-   url: "http://",
+   url: "http://www.wuxiyezhu.com/HSEE",
  
    title: "HSEE 2014 招聘",
  
@@ -21,18 +21,18 @@ var dataForWeixin={
 (function(){
 
     var onBridgeReady = function() {
-
+        
         WeixinJSBridge.on('menu:share:appmessage', function(argv) {
-
+            // 发送给好友
             WeixinJSBridge.invoke('sendAppMessage', {
 
                 "appid": dataForWeixin.appId, 
 
                 "img_url": dataForWeixin.MsgImg, 
 
-                "img_width": "120", 
+                "img_width": "200", 
 
-                "img_height": "120", 
+                "img_height": "200", 
 
                 "link": dataForWeixin.url, 
 
@@ -44,7 +44,7 @@ var dataForWeixin={
                 (dataForWeixin.callback)();
             });
         });
-
+        // 分享到朋友圈
         WeixinJSBridge.on('menu:share:timeline', function(argv) {
 
             (dataForWeixin.callback)();
@@ -53,9 +53,9 @@ var dataForWeixin={
 
                 "img_url": dataForWeixin.TLImg, 
 
-                "img_width": "120", 
+                "img_width": "200", 
 
-                "img_height": "120", 
+                "img_height": "200", 
 
                 "link": dataForWeixin.url, 
 
@@ -66,7 +66,7 @@ var dataForWeixin={
             }, function(res) {
             });
         });
-
+        // 分享到微博
         WeixinJSBridge.on('menu:share:weibo', function(argv) {
 
             WeixinJSBridge.invoke('shareWeibo',{
@@ -79,36 +79,11 @@ var dataForWeixin={
                 (dataForWeixin.callback)();
             });
         });
-
-        WeixinJSBridge.on('menu:share:facebook', function(argv) {
-
-            (dataForWeixin.callback)();
-
-            WeixinJSBridge.invoke('shareFB', {
-
-                "img_url": dataForWeixin.TLImg, 
-
-                "img_width": "120", 
-
-                "img_height": "120", 
-
-                "link": dataForWeixin.url, 
-
-                "desc": dataForWeixin.desc, 
-
-                "title": dataForWeixin.title
-
-            }, function(res) {
-            });
-        });
     };
  
     if (document.addEventListener) {
-
-        document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
-     
+        document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);    
     } else if (document.attachEvent) {
-
         document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
         document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
     }
