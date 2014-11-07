@@ -46,16 +46,17 @@ body {
 .pullup img{
 	width: 8%;
 }
-@keyframes anUp  {from {top: 93%;} to {top: 91%;}}
-@-webkit-keyframes anUp {from {top: 93%;} to { top: 91%;}}
-@-moz-keyframes anUp {from {top: 93%;} to {top: 91%;}}
-@-o-keyframes anUp {from {top: 93%;} to {top: 91%;}}
 .swiper-slide-active  .pullup {
-	animation: 1s linear alternate none infinite anUp;
-	-webkit-animation: 1s linear alternate none infinite anUp;
-	-moz-animation: 1s linear alternate none infinite anUp;
-	-o-animation: 1s linear alternate none infinite anUp;
+	animation: anUp 1s linear infinite alternate none ;
+	-webkit-animation: anUp 1s linear infinite  alternate none ;
+	-moz-animation: anUp 1s linear infinite  alternate none;
+	-o-animation:anUp  1s linear infinite  alternate none;
 }
+@keyframes anUp  {0% {top: 93%;} 100% {top: 91%;}}
+@-webkit-keyframes anUp {0% {top: 93%;} 100% { top: 91%;}}
+@-moz-keyframes anUp {0% {top: 93%;} 100% {top: 91%;}}
+@-o-keyframes anUp {0% {top: 93%;} 100% {top: 91%;}}
+
 /*page1 started*/
 .page1 {
 	background: rgba(254,184,41,1);
@@ -64,7 +65,7 @@ body {
 	background-size: cover;
 }
 /*lineWithCircle upper*/
-@keyframes anCircleUp   { 0% {transform:translate(0%,0%);} 25% {transform:translate(-5%,5%);} 50% {transform:translate(-12%,2%);} 75% {transform:translate(-24%,48%);} 100% {transform:translate(-32%,64%);}}
+keyframes anCircleUp   { 0% {transform:translate(0%,0%);} 25% {transform:translate(-5%,5%);} 50% {transform:translate(-12%,2%);} 75% {transform:translate(-24%,48%);} 100% {transform:translate(-32%,64%);}}
 @-webkit-keyframes anCircleUp   { 0% {-webkit-transform:translate(0%,0%);} 25% {-webkit-transform:translate(-10%,10%);} 50% {-webkit-transform:translate(-20%,20%);} 75% {-webkit-transform:translate(-30%,30%);} 100% {-webkit-transform:translate(-40%,40%);} }
 @-moz-keyframes anCircleUp { 0% {-moz-transform:translate(0%,0%);} 25% {-moz-transform:translate(-6%,1%);} 50% {-moz-transform:translate(-16%,32%);} 75% {-moz-transform:translate(-24%,48%);} 100% {-moz-transform:translate(-32%,64%);}  }
 @-o-keyframes anCircleUp    { 0% {-o-transform:translate(0%,0%);} 25% {-o-transform:translate(-6%,1%);} 50% {-o-transform:translate(-16%,32%);} 75% {-o-transform:translate(-24%,48%);} 100% {-o-transform:translate(-32%,64%);}  }
@@ -76,16 +77,16 @@ body {
 }
 .swiper-slide-active .line-circleUp
 {
-	animation: 3s linear 1s alternate none infinite anCircleUp;
-	-webkit-animation: 3s linear 1s alternate none infinite anCircleUp;
-	-moz-animation: 3s linear 1s alternate none infinite anCircleUp;
-	-o-animation: 3s linear 1s alternate none infinite anCircleUp;
+	animation:anCircleUp 3s linear 1s infinite alternate none;
+	-webkit-animation:anCircleUp 3s linear 1s infinite alternate none;
+	-moz-animation:anCircleUp 3s linear 1s infinite alternate none;
+	-o-animation:anCircleUp 3s linear 1s infinite alternate none;
 }
 .line-circleUp img {
 	width: 100%;
 }
 /*Thin liner upper*/
-@keyframes anlineUp   { 0% {transform:translate(0%,0%);} 25% {transform:translate(-8%,16%);} 50% {transform:translate(-16%,32%);} 75% {transform:translate(-24%,48%);} 100% {transform:translate(-32%,64%);}}
+keyframes anlineUp   { 0% {transform:translate(0%,0%);} 25% {transform:translate(-8%,16%);} 50% {transform:translate(-16%,32%);} 75% {transform:translate(-24%,48%);} 100% {transform:translate(-32%,64%);}}
 @-webkit-keyframes anlineUp   { 0% {-webkit-transform:translate(0%,0%);} 25% {-webkit-transform:translate(-8%,16%);} 50% {-webkit-transform:translate(-16%,32%);} 75% {-webkit-transform:translate(-24%,48%);} 100% {-webkit-transform:translate(-32%,64%);} }
 @-moz-keyframes anlineUp { 0% {-moz-transform:translate(0%,0%);} 25% {-moz-transform:translate(-8%,16%);} 50% {-moz-transform:translate(-16%,32%);} 75% {-moz-transform:translate(-24%,48%);} 100% {-moz-transform:translate(-32%,64%);}  }
 @-o-keyframes anlineUp    { 0% {-o-transform:translate(0%,0%);} 25% {-o-transform:translate(-8%,16%);} 50% {-o-transform:translate(-16%,32%);} 75% {-o-transform:translate(-24%,48%);} 100% {-o-transform:translate(-32%,64%);}  }
@@ -98,10 +99,10 @@ body {
 }
 .swiper-slide-active .thin-line
 {
-	animation: 2s linear 2s alternate none infinite anlineUp;
-	-webkit-animation: 2s linear 2s alternate none infinite anlineUp;
-	-moz-animation: 2s linear 2s alternate none infinite anlineUp;
-	-o-animation: 2s linear 2s alternate none infinite anlineUp;
+	animation:anlineUp 2s linear 2s infinite alternate none ;
+	-webkit-animation:anlineUp 2s linear 2s infinite alternate none ;
+	-moz-animation:anlineUp 2s linear 2s infinite alternate none ;
+	-o-animation:anlineUp 2s linear 2s infinite alternate none ;
 }
 .thin-line img {
 	width: 50%;
@@ -119,10 +120,10 @@ body {
 }
 .swiper-slide-active .rec-long
 {
-	animation: 3s linear 1s alternate none infinite anRecLarge;
-	-webkit-animation: 3s linear 1s alternate none infinite anRecLarge;
-	-moz-animation: 3s linear 1s alternate none infinite anRecLarge;
-	-o-animation: 3s linear 1s alternate none infinite anRecLarge;
+	animation:anRecLarge 3s linear 1s infinite alternate none ;
+	-webkit-animation:anRecLarge 3s linear 1s infinite alternate none;
+	-moz-animation:anRecLarge 3s linear 1s infinite alternate none;
+	-o-animation:anRecLarge 3s linear 1s infinite alternate none;
 }
 
 .rec-long img {
@@ -143,10 +144,10 @@ body {
 }
 .swiper-slide-active .rec-short
 {
-	animation: 1s linear 1s alternate none infinite anRecSmall;
-	-webkit-animation: 1s linear 1s alternate none infinite anRecSmall;
-	-moz-animation: 1s linear 1s alternate none infinite anRecSmall;
-	-o-animation: 1s linear 1s alternate none infinite anRecSmall;
+	animation:anRecSmall 1s linear 1s infinite alternate none ;
+	-webkit-animation:anRecSmall 1s linear 1s infinite alternate none;
+	-moz-animation:anRecSmall 1s linear 1s infinite alternate none;
+	-o-animation:anRecSmall 1s linear 1s infinite alternate none;
 }
 .rec-short img {
 	width: 50%;
@@ -165,10 +166,10 @@ body {
 }
 .swiper-slide-active .line-circleDown
 {
-	animation: 4s linear 1s alternate none infinite anCircleDown;
-	-webkit-animation: 4s linear 1s alternate none infinite anCircleDown;
-	-moz-animation: 4s linear 1s alternate none infinite anCircleDown;
-	-o-animation: 4s linear 1s alternate none infinite anCircleDown;
+	animation:anCircleDown 4s linear 1s infinite alternate none  ;
+	-webkit-animation:anCircleDown 4s linear 1s infinite alternate none;
+	-moz-animation:anCircleDown 4s linear 1s infinite alternate none;
+	-o-animation:anCircleDown 4s linear 1s infinite alternate none;
 }
 .line-circleDown img {
 	width: 50%;
@@ -188,10 +189,10 @@ body {
 }
 .swiper-slide-active .block-small
 {
-	animation: 4s linear 1s infinite anBlockSmall;
-	-webkit-animation: 4s linear 1s infinite anBlockSmall;
-	-moz-animation: 4s linear 1s infinite anBlockSmall;
-	-o-animation: 4s linear 1s infinite anBlockSmall;
+	animation:anBlockSmall 4s  linear 1s infinite ;
+	-webkit-animation:anBlockSmall 4s linear 1s infinite;
+	-moz-animation:anBlockSmall 4s linear 1s infinite;
+	-o-animation:anBlockSmall 4s linear 1s infinite;
 }
 .block-small img {
 	width: 5%;
@@ -211,10 +212,10 @@ body {
 }
 .swiper-slide-active .block-large
 {
-	animation: 8s linear 2s infinite anBlockLarge;
-	-webkit-animation: 8s linear 2s infinite anBlockLarge;
-	-moz-animation: 8s linear 2s infinite anBlockLarge;
-	-o-animation: 8s linear 2s infinite anBlockLarge;
+	animation:anBlockLarge 8s linear 2s infinite;
+	-webkit-animation:anBlockLarge 8s linear 2s infinite;
+	-moz-animation:anBlockLarge 8s linear 2s infinite;
+	-o-animation:anBlockLarge 8s linear 2s infinite;
 }
 .block-large img {
 	width: 5%;
@@ -233,16 +234,16 @@ body {
 	position: absolute;
 	width: 100%;
 	top: 15%;
-	animation: 2s linear 1s alternate none infinite anBlockRecruit;
-	-webkit-animation: 2s linear 1s alternate none infinite anBlockRecruit;
-	-moz-animation: 2s linear 1s alternate none infinite anBlockRecruit;
-	-o-animation: 2s linear 1s alternate none infinite anBlockRecruit;
+	animation:anBlockRecruit 2s linear 1s infinite alternate none;
+	-webkit-animation:anBlockRecruit 2s linear 1s infinite alternate none;
+	-moz-animation:anBlockRecruit 2s linear 1s infinite alternate none;
+	-o-animation:anBlockRecruit 2s linear 1s infinite alternate none;
 }
 .recruitToNext {
-	animation: 1s linear 0s alternate none 1 anBlockRecruitNext;
-	-webkit-animation: 1s linear 0s alternate none 1 anBlockRecruitNext;
-	-moz-animation: 1s linear 0s alternate none 1 anBlockRecruitNext;
-	-o-animation: 1s linear 0s alternate none 1 anBlockRecruitNext;
+	animation:anBlockRecruitNext 1s linear 0s 1 alternate none ;
+	-webkit-animation:anBlockRecruitNext 1s linear 0s 1 alternate none;
+	-moz-animation:anBlockRecruitNext 1s linear 0s 1 alternate none;
+	-o-animation:anBlockRecruitNext 1s linear 0s 1 alternate none;
 }
 .block-recruit img {
 	width: 62%;
@@ -572,10 +573,10 @@ to {
 	left: 4%;
 }}
 .swiper-slide-active  .mileLeftArrow {
-	animation: 1s linear alternate none infinite anMileLArrow;
-	-webkit-animation: 1s linear alternate none infinite anMileLArrow;
-	-moz-animation: 1s linear alternate none infinite anMileLArrow;
-	-o-animation: 1s linear alternate none infinite anMileLArrow;
+	animation:anMileLArrow 1s linear infinite alternate none;
+	-webkit-animation:anMileLArrow 1s linear infinite alternate none;
+	-moz-animation:anMileLArrow 1s linear infinite alternate none;
+	-o-animation:anMileLArrow 1s linear infinite alternate none;
 }
 .mileRightArrow {
 	left: 89%;
@@ -610,10 +611,10 @@ to {
 	left: 87%;
 }}
 .swiper-slide-active  .mileRightArrow {
-	animation: 1s linear alternate none infinite anMileRArrow;
-	-webkit-animation: 1s linear alternate none infinite anMileRArrow;
-	-moz-animation: 1s linear alternate none infinite anMileRArrow;
-	-o-animation: 1s linear alternate none infinite anMileRArrow;
+	animation:anMileRArrow 1s linear infinite alternate none;
+	-webkit-animation:anMileRArrow 1s linear infinite alternate none;
+	-moz-animation:anMileRArrow 1s linear infinite alternate none;
+	-o-animation:anMileRArrow 1s linear infinite alternate none;
 }
 
 .mileCircle {
@@ -1083,10 +1084,10 @@ to {
 .swiper-slide-active .hseeEye {
 	-webkit-animation-fill-mode: both;
 	animation-fill-mode: both;
-	animation: 30s linear infinite anEyeCenter;
-	-webkit-animation: 30s linear infinite anEyeCenter;
-	-moz-animation: 30s linear infinite anEyeCenter;
-	-o-animation: 30s linear infinite anEyeCenter;
+	animation:anEyeCenter 30s linear infinite ;
+	-webkit-animation:anEyeCenter 30s linear infinite ;
+	-moz-animation:anEyeCenter 30s linear infinite ;
+	-o-animation:anEyeCenter 30s linear infinite ;
 	-webkit-transform-origin: 50% 50%;
 	-ms-transform-origin: 50% 50%;
 	transform-origin: 50% 50%;
@@ -1127,10 +1128,10 @@ to {
 .swiper-slide-active  .eyecircle {
 	-webkit-animation-fill-mode: both;
 	animation-fill-mode: both;
-	animation: 30s linear infinite anEyeItemCenter;
-	-webkit-animation: 30s linear infinite anEyeItemCenter;
-	-moz-animation: 30s linear infinite anEyeItemCenter;
-	-o-animation: 30s linear infinite anEyeItemCenter;
+	animation:anEyeItemCenter 30s linear infinite ;
+	-webkit-animation:anEyeItemCenter 30s linear infinite ;
+	-moz-animation:anEyeItemCenter 30s linear infinite ;
+	-o-animation:anEyeItemCenter 30s linear infinite ;
 }
 .eyeblue {
 	top: 26%;
@@ -1314,10 +1315,10 @@ to {
 
 .swiper-slide-active .dreamtitle
 {
-	animation: 0.5s ease  1 andreamtitle;
-	-webkit-animation: 0.5s ease  1 andreamtitle;
-	-moz-animation: 0.5s ease  1 andreamtitle;
-	-o-animation: 0.5s ease  1 andreamtitle;
+	animation:andreamtitle 0.5s ease  1 ;
+	-webkit-animation:andreamtitle 0.5s ease  1;
+	-moz-animation:andreamtitle 0.5s ease  1;
+	-o-animation:andreamtitle 0.5s ease  1;
 }
 
 
@@ -1336,10 +1337,10 @@ to {
 
 .swiper-slide-active .hearttitle
 {
-	animation: 0.5s ease 0.1s  1 anhearttitle;
-	-webkit-animation: 0.5s ease 0.1s  1 anhearttitle;
-	-moz-animation: 0.5s ease 0.1s  1 anhearttitle;
-	-o-animation: 0.5s ease 0.1s  1 anhearttitle;
+	animation:anhearttitle 0.5s ease 0.1s  1 ;
+	-webkit-animation:anhearttitle 0.5s ease 0.1s  1;
+	-moz-animation:anhearttitle 0.5s ease 0.1s  1;
+	-o-animation:anhearttitle 0.5s ease 0.1s  1;
 }
 
 .heartCharacter{
@@ -1354,10 +1355,10 @@ to {
 
 .swiper-slide-active .heartCharacter
 {
-	animation: 0.5s ease   1 anBigHeart;
-	-webkit-animation: 0.5s ease   1 anBigHeart;
-	-moz-animation: 0.5s ease   1 anBigHeart;
-	-o-animation: 0.5s ease   1 anBigHeart;
+	animation:anBigHeart 0.5s ease 1 ;
+	-webkit-animation:anBigHeart 0.5s ease 1;
+	-moz-animation:anBigHeart 0.5s ease 1;
+	-o-animation:anBigHeart 0.5s ease 1;
 }
 
 .change{
@@ -1373,10 +1374,10 @@ to {
 
 .swiper-slide-active .change
 {
-	animation: 0.5s ease 0.1s  1 anBigChange;
-	-webkit-animation: 0.5s ease 0.1s  1 anBigChange;
-	-moz-animation: 0.5s ease 0.1s  1 anBigChange;
-	-o-animation: 0.5s ease 0.1s  1 anBigChange;
+	animation:anBigChange 0.5s ease 0.1s 1;
+	-webkit-animation:anBigChange 0.5s ease 0.1s 1;
+	-moz-animation:anBigChange 0.5s ease 0.1s 1;
+	-o-animation:anBigChange 0.5s ease 0.1s 1;
 }
 
 
@@ -1393,10 +1394,10 @@ to {
 
 .swiper-slide-active .dream
 {
-	animation: 0.5s ease 0.1s  1 anBigDream;
-	-webkit-animation: 0.5s ease 0.1s  1 anBigDream;
-	-moz-animation: 0.5s ease 0.1s  1 anBigDream;
-	-o-animation: 0.5s ease  0.1s  1 anBigDream;
+	animation:anBigDream 0.5s ease 0.1s  1;
+	-webkit-animation:anBigDream 0.5s ease 0.1s 1;
+	-moz-animation:anBigDream 0.5s ease 0.1s 1;
+	-o-animation:anBigDream 0.5s ease  0.1s 1;
 }
 
 /*page12 started*/
@@ -1415,23 +1416,6 @@ to {
 .entrancetitle img{
 	width:76.40625%;
 }
-/*.creativetitle1 img{
-	width:26.2%;
-}
-.creativetitle2 img{
-	width:52%;
-}
-.creativetitle3{
-	margin-top:4%;
-}*/
-/*.creativetitle3 img{
-	width:76.3%;
-}*/
-/*.creativeline{
-	width:6.6%;
-	margin: 2% auto;
-	border-bottom: 1px solid white;
-}*/
 
 .entranceButton{
 	position: relative;
@@ -1515,13 +1499,13 @@ to {
 	-webkit-transform-origin: center center;
 	-moz-transform-origin: center center;
 	-o-transform-origin: center center;
-	animation:scaleo 1.5s 0.5s infinite linear alternate none;
-	-webkit-animation: scaleo 1.5s 0.5s infinite linear alternate none;
-	-moz-animation:scaleo 1.5s 0.5s infinite linear alternate none;
-	-o-animation:scaleo 1.5s 0.5s infinite linear alternate none;
+	animation:scaleo 1.5s linear 0.5s infinite alternate none;
+	-webkit-animation: scaleo 1.5s linear 0.5s infinite alternate none;
+	-moz-animation:scaleo 1.5s linear 0.5s infinite alternate none;
+	-o-animation:scaleo 1.5s linear 0.5s infinite alternate none;
 } 
 
-keyframes scaleo{0%{opacity:1;transform:scaleX(1) scaleY(1);} 100%{opacity:1;transform:scaleX(1.2) scaleY(1.2);}}
+@keyframes scaleo{0%{opacity:1;transform:scaleX(1) scaleY(1);} 100%{opacity:1;transform:scaleX(1.2) scaleY(1.2);}}
 @-webkit-keyframes scaleo{0%{opacity:1;-webkit-transform:scaleX(1) scaleY(1);} 100%{opacity:1;-webkit-transform:scaleX(1.2) scaleY(1.2);}}
 @-moz-keyframes scaleo{0%{opacity:1;-moz-transform:scaleX(1) scaleY(1);} 100%{opacity:1;-moz-transform:scaleX(1.2) scaleY(1.2);}}
 @-o-keyframes scaleo{0%{opacity:1;-o-transform:scaleX(1) scaleY(1);} 100%{opacity:1;-o-transform:scaleX(1.2) scaleY(1.2);}}
@@ -1533,24 +1517,6 @@ keyframes scaleo{0%{opacity:1;transform:scaleX(1) scaleY(1);} 100%{opacity:1;tra
 .recruittitle img{
 	width: 100%;
 }
-/*.recruithead{
-	width: 100%;
-}
-.recruithead img{
-	width: 52.2%;
-}
-.recruitline{
-	width:6.6%;
-	margin: 2% auto;
-	border-bottom: 1px solid white;	
-}
-
-.recruitdesc {
-	width: 100%;
-}
-.recruitdesc img{
-	width: 80.3%;
-}*/
 .recruitButtons{
 	position:relative;
 	margin-top:20%;
@@ -1800,15 +1766,11 @@ keyframes scaleo{0%{opacity:1;transform:scaleX(1) scaleY(1);} 100%{opacity:1;tra
 	background-repeat: no-repeat;
 	background-size: cover;	
 }
-keyframes scalebutton{0%{transform:scaleX(1) scaleY(1);} 100%{transform:scaleX(2) scaleY(2);}}
-@-webkit-keyframes scalebutton{0%{-webkit-transform:scaleX(1) scaleY(1);} 100%{-webkit-transform:scaleX(2) scaleY(2);}}
-@-moz-keyframes scalebutton{0%{-moz-transform:scaleX(1) scaleY(1);} 100%{-moz-transform:scaleX(2) scaleY(2);}}
-@-o-keyframes scalebutton{0%{-o-transform:scaleX(1) scaleY(1);} 100%{-o-transform:scaleX(2) scaleY(2);}}
 .swiper-slide-active .contacttopbutton{
-	animation:scaleo 0.5s 2s 4 linear alternate both;
-	-webkit-animation: scaleo 0.5s 2s 4 linear alternate both;
-	-moz-animation:scaleo 0.5s 2s 4 linear alternate both;
-	-o-animation:scaleo 0.5s 2s 4 linear alternate both;
+	animation:scaleo 0.5s linear 2s 4 alternate none;
+	-webkit-animation: scaleo 0.5s linear 2s 4 alternate none;
+	-moz-animation:scaleo 0.5s linear 2s 4 alternate none;
+	-o-animation:scaleo 0.5s linear 2s 4 alternate none;
 }
 .contacttopbutton{
 	width: 100%;
@@ -1817,31 +1779,6 @@ keyframes scalebutton{0%{transform:scaleX(1) scaleY(1);} 100%{transform:scaleX(2
 .contacttopbutton img{
 	width: 14.4%;
 }
-/*.contacttitle{
-	color: white;
-	text-align: center;
-	width: 100%;
-	line-height: 0;
-}
-.contacttitle p:first-child{
-	font-size: 3em;
-}
-.contacttitle p:last-child{
-	font-size: 1.5em;
-	margin-top: -3%;
-}
-.contactline{
-	width:13.4%;
-	margin: 3% auto;
-	border-bottom: 1px solid white;
-}
-.contactcontent{
-	color: white;
-	text-align: center;
-	width: 100%;
-	line-height: 0.9;
-	font-size: 1em;
-}*/
 .contactcontent{
 	width: 100%;
 	margin-top:6%;
