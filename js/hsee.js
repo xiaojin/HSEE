@@ -260,6 +260,7 @@ var hsee = {
                     $(".intro-title img:nth-child(4)").addClass("anintro0-5");
                     $(".intro-title div:nth-child(5)").addClass("anintro3-5");
                     $(".intro-title img:nth-child(6)").addClass("anintro5");
+                    alert(window.innerHeight);
                 }
                 if (swiper.activeIndex === 3) {//第3页 动画加载
                     $(".charac-lineUp").addClass("ancharac-lineUp");
