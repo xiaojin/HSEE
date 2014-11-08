@@ -89,6 +89,13 @@ var hsee = {
                             'left' : offset
                         });
                     }
+                    for(i = 1; i <= 4; i++){
+                        var value = ((i-index)*100)+"%";
+                        $(".product"+i).css({"transform":"translateX("+value+")",
+                                            "-webkit-transform":"translateX("+value+")"
+                                            });
+                    }
+                    
                 } else if ((swiper.positions.current - swiper.positions.start) > 0 && index >= 1) {
                     $(".producthumanactive").css({
                         'left' : '20%',
@@ -106,6 +113,55 @@ var hsee = {
                             'left' : offset
                         });
                     }
+                    for(i = 1; i <= 4; i++){
+                        var value = ((i-index)*100)+"%";
+                        $(".product"+i).css({"transform":"translateX("+value+")",
+                                             "-webkit-transform":"translateX("+value+")"
+                                             });
+                    }                    
+                }
+                // if(swiper.activeIndex ===3){
+                    // $(".resourceproductdetail .recruitArrowRight").removeClass("anArrowRight");
+                    // $(".resourceproductdetail .recruitArrowRight").css('opacity',0);
+                // } else if(swiper.activeIndex ===0){
+                     // $(".resourceproductdetail .recruitArrowLeft").removeClass("anArrowLeft");
+                     // $(".resourceproductdetail .recruitArrowLeft").css('opacity',0);
+                // }else {
+                     // $(".resourceproductdetail .recruitArrowLeft").css('opacity',1);
+                     // $(".resourceproductdetail .recruitArrowRight").css('opacity',1);
+                     // $(".resourceproductdetail .recruitArrowRight").removeClass("anArrowRight");
+                     // $(".resourceproductdetail .recruitArrowLeft").removeClass('anArrowLeft');
+                     // setTimeout(function(){
+                        // $(".resourceproductdetail .recruitArrowRight").addClass("anArrowRight");
+                        // $(".resourceproductdetail .recruitArrowLeft").addClass("anArrowLeft");                        
+                     // },100);                 
+                // }
+            },
+            onTouchMove: function(swiper){ //给用户 已经移动到底的视觉效果
+                var distance =swiper.positions.current - swiper.positions.start;
+                if(distance< 0 && swiper.activeIndex==3){ 
+                   var cal=-10;                              
+                   $(".product4").css({"transform":"translateX("+cal+"%)",
+                     "-webkit-transform":"translateX("+cal+"%)"
+                     });
+                }
+                if(distance>0 && swiper.activeIndex==0){
+                   var cal=10;                              
+                   $(".product1").css({"transform":"translateX("+cal+"%)",
+                     "-webkit-transform":"translateX("+cal+"%)"
+                     });                    
+                }
+            },
+            onTouchEnd :function(swiper){ //给用户 已经移动到底的视觉效果
+                if(swiper.activeIndex==3){
+                    $(".product4").css({"transform":"translateX(0)",
+                                 "-webkit-transform":"translateX(0)"
+                                 });
+                }
+                 if(swiper.activeIndex==0){
+                    $(".product1").css({"transform":"translateX(0)",
+                                 "-webkit-transform":"translateX(0)"
+                                 });
                 }
             }
         });
@@ -150,6 +206,12 @@ var hsee = {
                             'left' : offset
                         });
                     }
+                    for(i = 1; i <= 3; i++){
+                        var value = ((i-index)*100)+"%";
+                        $(".leader"+i).css({"transform":"translateX("+value+")",
+                                            "-webkit-transform":"translateX("+value+")"
+                                            });
+                    }                    
                 } else if ((swiper.positions.current - swiper.positions.start) > 0 && index >= 1) {
                     $(".leaderhumanactive").css({
                         'left' : '20%',
@@ -167,8 +229,42 @@ var hsee = {
                             'left' : offset
                         });
                     }
+                    for(i = 1; i <= 3; i++){
+                        var value = ((i-index)*100)+"%";
+                        $(".leader"+i).css({"transform":"translateX("+value+")",
+                                            "-webkit-transform":"translateX("+value+")"
+                                            });
+                    }                    
                 }
-            }
+            },
+            onTouchMove: function(swiper){ //给用户 已经移动到底的视觉效果
+                var distance =swiper.positions.current - swiper.positions.start;
+                if(distance< 0 && swiper.activeIndex==2){ 
+                   var cal=-10;                              
+                   $(".leader3").css({"transform":"translateX("+cal+"%)",
+                     "-webkit-transform":"translateX("+cal+"%)"
+                     });
+                }
+                if(distance>0 && swiper.activeIndex==0){
+                   var cal=10;                              
+                   $(".leader1").css({"transform":"translateX("+cal+"%)",
+                     "-webkit-transform":"translateX("+cal+"%)"
+                     });                    
+                }
+            },
+            onTouchEnd :function(swiper){ //给用户 已经移动到底的视觉效果
+                if(swiper.activeIndex==2){
+                    $(".leader3").css({"transform":"translateX(0)",
+                                 "-webkit-transform":"translateX(0)"
+                                 });
+                }
+                 if(swiper.activeIndex==0){
+                    $(".leader1").css({"transform":"translateX(0)",
+                                 "-webkit-transform":"translateX(0)"
+                                 });
+                }
+            }        
+            
         });
     },
     //13页员工详细信息：初始化工程师员工招聘详细页面滑动控件
@@ -211,6 +307,12 @@ var hsee = {
                             'left' : offset
                         });
                     }
+                    for(i = 1; i <= 4; i++){
+                        var value = ((i-index)*100)+"%";
+                        $(".engineer"+i).css({"transform":"translateX("+value+")",
+                                            "-webkit-transform":"translateX("+value+")"
+                                            });
+                    }                       
                 } else if ((swiper.positions.current - swiper.positions.start) > 0 && index >= 1) {
                     $(".enghumanactive").css({
                         'left' : '20%',
@@ -228,8 +330,41 @@ var hsee = {
                             'left' : offset
                         });
                     }
+                    for(i = 1; i <= 4; i++){
+                        var value = ((i-index)*100)+"%";
+                        $(".engineer"+i).css({"transform":"translateX("+value+")",
+                                            "-webkit-transform":"translateX("+value+")"
+                                            });
+                    }                       
                 }
-            }
+            },
+            onTouchMove: function(swiper){ //给用户 已经移动到底的视觉效果
+                var distance =swiper.positions.current - swiper.positions.start;
+                if(distance< 0 && swiper.activeIndex==3){ 
+                   var cal=-10;                              
+                   $(".engineer4").css({"transform":"translateX("+cal+"%)",
+                     "-webkit-transform":"translateX("+cal+"%)"
+                     });
+                }
+                if(distance>0 && swiper.activeIndex==0){
+                   var cal=10;                              
+                   $(".engineer1").css({"transform":"translateX("+cal+"%)",
+                     "-webkit-transform":"translateX("+cal+"%)"
+                     });                    
+                }
+            },
+            onTouchEnd :function(swiper){ //给用户 已经移动到底的视觉效果
+                if(swiper.activeIndex==3){
+                    $(".engineer4").css({"transform":"translateX(0)",
+                                 "-webkit-transform":"translateX(0)"
+                                 });
+                }
+                 if(swiper.activeIndex==0){
+                    $(".engineer1").css({"transform":"translateX(0)",
+                                 "-webkit-transform":"translateX(0)"
+                                 });
+                }
+            }           
         });
     },
     ready : function() {

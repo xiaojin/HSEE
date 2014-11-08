@@ -1616,11 +1616,122 @@ to {
 
 .resourcewhiteback{
 	width:100%;
-	margin-top:5%
+	margin-top:5%;
+	position:relative;
 }
-.resourcewhiteback img{
+
+.positiondesc{
+	 width: 100%;
+	 position: absolute;
+	 top: 14%;
+	transition: transform 0.4s linear;
+	-webkit-transition: -webkit-transform 0.4s linear;
+	-moz-transition: -moz-transform 0.4s linear;
+	-o-transition: -o-transform 0.4s linear;	 
+}
+.positiondesc img{
+	width:35.6%;
+}
+.product1{
+	transform: translateX(0);
+	-webkit-transform: translateX(0);
+}
+.product2{
+	transform: translateX(100%);
+	-webkit-transform: translateX(100%);
+}
+.product3{
+	transform: translateX(200%);
+	-webkit-transform: translateX(200%);
+}
+.product4{
+	transform: translateX(300%);
+	-webkit-transform: translateX(300%);
+}
+.leader1{
+	transform: translateX(0);
+	-webkit-transform: translateX(0);
+}
+.leader2{
+	transform: translateX(100%);
+	-webkit-transform: translateX(100%);
+}
+.leader3{
+	transform: translateX(200%);
+	-webkit-transform: translateX(200%);
+}
+.engineer1{
+	transform: translateX(0);
+	-webkit-transform: translateX(0);
+}
+.engineer2{
+	transform: translateX(100%);
+	-webkit-transform: translateX(100%);
+}
+.engineer3{
+	transform: translateX(200%);
+	-webkit-transform: translateX(200%);
+}
+.engineer4{
+	transform: translateX(300%);
+	-webkit-transform: translateX(300%);
+}
+.resourcewhitebackImg{
 	width: 44.7%;
 }
+.recruitOverlay {
+	width: 100%;
+	position: absolute;
+	top:0%;
+}
+.recruitOverlay img{
+	width: 100%;
+}
+.recruitArrowLeft{
+	position: absolute;
+	width:5%;
+	top:35%;
+	left: 13%;
+	/*z-index:9;*/
+}
+
+.recruitArrowLeft img{
+	width: 100%;
+}
+.recruitArrowRight{
+	position: absolute;
+	width:10%;
+	top:35%;
+	left: 76.6%;
+}
+.recruitArrowRight img{
+	width: 50%;
+}
+
+.anArrowRight{
+	animation:anrecruitR 2s ease infinite normal none;
+	-webkit-animation: anrecruitR 2s ease infinite normal none;
+	-moz-animation:anrecruitR 2s ease infinite normal none;
+	-o-animation:anrecruitR 2s ease infinite normal none;		
+}
+.anArrowLeft{
+	-webkit-backface-visibility: hidden; 
+   	backface-visibility: hidden;
+	animation:anrecruitL 2s ease infinite normal;
+	-webkit-animation: anrecruitL 2s ease infinite normal;
+	-moz-animation:anrecruitL 2s ease infinite normal;
+	-o-animation:anrecruitL 2s ease infinite normal;		
+}
+
+@keyframes anrecruitR{0%{opacity:1;left:76.6%} 100%{opacity:0;left:84.6%}}
+@-webkit-keyframes anrecruitR{0%{opacity:1;left:76.6%} 100%{opacity:0;left:84.6%}}
+@-moz-keyframes anrecruitR{0%{opacity:1;left:76.6%} 100%{opacity:0;left:84.6%}}
+@-o-keyframes anrecruitR{0%{opacity:1;left:76.6%} 100%{opacity:0;left:84.6%}}
+
+@keyframes anrecruitL{0%{opacity:1;left:13%} 100%{opacity:0;tleft:4%}}
+@-webkit-keyframes anrecruitL{0%{opacity:1;left:13%} 100%{opacity:0;left:4%}}
+@-moz-keyframes anrecruitL{0%{opacity:1;left:13%} 100%{opacity:0;left:4%}}
+@-o-keyframes anrecruitL{0%{opacity:1;left:13%} 100%{opacity:0;left:4%}}
 
 .recruitquit{
 	position: absolute;
@@ -1646,6 +1757,7 @@ to {
 } 
 
 
+
 .swiperproductmen, .swiperleadermen, .swiperengineermen{
 	width:100%;
 	position: absolute;
@@ -1654,22 +1766,15 @@ to {
 .swiperproductmen .swiper-slide, .swiperleadermen .swiper-slide, .swiperengineermen .swiper-slide{
 	width: 100%;
 }
-.recruitOverlay {
-	width: 100%;
-	position: absolute;
-	top:92%;
-}
-.recruitOverlay img{
-	width: 100%;
-}
-.swiperproductmen img,.swiperleadermen img{
+
+/*.swiperproductmen img,.swiperleadermen img{
 	width:35.6%;
 	margin-top:92%;
 }
 .swiperengineermen img{
 	width:35.6%;
 	margin-top:90%;
-}
+}*/
 
 .leaderhumanback img{
 	width:45%;
