@@ -1709,29 +1709,29 @@ to {
 }
 
 .anArrowRight{
-	animation:anrecruitR 2s ease infinite normal none;
-	-webkit-animation: anrecruitR 2s ease infinite normal none;
-	-moz-animation:anrecruitR 2s ease infinite normal none;
-	-o-animation:anrecruitR 2s ease infinite normal none;		
+	animation:anrecruitR 4s linear infinite normal none;
+	-webkit-animation: anrecruitR 4s linear infinite normal none;
+	-moz-animation:anrecruitR 4s linear infinite normal none;
+	-o-animation:anrecruitR 4s linear infinite normal none;		
 }
 .anArrowLeft{
 	-webkit-backface-visibility: hidden; 
    	backface-visibility: hidden;
-	animation:anrecruitL 2s ease infinite normal;
-	-webkit-animation: anrecruitL 2s ease infinite normal;
-	-moz-animation:anrecruitL 2s ease infinite normal;
-	-o-animation:anrecruitL 2s ease infinite normal;		
+	animation:anrecruitL 4s linear infinite normal;
+	-webkit-animation: anrecruitL 4s linear infinite normal;
+	-moz-animation:anrecruitL 4s linear infinite normal;
+	-o-animation:anrecruitL 4s linear infinite normal;		
 }
 
-@keyframes anrecruitR{0%{opacity:1;left:76.6%} 100%{opacity:0;left:84.6%}}
-@-webkit-keyframes anrecruitR{0%{opacity:1;left:76.6%} 100%{opacity:0;left:84.6%}}
-@-moz-keyframes anrecruitR{0%{opacity:1;left:76.6%} 100%{opacity:0;left:84.6%}}
-@-o-keyframes anrecruitR{0%{opacity:1;left:76.6%} 100%{opacity:0;left:84.6%}}
+@keyframes anrecruitR{0% {opacity:1;left:76.6%} 25%{opacity:0;left:84.6%}50% {opacity:0;left:76.6%} 75% {opacity:0;left:76.6%} 100%{opacity:0;left:76.6%}}
+@-webkit-keyframes anrecruitR{0% {opacity:1;left:76.6%} 25%{opacity:0;left:84.6%}50% {opacity:0;left:76.6%} 75% {opacity:0;left:76.6%} 100%{opacity:0;left:76.6%}}
+@-moz-keyframes anrecruitR{0% {opacity:1;left:76.6%} 25%{opacity:0;left:84.6%}50% {opacity:0;left:76.6%} 75% {opacity:0;left:76.6%} 100%{opacity:0;left:76.6%}}
+@-o-keyframes anrecruitR{0% {opacity:1;left:76.6%} 25%{opacity:0;left:84.6%}50% {opacity:0;left:76.6%} 75% {opacity:0;left:76.6%} 100%{opacity:0;left:76.6%}}
 
-@keyframes anrecruitL{0%{opacity:1;left:13%} 100%{opacity:0;tleft:4%}}
-@-webkit-keyframes anrecruitL{0%{opacity:1;left:13%} 100%{opacity:0;left:4%}}
-@-moz-keyframes anrecruitL{0%{opacity:1;left:13%} 100%{opacity:0;left:4%}}
-@-o-keyframes anrecruitL{0%{opacity:1;left:13%} 100%{opacity:0;left:4%}}
+@keyframes anrecruitL{0% {opacity:1;left:13%} 25%{opacity:0;left:4%} 50% {opacity:0;left:4%} 75% {opacity:0;left:13%} 100%{opacity:0;left:13%}}
+@-webkit-keyframes anrecruitL{0% {opacity:1;left:13%} 25%{opacity:0;left:4%} 50% {opacity:0;left:4%} 75% {opacity:0;left:13%} 100%{opacity:0;left:13%}}
+@-moz-keyframes anrecruitL{0% {opacity:1;left:13%} 25%{opacity:0;left:4%} 50% {opacity:0;left:4%} 75% {opacity:0;left:13%} 100%{opacity:0;left:13%}}
+@-o-keyframes anrecruitL{0% {opacity:1;left:13%} 25%{opacity:0;left:4%} 50% {opacity:0;left:4%} 75% {opacity:0;left:13%} 100%{opacity:0;left:13%}}
 
 .recruitquit{
 	position: absolute;

@@ -1,3 +1,6 @@
+var swiperproduct=null,
+    swiperengineer=null, 
+    swiperleader=null;
 var hsee = {
     bind : function() {
         //绑定12页欢迎进入按钮
@@ -14,7 +17,9 @@ var hsee = {
             $(".page12").addClass("page12detailbackground");            
             $(".resourceCategory").hide();
             $(".resourceproductdetail").show();
-            hsee.initProductsilder();
+            if(swiperproduct==null ||swiperproduct ==undefined){
+                hsee.initProductsilder();
+            }            
         });
         //绑定导视招聘按钮
         $(".recruitleaderbtn").click(function() {
@@ -22,7 +27,9 @@ var hsee = {
             $(".page12").addClass("page12detailbackground");              
             $(".resourceCategory").hide();
             $(".resourceleadertdetail").show();
-            hsee.initLeadersidler();          
+            if(swiperleader==null ||swiperleader ==undefined){
+                hsee.initLeadersidler(); 
+            }                               
         });
         //绑定工程师招聘按钮
         $(".recruitengineerbtn").click(function() {
@@ -30,7 +37,9 @@ var hsee = {
             $(".page12").addClass("page12detailbackground");  
             $(".resourceCategory").hide();
             $(".resourceengineertdetail").show();
-            hsee.initEngineersilder();
+            if(swiperleader==null ||swiperleader ==undefined){
+                 hsee.initEngineersilder(); 
+            }                         
         });
         //绑定招聘详细页面推出按钮
         $(".recruitquit").click(function(e) {
@@ -51,7 +60,7 @@ var hsee = {
     },
     //13页员工详细信息：初始化产品员工招聘详细页面滑动控件
     initProductsilder : function() {
-        var swiperproduct = new Swiper('.swiperproductmen', {
+        swiperproduct = new Swiper('.swiperproductmen', {
             mode : 'horizontal',
             slidesPerView : 1,
             speed : 400,
@@ -153,12 +162,13 @@ var hsee = {
                 }
             },
             onTouchEnd :function(swiper){ //给用户 已经移动到底的视觉效果
-                if(swiper.activeIndex==3){
+                var distance =swiper.positions.current - swiper.positions.start;
+                if(swiper.activeIndex==3 && distance!=0){
                     $(".product4").css({"transform":"translateX(0)",
                                  "-webkit-transform":"translateX(0)"
                                  });
                 }
-                 if(swiper.activeIndex==0){
+                 if(swiper.activeIndex==0 && distance!=0){
                     $(".product1").css({"transform":"translateX(0)",
                                  "-webkit-transform":"translateX(0)"
                                  });
@@ -168,7 +178,7 @@ var hsee = {
     },
     //13页员工详细信息：初始化导视员工招聘详细页面滑动控件
     initLeadersidler : function() {
-        var swiperleader = new Swiper('.swiperleadermen', {
+         swiperleader = new Swiper('.swiperleadermen', {
             mode : 'horizontal',
             slidesPerView : 1,
             speed : 400,
@@ -253,12 +263,13 @@ var hsee = {
                 }
             },
             onTouchEnd :function(swiper){ //给用户 已经移动到底的视觉效果
-                if(swiper.activeIndex==2){
+                var distance =swiper.positions.current - swiper.positions.start;
+                if(swiper.activeIndex==2 && distance!=0){
                     $(".leader3").css({"transform":"translateX(0)",
                                  "-webkit-transform":"translateX(0)"
                                  });
                 }
-                 if(swiper.activeIndex==0){
+                 if(swiper.activeIndex==0 && distance!=0){
                     $(".leader1").css({"transform":"translateX(0)",
                                  "-webkit-transform":"translateX(0)"
                                  });
@@ -354,12 +365,13 @@ var hsee = {
                 }
             },
             onTouchEnd :function(swiper){ //给用户 已经移动到底的视觉效果
-                if(swiper.activeIndex==3){
+                var distance =swiper.positions.current - swiper.positions.start;
+                if(swiper.activeIndex==3 && distance!=0){
                     $(".engineer4").css({"transform":"translateX(0)",
                                  "-webkit-transform":"translateX(0)"
                                  });
                 }
-                 if(swiper.activeIndex==0){
+                 if(swiper.activeIndex==0&& distance!=0){
                     $(".engineer1").css({"transform":"translateX(0)",
                                  "-webkit-transform":"translateX(0)"
                                  });

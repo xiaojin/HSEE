@@ -8,9 +8,9 @@ var dataForWeixin={
  
    url: "http://www.wuxiyezhu.com/HSEE",
  
-   title: "寻找一颗改变世界的心！",
+   title: "寻找一颗改变世界的心!",
  
-   desc: "2014和视( H' see )年度最后席位等你来！",
+   desc: "2014和视(H'SEE)年度最后席位等你来！",
  
    fakeid: "",
  
