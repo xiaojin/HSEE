@@ -10,24 +10,32 @@ var hsee = {
         });
         //绑定产品招聘按钮
         $(".recruitproductbtn").click(function() {
+            $(".page12").removeClass("page12background");
+            $(".page12").addClass("page12detailbackground");            
             $(".resourceCategory").hide();
             $(".resourceproductdetail").show();
             hsee.initProductsilder();
         });
         //绑定导视招聘按钮
         $(".recruitleaderbtn").click(function() {
+            $(".page12").removeClass("page12background");
+            $(".page12").addClass("page12detailbackground");              
             $(".resourceCategory").hide();
             $(".resourceleadertdetail").show();
-            hsee.initLeadersidler();
+            hsee.initLeadersidler();          
         });
         //绑定工程师招聘按钮
         $(".recruitengineerbtn").click(function() {
+            $(".page12").removeClass("page12background");
+            $(".page12").addClass("page12detailbackground");  
             $(".resourceCategory").hide();
             $(".resourceengineertdetail").show();
             hsee.initEngineersilder();
         });
         //绑定招聘详细页面推出按钮
         $(".recruitquit").click(function(e) {
+            $(".page12").addClass("page12background");
+            $(".page12").removeClass("page12detailbackground");            
             var $target = $(e.target);
             $target.closest(".recruitquit").parent().hide();
             $(".resourceCategory").show();
@@ -260,7 +268,7 @@ var hsee = {
                     $(".intro-title img:nth-child(4)").addClass("anintro0-5");
                     $(".intro-title div:nth-child(5)").addClass("anintro3-5");
                     $(".intro-title img:nth-child(6)").addClass("anintro5");
-                    alert(window.innerHeight);
+                    
                 }
                 if (swiper.activeIndex === 3) {//第3页 动画加载
                     $(".charac-lineUp").addClass("ancharac-lineUp");

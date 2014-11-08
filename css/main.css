@@ -47,15 +47,15 @@ body {
 	width: 8%;
 }
 .swiper-slide-active  .pullup {
-	animation: anUp 1s linear infinite alternate none ;
+	animation: anUp 1s linear infinite alternate none;
 	-webkit-animation: anUp 1s linear infinite  alternate none ;
 	-moz-animation: anUp 1s linear infinite  alternate none;
 	-o-animation:anUp  1s linear infinite  alternate none;
 }
-@keyframes anUp  {0% {top: 93%;} 100% {top: 91%;}}
-@-webkit-keyframes anUp {0% {top: 93%;} 100% { top: 91%;}}
-@-moz-keyframes anUp {0% {top: 93%;} 100% {top: 91%;}}
-@-o-keyframes anUp {0% {top: 93%;} 100% {top: 91%;}}
+@keyframes anUp  {from {top: 93%;} to {top: 91%;}}
+@-webkit-keyframes anUp {from {top: 93%;} to { top: 91%;}}
+@-moz-keyframes anUp {from {top: 93%;} to {top: 91%;}}
+@-o-keyframes anUp {from {top: 93%;} to {top: 91%;}}
 
 /*page1 started*/
 .page1 {
@@ -65,7 +65,7 @@ body {
 	background-size: cover;
 }
 /*lineWithCircle upper*/
-keyframes anCircleUp   { 0% {transform:translate(0%,0%);} 25% {transform:translate(-5%,5%);} 50% {transform:translate(-12%,2%);} 75% {transform:translate(-24%,48%);} 100% {transform:translate(-32%,64%);}}
+@keyframes anCircleUp   { 0% {transform:translate(0%,0%);} 25% {transform:translate(-5%,5%);} 50% {transform:translate(-12%,2%);} 75% {transform:translate(-24%,48%);} 100% {transform:translate(-32%,64%);}}
 @-webkit-keyframes anCircleUp   { 0% {-webkit-transform:translate(0%,0%);} 25% {-webkit-transform:translate(-10%,10%);} 50% {-webkit-transform:translate(-20%,20%);} 75% {-webkit-transform:translate(-30%,30%);} 100% {-webkit-transform:translate(-40%,40%);} }
 @-moz-keyframes anCircleUp { 0% {-moz-transform:translate(0%,0%);} 25% {-moz-transform:translate(-6%,1%);} 50% {-moz-transform:translate(-16%,32%);} 75% {-moz-transform:translate(-24%,48%);} 100% {-moz-transform:translate(-32%,64%);}  }
 @-o-keyframes anCircleUp    { 0% {-o-transform:translate(0%,0%);} 25% {-o-transform:translate(-6%,1%);} 50% {-o-transform:translate(-16%,32%);} 75% {-o-transform:translate(-24%,48%);} 100% {-o-transform:translate(-32%,64%);}  }
@@ -86,7 +86,7 @@ keyframes anCircleUp   { 0% {transform:translate(0%,0%);} 25% {transform:transla
 	width: 100%;
 }
 /*Thin liner upper*/
-keyframes anlineUp   { 0% {transform:translate(0%,0%);} 25% {transform:translate(-8%,16%);} 50% {transform:translate(-16%,32%);} 75% {transform:translate(-24%,48%);} 100% {transform:translate(-32%,64%);}}
+@keyframes anlineUp   { 0% {transform:translate(0%,0%);} 25% {transform:translate(-8%,16%);} 50% {transform:translate(-16%,32%);} 75% {transform:translate(-24%,48%);} 100% {transform:translate(-32%,64%);}}
 @-webkit-keyframes anlineUp   { 0% {-webkit-transform:translate(0%,0%);} 25% {-webkit-transform:translate(-8%,16%);} 50% {-webkit-transform:translate(-16%,32%);} 75% {-webkit-transform:translate(-24%,48%);} 100% {-webkit-transform:translate(-32%,64%);} }
 @-moz-keyframes anlineUp { 0% {-moz-transform:translate(0%,0%);} 25% {-moz-transform:translate(-8%,16%);} 50% {-moz-transform:translate(-16%,32%);} 75% {-moz-transform:translate(-24%,48%);} 100% {-moz-transform:translate(-32%,64%);}  }
 @-o-keyframes anlineUp    { 0% {-o-transform:translate(0%,0%);} 25% {-o-transform:translate(-8%,16%);} 50% {-o-transform:translate(-16%,32%);} 75% {-o-transform:translate(-24%,48%);} 100% {-o-transform:translate(-32%,64%);}  }
@@ -992,7 +992,7 @@ to {
 .officeBottle{
 	width:28%;
 	left: -42%;
-	top: 54%;;
+	top: 54%;
 }
 .anOfficeBottle{
 	left: 12.5%;
@@ -1409,6 +1409,11 @@ to {
 	background-repeat: no-repeat;
 	background-size: cover;	
 }
+.page12detailbackground{
+	background-image: url(../images/page12/di.png);
+	background-repeat: no-repeat;
+	background-size: cover;	
+}
 .entrancetitle{
 	margin-top: 10%;	
 	width: 100%;
@@ -1611,7 +1616,7 @@ to {
 
 .resourcewhiteback{
 	width:100%;
-	margin-top:3%
+	margin-top:5%
 }
 .resourcewhiteback img{
 	width: 44.7%;
@@ -1619,15 +1624,27 @@ to {
 
 .recruitquit{
 	position: absolute;
-	width:100%;
+	width:12.2%;
 	top:0%;
-	left: 40%;
+	left: 80%;
 	z-index: 9;
 }
-
 .recruitquit img{
-	width:12.2%;
+	width:100%;
 }
+@media only screen and (min-height: 500px){
+   .recruitquit{
+		position: relative;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 3%;	
+		z-index: 9;	
+		width:12.2%;
+		top: 0;
+		left: 0;
+	}
+} 
+
 
 .swiperproductmen, .swiperleadermen, .swiperengineermen{
 	width:100%;
@@ -1635,6 +1652,14 @@ to {
 	top:0;
 }
 .swiperproductmen .swiper-slide, .swiperleadermen .swiper-slide, .swiperengineermen .swiper-slide{
+	width: 100%;
+}
+.recruitOverlay {
+	width: 100%;
+	position: absolute;
+	top:92%;
+}
+.recruitOverlay img{
 	width: 100%;
 }
 .swiperproductmen img,.swiperleadermen img{
