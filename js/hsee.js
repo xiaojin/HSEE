@@ -354,7 +354,7 @@ var hsee = {
                     $(".block-recruit").removeClass("recruitToNext");
                     previousX = 1;
                     if (!humanFlipped) {
-                        swiperNested1.params.autoplay = 500;
+                        swiperNested1.params.autoplay = 600;
                         swiperNested1.startAutoplay();
                         humanFlipped = true;
                     }
@@ -392,25 +392,25 @@ var hsee = {
                 } else {
                     $(".shadowL").show();
                 }
-            },
-            onSetWrapperTransition : function(swiper, duration) {
-                if (swiper.positions.current - swiper.positions.start != 0) { //如果用户点击屏幕，差值会是0，就不做任何处理
+            },// onSetWrapperTransition 
+           onSlideChangeStart: function(swiper, duration) {
+                if (swiper.positions.current - swiper.positions.start != 0) { //如果用户点击屏幕，差值不等于0，就不做任何处理
                     return false;
-                }
+                }                
                 var transform = swiper.getWrapperTranslate('x'); //x轴滑动德距离
                 var instance = transform - previousX;
                 previousX = transform;
                 var index = swiper.activeIndex;
-                if (index === 2) {
+                if (index === 3) {
                     $(".shadowL").removeClass("anshowL");
                     $(".shadowL").css('opacity', '0');
                 } else {
                     $(".shadowL").addClass("anshowL");
                     $(".shadowL").css('opacity', '1');                   
                 }
-                var $facer = $(".facer" + index), per = (transform + (swiper.width * index)) / swiper.width, $facel = $(".facel" + index);
-                if ((index + 1) < 6 && instance < 0) { //向右边移动
-                    var $nrface = $(".facer" + (index + 1)), $nlface = $(".facel" + (index + 1));
+                var $facer = $(".facer" + (index-1)), per = (transform + (swiper.width * index)) / swiper.width, $facel = $(".facel" + (index-1));
+                if ((index + 1) <= 6 && instance < 0) { //向右边移动
+                    var $nrface = $(".facer" + (index)), $nlface = $(".facel" + (index));
                     $nrface.show();
                      $nlface.css({
                          "-webkit-transform": "rotateY(" + 90 + "deg)",
@@ -429,8 +429,8 @@ var hsee = {
                         $nlface.css({
                              "-webkit-transform": "rotateY(" + 0 + "deg)",
                              "transform": "rotateY(" + 0 + "deg)",
-                             "-webkit-transition": "-webkit-transform 0.2s",
-                             "transition": "-webkit-transform 0.2s"
+                             "-webkit-transition": "-webkit-transform 0.3s",
+                             "transition": "-webkit-transform 0.3s"
                         });
                     }, 200);
                     setTimeout(function() {
@@ -448,43 +448,7 @@ var hsee = {
                     if (index == 4) {                       
                         $(".page2 .pullup").show();
                     }
-                } else if ((index - 1) >= 0 && instance > 0) {//向左边移动
-                    var $prface = $(".facer" + (index - 1)), $plface = $(".facel" + (index - 1));
-                    $plface.show();
-                    $prface.css({
-                             "-webkit-transform": "rotateY(" + 90 + "deg)",
-                             "transform": "rotateY(" + 90 + "deg)"
-                     });                      
-                    $facer.css({
-                             "-webkit-transform": "rotateY(" + -90 + "deg)",
-                             "transform": "rotateY(" + -90 + "deg)",
-                             "-webkit-transition":"-webkit-transform 0.2s",
-                             "transition": "-webkit-transform 0.2s"
-                     });                     
-                    setTimeout(function() {
-                        $prface.show();
-                        $facer.css("z-index", 0);
-                        $prface.css({
-                                 "z-index":1,
-                                 "-webkit-transform": "rotateY(" + 0 + "deg)",
-                                 "transform": "rotateY(" + 0 + "deg)",
-                                 "-webkit-transition":"-webkit-transform 0.2s",
-                                 "transition": "-webkit-transform 0.2s"
-                         });                                             
-                    }, 200);
-                    setTimeout(function() {
-                        $facer.hide();
-                        $facel.hide();
-                        $facer.css({
-                                 "-webkit-transform": "rotateY(" + 0 + "deg)",
-                                 "transform": "rotateY(" + 0 + "deg)"
-                         }); 
-                        $facel.css({
-                                 "-webkit-transform": "rotateY(" + 0 + "deg)",
-                                 "transform": "rotateY(" + 0 + "deg)"
-                         });                                                         
-                    }, 200);
-                }
+                } 
 
             },
         });
@@ -493,23 +457,6 @@ var hsee = {
             paginationClickable : true,
             slidesPerView : 1,
             speed : 300,
-            onSetWrapperTransform : function(swiper, transform) {
-                // var $mileIcons = $(".mile-icons"), index = swiper.activeIndex;
-                // var per = Math.abs((transform.x + (swiper.width * index)) / swiper.width);
-                // var moveDist = (swiper.positions.current - swiper.positions.start);
-                // console.log(swiper.positions);
-                // if ((index + 1) < 6 && (swiper.positions.current - swiper.positions.start) < 0) {
-                // var offsetX = "translateX(" + (-per * 20 - (20 * index)) + "%)";
-                // console.log(offsetX);
-                // $mileIcons.css('-webkit-transform', offsetX);
-                // if(index ==4){
-                // $(".page6 .pullup").show();
-                // }
-                // } else if ((swiper.positions.current - swiper.positions.start) > 0 && (index - 1) >= 0) {
-                // var offsetX = "translateX(" + (per * 20 - (20 * index)) + "%)";
-                // $mileIcons.css('-webkit-transform', offsetX);
-                // }
-            },
             onTouchEnd : function(swiper) {
                 var index = swiper.activeIndex, offset = 0;
                 if (swiper.getWrapperTranslate('x') < 0) {

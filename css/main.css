@@ -282,11 +282,12 @@ body {
 .lfaces {
 	left: 25%;
 	-webkit-transform-origin: 100% 0;
-
+	transform-origin: 100% 0;
 }
 .rfaces {
 	left: 49%;
 	-webkit-transform-origin: 0 0;
+	transform-origin: 0 0;
 }
 
 .humanWords {
@@ -297,7 +298,6 @@ body {
 	left: 22%;
 }
 .humanWords img {
-	height: auto;
 	width: 100%;
 }
 .oldTitle {
