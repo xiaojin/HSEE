@@ -1303,22 +1303,15 @@ to {
 
 .dreamtitle{
 	width: 52.5%;
-	top: 3%;
 	z-index: 0;
-	left: 12%;
+	transition: top 0.3s linear,left 0.3s linear;
+	-webkit-transition:  top 0.3s linear,left 0.3s linear;
+	top:-40%;left:44%;
 }
-
-@keyframes andreamtitle   { from {top:-40%;left:44%;}  to {top:3%;left:12%;}}
-@-webkit-keyframes andreamtitle   { from {top:-40%;left:44%;} to {top:3%;left:12%;}}
-@-moz-keyframes andreamtitle { from {top:-40%;left:44%;} to {top:3%;left:12%;}}
-@-o-keyframes andreamtitle   { from {top:-40%;left:44%;} to {top:3%;left:12%;}}
 
 .swiper-slide-active .dreamtitle
 {
-	animation:andreamtitle 0.3s linear  1 ;
-	-webkit-animation:andreamtitle 0.3s linear  1;
-	-moz-animation:andreamtitle 0.3s linear  1;
-	-o-animation:andreamtitle 0.3s linear  1;
+	top:3%;left:12%;
 }
 
 
@@ -1327,77 +1320,51 @@ to {
 .hearttitle{
 	width: 47.2%;
 	z-index: 0;
-	top: 36%;
-	left: 11%;
+	transition: top 0.3s linear 0.1s,left 0.3s linear 0.1s;
+	-webkit-transition:  top 0.3s linear 0.1s,left 0.3s linear 0.1s;
+	top:-4%;left:-32%;
 }
-@keyframes anhearttitle   { 0% {top:-4%;left:-32%;}  100% {top:36%;left:11%;}}
-@-webkit-keyframes anhearttitle   { 0% {top:-4%;left:-32%;} 100% {top:36%;left:11%;}}
-@-moz-keyframes anhearttitle { 0% {top:-4%;left:-32%;} 100% {top:36%;left:11%;}}
-@-o-keyframes anhearttitle   { 0% {top:-4%;left:-32%;} 100% {top:36%;left:11%;}}
 
 .swiper-slide-active .hearttitle
 {
-	animation:anhearttitle 0.3s linear 0.1s  1 ;
-	-webkit-animation:anhearttitle 0.3s linear 0.1s  1;
-	-moz-animation:anhearttitle 0.3s linear 0.1s  1;
-	-o-animation:anhearttitle 0.3s linear 0.1s  1;
+	top:36%;left:11%;
 }
 
 .heartCharacter{
 	width: 48.4%;
-	top: 1%;
-	left: 33%;
+	transition: top 0.3s linear,left 0.3s linear;
+	-webkit-transition:  top 0.3s linear,left 0.3s linear;
+	top:64%;left:-19%;
 }
-@keyframes anBigHeart   { 0% {top:64%;left:-19%;}  100% {top:1%;left:33%;}}
-@-webkit-keyframes anBigHeart   { 0% {top:64%;left:-19%;} 100% {top:1%;left:33%;}}
-@-moz-keyframes anBigHeart { 0% {top:64%;left:-19%;} 100% {top:1%;left:33%;}}
-@-o-keyframes anBigHeart   { 0% {top:64%;left:-19%;} 100% {top:1%;left:33%;}}
 
 .swiper-slide-active .heartCharacter
 {
-	animation:anBigHeart 0.3s linear 1 ;
-	-webkit-animation:anBigHeart 0.3s linear 1;
-	-moz-animation:anBigHeart 0.3s linear 1;
-	-o-animation:anBigHeart 0.3s linear 1;
+	top:1%;left:33%;
 }
 
 .change{
 	width: 34.1%;
-	top: 20%;
-	left: 54%;
+	transition: top 0.3s linear 0.1s,left 0.3s linear 0.1s;
+	-webkit-transition:  top 0.3s linear 0.1s,left 0.3s linear 0.1s;
+	top:-25%;left:92%;	
 }
-
-@keyframes anBigChange   { 0% {top:-25%;left:92%;}  100% {top:20%;left:54%;}}
-@-webkit-keyframes anBigChange   { 0% {top:-25%;left:92%;} 100% {top:20%;left:54%;}}
-@-moz-keyframes anBigChange { 0% {top:-25%;left:92%;} 100% {top:20%;left:54%;}}
-@-o-keyframes anBigChange   { 0% {top:-25%;left:92%;} 100% {top:20%;left:54%;}}
 
 .swiper-slide-active .change
 {
-	animation:anBigChange 0.3s linear 0.1s 1;
-	-webkit-animation:anBigChange 0.3s linear 0.1s 1;
-	-moz-animation:anBigChange 0.3s linear 0.1s 1;
-	-o-animation:anBigChange 0.3s linear 0.1s 1;
+	top:20%;left:54%;
 }
-
 
 
 .dream{
 	width: 29.7%;
-	top: 34%;
-	left: 60%;
+	transition: top 0.3s linear 0.1s,left 0.3s linear 0.1s;
+	-webkit-transition:  top 0.3s linear 0.1s,left 0.3s linear 0.1s;
+	top:-1%;left:89%;		
 }
-@keyframes anBigDream   { 0% {top:-1%;left:89%;}  100% {top:34%;left:60%;}}
-@-webkit-keyframes anBigDream   { 0% {top:-1%;left:89%;} 100% {top:34%;left:60%;}}
-@-moz-keyframes anBigDream { 0% {top:-1%;left:89%;} 100% {top:34%;left:60%;}}
-@-o-keyframes anBigDream   { 0% {top:-1%;left:89%;} 100% {top:34%;left:60%;}}
 
 .swiper-slide-active .dream
 {
-	animation:anBigDream 0.3s linear 0.1s  1;
-	-webkit-animation:anBigDream 0.3s linear 0.1s 1;
-	-moz-animation:anBigDream 0.3s linear 0.1s 1;
-	-o-animation:anBigDream 0.3s linear  0.1s 1;
+	top:34%;left:60%;
 }
 
 /*page12 started*/
