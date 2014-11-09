@@ -1,12 +1,13 @@
+var path=window.location.protocol+"//"+window.location.host+window.location.pathname.replace(/[^\/]+$/,'');
 var dataForWeixin={
  
    appId: "",
  
-   MsgImg: "http://www.wuxiyezhu.com/HSEE/images/corplogo.jpg",
+   MsgImg: path+"images/corplogo.jpg",
  
-   TLImg: "http://www.wuxiyezhu.com/HSEE/images/corplogo.jpg",
+   TLImg:  path+"images/corplogo.jpg",
  
-   url: "http://www.wuxiyezhu.com/HSEE",
+   url:  path+"index.html",
  
    title: "寻找一颗改变世界的心!",
  

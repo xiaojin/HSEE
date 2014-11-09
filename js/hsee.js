@@ -252,7 +252,6 @@ var hsee = {
         hsee.bind();
         var swiperNested1;
         //第二页动画播放一遍，定义标签确定动画是否已经播放完毕
-        var previousX = 1; //初始化位移坐标
         var humanFlipped = false; //第二页人脸动画阻止重复播放
         //项目主要的上下滑动控件
         var swiperParent = new Swiper('.swiper-parent', {
@@ -393,13 +392,10 @@ var hsee = {
                     $(".shadowL").show();
                 }
             },// onSetWrapperTransition 
-           onSlideChangeStart: function(swiper, duration) {
+           onSlideChangeStart: function(swiper, direction) {
                 if (swiper.positions.current - swiper.positions.start != 0) { //如果用户点击屏幕，差值不等于0，就不做任何处理
                     return false;
                 }                
-                var transform = swiper.getWrapperTranslate('x'); //x轴滑动德距离
-                var instance = transform - previousX;
-                previousX = transform;
                 var index = swiper.activeIndex;
                 if (index === 3) {
                     $(".shadowL").removeClass("anshowL");
@@ -408,8 +404,8 @@ var hsee = {
                     $(".shadowL").addClass("anshowL");
                     $(".shadowL").css('opacity', '1');                   
                 }
-                var $facer = $(".facer" + (index-1)), per = (transform + (swiper.width * index)) / swiper.width, $facel = $(".facel" + (index-1));
-                if ((index + 1) <= 6 && instance < 0) { //向右边移动
+                var $facer = $(".facer" + (index-1)), $facel = $(".facel" + (index-1));
+                if ((index + 1) <= 6 && "next" ===direction) { //向右边移动
                     var $nrface = $(".facer" + (index)), $nlface = $(".facel" + (index));
                     $nrface.show();
                      $nlface.css({
