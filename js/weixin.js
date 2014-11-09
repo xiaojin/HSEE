@@ -31,9 +31,9 @@ var dataForWeixin={
 
                 "img_url": dataForWeixin.MsgImg, 
 
-                "img_width": "200", 
+                "img_width": "120", 
 
-                "img_height": "200", 
+                "img_height": "120", 
 
                 "link": dataForWeixin.url, 
 
@@ -54,9 +54,9 @@ var dataForWeixin={
 
                 "img_url": dataForWeixin.TLImg, 
 
-                "img_width": "200", 
+                "img_width": "120", 
 
-                "img_height": "200", 
+                "img_height": "120", 
 
                 "link": dataForWeixin.url, 
 

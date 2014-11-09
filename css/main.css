@@ -1921,6 +1921,12 @@ to {
 	position: relative;
 	margin-top: 9%;
 }
+@media only screen and (min-height: 500px){
+	.contactletter{	
+		margin-top: 15%;
+	}
+} 
+
 .letterbackground{
 	width: 100%;
 	position: relative;
