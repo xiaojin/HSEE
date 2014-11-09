@@ -37,7 +37,7 @@ var hsee = {
             $(".page12").addClass("page12detailbackground");  
             $(".resourceCategory").hide();
             $(".resourceengineertdetail").show();
-            if(swiperleader==null ||swiperleader ==undefined){
+            if(swiperengineer==null ||swiperengineer ==undefined){
                  hsee.initEngineersilder(); 
             }                         
         });
@@ -48,6 +48,17 @@ var hsee = {
             var $target = $(e.target);
             $target.closest(".recruitquit").parent().hide();
             $(".resourceCategory").show();
+            var jobdesc = $target.closest(".recruitquit").parent().attr("class");
+            if("resourceproductdetail" === jobdesc){
+                swiperproduct.destroy();
+                swiperproduct=null;                
+            }else if("resourceleadertdetail" === jobdesc){
+                swiperleader.destroy();
+                swiperleader=null;             
+            }else if("resourceengineertdetail" === jobdesc){
+                swiperengineer.destroy();
+                swiperengineer=null;                   
+            }
         });
         //绑定13页关注我们按钮
         $(".contactletter").click(function() {
@@ -65,86 +76,26 @@ var hsee = {
             slidesPerView : 1,
             speed : 400,
             onSlideChangeStart : function(swiper, direction) {
-                var index = swiper.activeIndex + 1, offset = 0;
-                var $hideHuman = $(".humanOpacity");
-                for ( i = 0; i < $hideHuman.length; i++) {
-                    var current = $($hideHuman[i]).css('left');
-                    current = current.replace(/px/, "");
-                    for ( j = i + 1; j < $hideHuman.length; j++) {
-                        var next = $($hideHuman[j]).css('left');
-                        next = next.replace(/px/, "");
-                        if (next < current) {
-                            var p = $hideHuman[i];
-                            $hideHuman[i] = $hideHuman[j];
-                            $hideHuman[j] = p;
-                            current = next;
-                        }
-                    }
-                }
-                if ((swiper.positions.current - swiper.positions.start) < 0 && index <= 4) {
-                    $(".producthumanactive").css({
-                        'left' : '-20%',
+               var index = swiper.activeIndex + 1, offset = 0;
+               $(".producthuman"+index).addClass("producthumanactive");                  
+                var offset = ["0", "20%", "0", "-20%"];
+                  $(".producthuman" + index).css({
+                        'left' : offset[0],
                     });
-                    $(".producthumanactive").addClass("humanOpacity");
-                    $(".producthuman" + (index - 1)).removeClass("producthumanactive");
-                    $($hideHuman[$hideHuman.length - 1]).css('left', 0);
-                    $($hideHuman[$hideHuman.length - 1]).removeClass("humanOpacity");
-                    $($hideHuman[$hideHuman.length - 1]).addClass("producthumanactive");
-                    for ( i = 0; i < $hideHuman.length - 1; i++) {
-                        var current = $($hideHuman[i]).css('left');
-                        var myleft = $($hideHuman[i]).position().left / $($hideHuman[i]).parent().width();
-                        offset = ((myleft + 0.2) * 100) + '%';
-                        $($hideHuman[i]).css({
-                            'left' : offset
-                        });
-                    }
-                    for(i = 1; i <= 4; i++){
-                        var value = ((i-index)*100)+"%";
-                        $(".product"+i).css({"transform":"translateX("+value+")",
-                                            "-webkit-transform":"translateX("+value+")"
-                                            });
-                    }
-                    
-                } else if ((swiper.positions.current - swiper.positions.start) > 0 && index >= 1) {
-                    $(".producthumanactive").css({
-                        'left' : '20%',
+                for ( i = 1; i < 4; i++) {
+                    var count = (index + i) % 4 === 0 ? 4 : (index + i) % 4;
+                    $(".producthuman" + count).css({
+                        'left' : offset[i],
                     });
-                    $(".producthumanactive").addClass("humanOpacity");
-                    $(".producthuman" + (index + 1)).removeClass("producthumanactive");
-                    $($hideHuman[0]).css('left', 0);
-                    $($hideHuman[0]).removeClass("humanOpacity");
-                    $($hideHuman[0]).addClass("producthumanactive");
-                    for ( i = 1; i < $hideHuman.length; i++) {
-                        var current = $($hideHuman[i]).css('left');
-                        var myleft = $($hideHuman[i]).position().left / $($hideHuman[i]).parent().width();
-                        offset = ((myleft - 0.2) * 100) + '%';
-                        $($hideHuman[i]).css({
-                            'left' : offset
-                        });
-                    }
-                    for(i = 1; i <= 4; i++){
-                        var value = ((i-index)*100)+"%";
-                        $(".product"+i).css({"transform":"translateX("+value+")",
-                                             "-webkit-transform":"translateX("+value+")"
-                                             });
-                    }                    
-                }
-                // if(swiper.activeIndex ===3){
-                    // $(".resourceproductdetail .recruitArrowRight").removeClass("anArrowRight");
-                    // $(".resourceproductdetail .recruitArrowRight").css('opacity',0);
-                // } else if(swiper.activeIndex ===0){
-                     // $(".resourceproductdetail .recruitArrowLeft").removeClass("anArrowLeft");
-                     // $(".resourceproductdetail .recruitArrowLeft").css('opacity',0);
-                // }else {
-                     // $(".resourceproductdetail .recruitArrowLeft").css('opacity',1);
-                     // $(".resourceproductdetail .recruitArrowRight").css('opacity',1);
-                     // $(".resourceproductdetail .recruitArrowRight").removeClass("anArrowRight");
-                     // $(".resourceproductdetail .recruitArrowLeft").removeClass('anArrowLeft');
-                     // setTimeout(function(){
-                        // $(".resourceproductdetail .recruitArrowRight").addClass("anArrowRight");
-                        // $(".resourceproductdetail .recruitArrowLeft").addClass("anArrowLeft");                        
-                     // },100);                 
-                // }
+                    $(".producthuman" + count).addClass("humanOpacity");
+                    $(".producthuman" + count).removeClass("producthumanactive");
+                }  
+                for(i = 1; i <= 4; i++){
+                    var value = ((i-index)*100)+"%";
+                    $(".product"+i).css({"transform":"translateX("+value+")",
+                                         "-webkit-transform":"translateX("+value+")"
+                                         });
+                }                    
             },
             onTouchMove: function(swiper){ //给用户 已经移动到底的视觉效果
                 var distance =swiper.positions.current - swiper.positions.start;
@@ -185,67 +136,25 @@ var hsee = {
             onSlideChangeStart : function(swiper, direction) {
                 var index = swiper.activeIndex + 1, offset = 0;
                 var $hideHuman = $(".leaderhumanOpacity");
-                for ( i = 0; i < $hideHuman.length; i++) {
-                    var current = $($hideHuman[i]).css('left');
-                    current = current.replace(/px/, "");
-                    for ( j = i + 1; j < $hideHuman.length; j++) {
-                        var next = $($hideHuman[j]).css('left');
-                        next = next.replace(/px/, "");
-                        if (next < current) {
-                            var p = $hideHuman[i];
-                            $hideHuman[i] = $hideHuman[j];
-                            $hideHuman[j] = p;
-                            current = next;
-                        }
-                    }
-                }
-                if ((swiper.positions.current - swiper.positions.start) < 0 && index <= 3) {
-                    $(".leaderhumanactive").css({
-                        'left' : '-20%',
+               $(".leaderhuman"+index).addClass("leaderhumanactive");                  
+                var offset = ["0", "20%", "-20%"];
+                  $(".leaderhuman" + index).css({
+                        'left' : offset[0],
                     });
-                    $(".leaderhumanactive").addClass("leaderhumanOpacity");
-                    $(".leaderhuman" + (index - 1)).removeClass("leaderhumanactive");
-                    $($hideHuman[$hideHuman.length - 1]).css('left', 0);
-                    $($hideHuman[$hideHuman.length - 1]).removeClass("leaderhumanOpacity");
-                    $($hideHuman[$hideHuman.length - 1]).addClass("leaderhumanactive");
-                    for ( i = 0; i < $hideHuman.length - 1; i++) {
-                        var current = $($hideHuman[i]).css('left');
-                        var myleft = $($hideHuman[i]).position().left / $($hideHuman[i]).parent().width();
-                        offset = ((myleft + 0.4) * 100) + '%';
-                        $($hideHuman[i]).css({
-                            'left' : offset
-                        });
-                    }
-                    for(i = 1; i <= 3; i++){
-                        var value = ((i-index)*100)+"%";
-                        $(".leader"+i).css({"transform":"translateX("+value+")",
-                                            "-webkit-transform":"translateX("+value+")"
-                                            });
-                    }                    
-                } else if ((swiper.positions.current - swiper.positions.start) > 0 && index >= 1) {
-                    $(".leaderhumanactive").css({
-                        'left' : '20%',
+                for ( i = 1; i < 3; i++) {
+                    var count = (index + i) % 3 === 0 ? 3 : (index + i) % 3;
+                    $(".leaderhuman" + count).css({
+                        'left' : offset[i],
                     });
-                    $(".leaderhumanactive").addClass("leaderhumanOpacity");
-                    $(".leaderhuman" + (index + 1)).removeClass("leaderhumanactive");
-                    $($hideHuman[0]).css('left', 0);
-                    $($hideHuman[0]).removeClass("leaderhumanOpacity");
-                    $($hideHuman[0]).addClass("leaderhumanactive");
-                    for ( i = 1; i < $hideHuman.length; i++) {
-                        var current = $($hideHuman[i]).css('left');
-                        var myleft = $($hideHuman[i]).position().left / $($hideHuman[i]).parent().width();
-                        offset = ((myleft - 0.4) * 100) + '%';
-                        $($hideHuman[i]).css({
-                            'left' : offset
-                        });
-                    }
-                    for(i = 1; i <= 3; i++){
-                        var value = ((i-index)*100)+"%";
-                        $(".leader"+i).css({"transform":"translateX("+value+")",
-                                            "-webkit-transform":"translateX("+value+")"
-                                            });
-                    }                    
-                }
+                    $(".leaderhuman" + count).addClass("leaderhumanOpacity");
+                    $(".leaderhuman" + count).removeClass("leaderhumanactive");
+                }  
+                for(i = 1; i <= 4; i++){
+                    var value = ((i-index)*100)+"%";
+                    $(".leader"+i).css({"transform":"translateX("+value+")",
+                                         "-webkit-transform":"translateX("+value+")"
+                                         });
+                }                  
             },
             onTouchMove: function(swiper){ //给用户 已经移动到底的视觉效果
                 var distance =swiper.positions.current - swiper.positions.start;
@@ -285,69 +194,26 @@ var hsee = {
             slidesPerView : 1,
             speed : 400,
             onSlideChangeStart : function(swiper, direction) {
-                var index = swiper.activeIndex + 1, offset = 0;
-                var $hideHuman = $(".enghumanOpacity");
-                for ( i = 0; i < $hideHuman.length; i++) {
-                    var current = $($hideHuman[i]).css('left');
-                    current = current.replace(/px/, "");
-                    for ( j = i + 1; j < $hideHuman.length; j++) {
-                        var next = $($hideHuman[j]).css('left');
-                        next = next.replace(/px/, "");
-                        if (next < current) {
-                            var p = $hideHuman[i];
-                            $hideHuman[i] = $hideHuman[j];
-                            $hideHuman[j] = p;
-                            current = next;
-                        }
-                    }
-                }
-                if ((swiper.positions.current - swiper.positions.start) < 0 && index <= 4) {
-                    $(".enghumanactive").css({
-                        'left' : '-20%',
+               var index = swiper.activeIndex + 1, offset = 0;
+               $(".enghuman"+index).addClass("enghumanactive");                  
+                var offset = ["0", "20%", "0", "-20%"];
+                  $(".enghuman" + index).css({
+                        'left' : offset[0],
                     });
-                    $(".enghumanactive").addClass("enghumanOpacity");
-                    $(".enghuman" + (index - 1)).removeClass("enghumanactive");
-                    $($hideHuman[$hideHuman.length - 1]).css('left', 0);
-                    $($hideHuman[$hideHuman.length - 1]).removeClass("enghumanOpacity");
-                    $($hideHuman[$hideHuman.length - 1]).addClass("enghumanactive");
-                    for ( i = 0; i < $hideHuman.length - 1; i++) {
-                        var current = $($hideHuman[i]).css('left');
-                        var myleft = $($hideHuman[i]).position().left / $($hideHuman[i]).parent().width();
-                        offset = ((myleft + 0.2) * 100) + '%';
-                        $($hideHuman[i]).css({
-                            'left' : offset
-                        });
-                    }
-                    for(i = 1; i <= 4; i++){
-                        var value = ((i-index)*100)+"%";
-                        $(".engineer"+i).css({"transform":"translateX("+value+")",
-                                            "-webkit-transform":"translateX("+value+")"
-                                            });
-                    }                       
-                } else if ((swiper.positions.current - swiper.positions.start) > 0 && index >= 1) {
-                    $(".enghumanactive").css({
-                        'left' : '20%',
+                for ( i = 1; i < 4; i++) {
+                    var count = (index + i) % 4 === 0 ? 4 : (index + i) % 4;
+                    $(".enghuman" + count).css({
+                        'left' : offset[i],
                     });
-                    $(".enghumanactive").addClass("enghumanOpacity");
-                    $(".enghuman" + (index + 1)).removeClass("enghumanactive");
-                    $($hideHuman[0]).css('left', 0);
-                    $($hideHuman[0]).removeClass("enghumanOpacity");
-                    $($hideHuman[0]).addClass("enghumanactive");
-                    for ( i = 1; i < $hideHuman.length; i++) {
-                        var current = $($hideHuman[i]).css('left');
-                        var myleft = $($hideHuman[i]).position().left / $($hideHuman[i]).parent().width();
-                        offset = ((myleft - 0.2) * 100) + '%';
-                        $($hideHuman[i]).css({
-                            'left' : offset
-                        });
-                    }
-                    for(i = 1; i <= 4; i++){
-                        var value = ((i-index)*100)+"%";
-                        $(".engineer"+i).css({"transform":"translateX("+value+")",
-                                            "-webkit-transform":"translateX("+value+")"
-                                            });
-                    }                       
-                }
+                    $(".enghuman" + count).addClass("enghumanOpacity");
+                    $(".enghuman" + count).removeClass("enghumanactive");
+                }  
+                for(i = 1; i <= 4; i++){
+                    var value = ((i-index)*100)+"%";
+                    $(".engineer"+i).css({"transform":"translateX("+value+")",
+                                         "-webkit-transform":"translateX("+value+")"
+                                         });
+                }                        
             },
             onTouchMove: function(swiper){ //给用户 已经移动到底的视觉效果
                 var distance =swiper.positions.current - swiper.positions.start;
