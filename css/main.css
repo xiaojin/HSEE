@@ -1315,10 +1315,10 @@ to {
 
 .swiper-slide-active .dreamtitle
 {
-	animation:andreamtitle 0.5s linear  1 ;
-	-webkit-animation:andreamtitle 0.5s linear  1;
-	-moz-animation:andreamtitle 0.5s linear  1;
-	-o-animation:andreamtitle 0.5s linear  1;
+	animation:andreamtitle 0.3s linear  1 ;
+	-webkit-animation:andreamtitle 0.3s linear  1;
+	-moz-animation:andreamtitle 0.3s linear  1;
+	-o-animation:andreamtitle 0.3s linear  1;
 }
 
 
@@ -1337,10 +1337,10 @@ to {
 
 .swiper-slide-active .hearttitle
 {
-	animation:anhearttitle 0.5s linear 0.1s  1 ;
-	-webkit-animation:anhearttitle 0.5s linear 0.1s  1;
-	-moz-animation:anhearttitle 0.5s linear 0.1s  1;
-	-o-animation:anhearttitle 0.5s linear 0.1s  1;
+	animation:anhearttitle 0.3s linear 0.1s  1 ;
+	-webkit-animation:anhearttitle 0.3s linear 0.1s  1;
+	-moz-animation:anhearttitle 0.3s linear 0.1s  1;
+	-o-animation:anhearttitle 0.3s linear 0.1s  1;
 }
 
 .heartCharacter{
@@ -1355,10 +1355,10 @@ to {
 
 .swiper-slide-active .heartCharacter
 {
-	animation:anBigHeart 0.5s linear 1 ;
-	-webkit-animation:anBigHeart 0.5s linear 1;
-	-moz-animation:anBigHeart 0.5s linear 1;
-	-o-animation:anBigHeart 0.5s linear 1;
+	animation:anBigHeart 0.3s linear 1 ;
+	-webkit-animation:anBigHeart 0.3s linear 1;
+	-moz-animation:anBigHeart 0.3s linear 1;
+	-o-animation:anBigHeart 0.3s linear 1;
 }
 
 .change{
@@ -1374,10 +1374,10 @@ to {
 
 .swiper-slide-active .change
 {
-	animation:anBigChange 0.5s linear 0.1s 1;
-	-webkit-animation:anBigChange 0.5s linear 0.1s 1;
-	-moz-animation:anBigChange 0.5s linear 0.1s 1;
-	-o-animation:anBigChange 0.5s linear 0.1s 1;
+	animation:anBigChange 0.3s linear 0.1s 1;
+	-webkit-animation:anBigChange 0.3s linear 0.1s 1;
+	-moz-animation:anBigChange 0.3s linear 0.1s 1;
+	-o-animation:anBigChange 0.3s linear 0.1s 1;
 }
 
 
@@ -1394,10 +1394,10 @@ to {
 
 .swiper-slide-active .dream
 {
-	animation:anBigDream 0.5s linear 0.1s  1;
-	-webkit-animation:anBigDream 0.5s linear 0.1s 1;
-	-moz-animation:anBigDream 0.5s linear 0.1s 1;
-	-o-animation:anBigDream 0.5s linear  0.1s 1;
+	animation:anBigDream 0.3s linear 0.1s  1;
+	-webkit-animation:anBigDream 0.3s linear 0.1s 1;
+	-moz-animation:anBigDream 0.3s linear 0.1s 1;
+	-o-animation:anBigDream 0.3s linear  0.1s 1;
 }
 
 /*page12 started*/
