@@ -827,33 +827,6 @@ to {
 	width: 33.90625%;
 }
 
-/*.locationOrg img {
-	width: 16%;
-}*/
-/*.locationOrg{
-	text-align:center;
-	color: rgb(3,145,141);
-	font-size: 0.9em
-}
-.locationTitle {
-	margin-top: 1%;
-	text-align:center;
-	color: rgb(52,63,79);
-	font-size: 1.3em
-}*/
-/*.locationTitle img {
-	width: 26%;
-}*/
-/*.locationCorp {
-	margin-top: 2%;
-	text-align:center;
-	color: rgb(52,63,79);
-	font-size: 0.7em;
-	font-weight: bolder;
-}*/
-/*.locationCorp img {
-	width: 34%;
-}*/
 .locationTree {
 	width: 100%;
 }
@@ -868,14 +841,14 @@ to {
 	position: absolute;	
 	top: -20%;
 	opacity:0;
-	transition: top 1s;
-	-moz-transition: top 1s; /* Firefox 4 */
-	-webkit-transition: top 1s; /* Safari and Chrome */
-	-o-transition: top 1s; /* Opera */
-	transition-delay: 1s;
-	-moz-transition-delay: 1s;
-	-webkit-transition-delay: 1s;
-	-o-transition-delay: 1s;
+	transition: top 0.6s;
+	-moz-transition: top 0.6s; /* Firefox 4 */
+	-webkit-transition: top 0.6s; /* Safari and Chrome */
+	-o-transition: top 0.6s; /* Opera */
+	transition-delay: 0.5s;
+	-moz-transition-delay: 0.5s;
+	-webkit-transition-delay: 0.5s;
+	-o-transition-delay: 0.5s;
 }
 
 .location-beijing {
