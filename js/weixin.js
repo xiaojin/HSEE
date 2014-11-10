@@ -9,9 +9,9 @@ var dataForWeixin={
  
    url:  path+"index.html",
  
-   title: "寻找一颗改变世界的心!",
+   title: "Had Gone Old Jobs \nHad Come New Jobs",
  
-   desc: "2014和视(H'SEE)年度最后席位等你来！",
+   desc: "2014和视(H’SEE)招聘:寻找一颗改变世界的心!",
  
    fakeid: "",
  
@@ -31,9 +31,9 @@ var dataForWeixin={
 
                 "img_url": dataForWeixin.MsgImg, 
 
-                "img_width": "120", 
+                "img_width": "80", 
 
-                "img_height": "120", 
+                "img_height": "80", 
 
                 "link": dataForWeixin.url, 
 
@@ -54,9 +54,9 @@ var dataForWeixin={
 
                 "img_url": dataForWeixin.TLImg, 
 
-                "img_width": "120", 
+                "img_width": "80", 
 
-                "img_height": "120", 
+                "img_height": "80", 
 
                 "link": dataForWeixin.url, 
 

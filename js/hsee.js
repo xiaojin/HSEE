@@ -485,7 +485,7 @@ var hsee = {
                     '-webkit-transform' : offset,
                     'transform' : offset
                 });
-            }, 100);
+            }, 70);
         };
         //第六页，绑定右箭头
         $(".mileRightArrow").click(function() {

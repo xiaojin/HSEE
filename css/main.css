@@ -618,11 +618,11 @@ to {
 }
 
 .mileCircle {
-	top: 28%;
+	top: 27%;
 }
 
 .mileCircle img {
-	width: 53%;
+	width: 56.25%;
 }
 .mileCircleIn {
 	top: 28%;
@@ -634,7 +634,7 @@ to {
 	top: 25%;
 }
 .mileCircleOut img {
-	width: 66%;
+	width: 100%;
 }
 .mile-title {
 	position: absolute;
@@ -654,14 +654,11 @@ to {
 	margin-top: 2%;
 	font-weight:100;
 }
-/*.mile-title img {
-	width: 50%;
-}*/
 
 .mileHide-Circle {
 	position: absolute;
 	width: 100%;
-	top: 27%;
+	top: 26%;
 }
 .mileHide-Circle img {
 	width: 100%;
@@ -670,7 +667,7 @@ to {
 	position: absolute;
 	width: 300%;
 	left: 20%;
-	top: 28%;
+	top: 26.3%;
 }
 .mile-icons img {
 	width: 100%;
@@ -981,14 +978,14 @@ to {
 	top: 0%;
 	left: 56%;
 }
-.computerCircle{
+/*.computerCircle{
 	width:100%;
 	top: 15%;
 	position: absolute;
 }
 .computerCircle img{
 	width:16%;
-}
+}*/
 .officeBottle{
 	width:28%;
 	left: -42%;
