@@ -9,9 +9,9 @@ var dataForWeixin={
  
    url:  path+"index.html",
  
-   title: "Had Gone Old Jobs \nHad Come New Jobs",
+   title: "寻找乔布斯 \nWe Need Jobs!",
  
-   desc: "2014和视(H’SEE)招聘:寻找一颗改变世界的心!",
+   desc: "2014 和视招聘,期待一颗改变世界的心",
  
    fakeid: "",
  
