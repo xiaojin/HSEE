@@ -756,7 +756,7 @@ to {
 }
 
 .hseeskills-yellowtitle {
-	width: 46.875%;
+	width: 53.125%;
 	position: absolute;
 	left: 100%;
 	top: 14%;
@@ -827,7 +827,7 @@ to {
 }
 
 .swiper-slide-active  .hseeskills-yellowtitle {
-	left: 49%;
+	left: 44%;
 	transition-delay: 1.7s;
 	-moz-transition-delay: 1.7s;
 	-webkit-transition-delay: 1.7s;
