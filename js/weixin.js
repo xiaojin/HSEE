@@ -11,7 +11,7 @@ var dataForWeixin={
  
    title: "Next Jobs(工作),Next Jobs(乔布斯)",
  
-   desc: "2014和视招聘,寻找一颗改变世界的心",
+   desc: "2015和视预招聘, 是时候和未来谈谈!",
  
    fakeid: "",
  
