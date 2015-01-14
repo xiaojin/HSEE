@@ -78,19 +78,19 @@ var hsee = {
             onSlideChangeStart : function(swiper, direction) {
                var index = swiper.activeIndex + 1, offset = 0;
                $(".producthuman"+index).addClass("producthumanactive");                  
-                var offset = ["0", "20%", "0", "-20%"];
+                var offset = ["0", "0"];
                   $(".producthuman" + index).css({
                         'left' : offset[0],
                     });
-                for ( i = 1; i < 4; i++) {
-                    var count = (index + i) % 4 === 0 ? 4 : (index + i) % 4;
+                for ( i = 1; i < 2; i++) {
+                    var count = (index + i) % 2 === 0 ? 2 : (index + i) % 2;
                     $(".producthuman" + count).css({
                         'left' : offset[i],
                     });
                     $(".producthuman" + count).addClass("humanOpacity");
                     $(".producthuman" + count).removeClass("producthumanactive");
                 }  
-                for(i = 1; i <= 4; i++){
+                for(i = 1; i <= 2; i++){
                     var value = ((i-index)*100)+"%";
                     $(".product"+i).css({"transform":"translateX("+value+")",
                                          "-webkit-transform":"translateX("+value+")"
@@ -99,9 +99,9 @@ var hsee = {
             },
             onTouchMove: function(swiper){ //给用户 已经移动到底的视觉效果
                 var distance =swiper.positions.current - swiper.positions.start;
-                if(distance< 0 && swiper.activeIndex==3){ 
+                if(distance< 0 && swiper.activeIndex==1){ 
                    var cal=-10;                              
-                   $(".product4").css({"transform":"translateX("+cal+"%)",
+                   $(".product2").css({"transform":"translateX("+cal+"%)",
                      "-webkit-transform":"translateX("+cal+"%)"
                      });
                 }
@@ -114,8 +114,8 @@ var hsee = {
             },
             onTouchEnd :function(swiper){ //给用户 已经移动到底的视觉效果
                 var distance =swiper.positions.current - swiper.positions.start;
-                if(swiper.activeIndex==3 && distance!=0){
-                    $(".product4").css({"transform":"translateX(0)",
+                if(swiper.activeIndex==1 && distance!=0){
+                    $(".product2").css({"transform":"translateX(0)",
                                  "-webkit-transform":"translateX(0)"
                                  });
                 }
@@ -137,7 +137,7 @@ var hsee = {
                 var index = swiper.activeIndex + 1, offset = 0;
                 var $hideHuman = $(".leaderhumanOpacity");
                $(".leaderhuman"+index).addClass("leaderhumanactive");                  
-                var offset = ["0", "20%", "-20%"];
+                var offset = ["0"];
                   $(".leaderhuman" + index).css({
                         'left' : offset[0],
                     });
@@ -158,7 +158,7 @@ var hsee = {
             },
             onTouchMove: function(swiper){ //给用户 已经移动到底的视觉效果
                 var distance =swiper.positions.current - swiper.positions.start;
-                if(distance< 0 && swiper.activeIndex==2){ 
+                if(distance< 0 && swiper.activeIndex==0){ 
                    var cal=-10;                              
                    $(".leader3").css({"transform":"translateX("+cal+"%)",
                      "-webkit-transform":"translateX("+cal+"%)"
@@ -166,20 +166,20 @@ var hsee = {
                 }
                 if(distance>0 && swiper.activeIndex==0){
                    var cal=10;                              
-                   $(".leader1").css({"transform":"translateX("+cal+"%)",
+                   $(".leader3").css({"transform":"translateX("+cal+"%)",
                      "-webkit-transform":"translateX("+cal+"%)"
                      });                    
                 }
             },
             onTouchEnd :function(swiper){ //给用户 已经移动到底的视觉效果
                 var distance =swiper.positions.current - swiper.positions.start;
-                if(swiper.activeIndex==2 && distance!=0){
+                if(swiper.activeIndex==0 && distance!=0){
                     $(".leader3").css({"transform":"translateX(0)",
                                  "-webkit-transform":"translateX(0)"
                                  });
                 }
                  if(swiper.activeIndex==0 && distance!=0){
-                    $(".leader1").css({"transform":"translateX(0)",
+                    $(".leader3").css({"transform":"translateX(0)",
                                  "-webkit-transform":"translateX(0)"
                                  });
                 }
